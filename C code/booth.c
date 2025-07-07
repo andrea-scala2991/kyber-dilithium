@@ -1,21 +1,29 @@
 #include "booth.h"
+#include <stdio.h>
 
-int32_t booth_multiply(int16_t multiplicand, int16_t multiplier) {
-    int32_t A = multiplicand;
+// Booth's multiplication algorithm for signed 16-bit integers.
+// Reduces the number of additions/subtractions in binary multiplication
+// by encoding sequences of 1s as fewer operations.
+uint32_t booth_multiply(uint16_t multiplicand, uint16_t multiplier) {
     int32_t result = 0;
-    int16_t m = multiplier;
-    int prev_bit = 0;
+    int prev = 0;
 
-    for (int i = 0; i < 16; i++) {
-        int bit = (m >> i) & 1;
-        if (bit != prev_bit) {
-            if (bit == 1)
-                result += A << i;
+    // Iterate over each bit of the multiplier
+    for (int i = 0; i <= 16; i++) {
+        int curr = (multiplier >> i) & 1;
+
+        // If the current bit is different from the previous bit,
+        // perform an addition or subtraction of A shifted by i
+        if (curr != prev) {
+            if (curr == 1)
+                result += (int32_t)multiplicand << i; // simulate addition of shifted multiplicand
             else
-                result -= A << i;
+                result -= (int32_t)multiplicand << i; // simulate subtraction
         }
-        prev_bit = bit;
+        
+        prev = curr;
     }
 
-    return result;
+    return -result;
 }
+

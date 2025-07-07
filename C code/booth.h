@@ -3,6 +3,6 @@
 
 #include <stdint.h>
 
-int32_t booth_multiply(int16_t multiplicand, int16_t multiplier);
+uint32_t booth_multiply(uint16_t multiplicand, uint16_t multiplier);
 
 #endif

@@ -2,8 +2,7 @@
 #define NTT_H
 
 #include <stdint.h>
-
-#define Q 3329  // prime modulus
+#include "kyber_params.h"
 
 uint16_t mod_add(uint16_t a, uint16_t b);
 uint16_t mod_sub(uint16_t a, uint16_t b);

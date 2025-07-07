@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "ntt.h": "c",
+        "stdio.h": "c"
+    }
+}
