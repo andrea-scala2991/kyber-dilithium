@@ -1,7 +1,7 @@
 #include "booth.h"
 #include <stdio.h>
 
-// Booth's multiplication algorithm for signed 16-bit integers.
+// modified Booth's multiplication algorithm for unsigned 16-bit integers.
 // Reduces the number of additions/subtractions in binary multiplication
 // by encoding sequences of 1s as fewer operations.
 uint32_t booth_multiply(uint16_t multiplicand, uint16_t multiplier) {
