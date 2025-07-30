@@ -26,7 +26,7 @@ module Mod_add(
     );
     
     input wire[11:0] A,B;
-    output reg[11:0] C;
+    output wire[11:0] C;
     
     localparam q = 3329; //KYBER module
     
@@ -37,11 +37,6 @@ module Mod_add(
     
     assign is_bigger = sum >= q;
     
-    always @(*) begin
-        case(is_bigger)
-            1'b0: C = sum[11:0];
-            1'b1: C = diff;
-            default: C = 12'bX;
-        endcase
-    end
+    assign C = (is_bigger) ? diff : sum[11:0];
+    
 endmodule

@@ -42,57 +42,70 @@ uint16_t find_primitive_2nth_root(int n) {
     return 0; // not found
 }
 
-void bit_reverse(uint16_t *a, int n) {
-    int j = 0;
-    for (int i = 1; i < n; i++) {
-        int bit = n >> 1;
-        while (j & bit) {
-            j ^= bit;
-            bit >>= 1;
-        }
-        j ^= bit;
-        if (i < j) {
-            uint16_t tmp = a[i];
-            a[i] = a[j];
-            a[j] = tmp;
-        }
-    }
-}
-
 void ntt_standard(uint16_t *a, int n, uint16_t omega) {
-    for (int len = 2; len <= n; len <<= 1) {
-        int half = len >> 1;
-        uint16_t root = mod_pow(omega, n / len);
-        for (int start = 0; start < n; start += len) {
-            uint16_t w = 1;
-            for (int j = 0; j < half; ++j) {
-                uint16_t u = a[start + j];
-                uint16_t v = mod_mul(a[start + j + half], w);
-                a[start + j] = mod_add(u, v);
-                a[start + j + half] = mod_sub(u, v);
-                w = mod_mul(w, root);
+    int log_n = 0;
+    for (int temp = n; temp > 1; temp >>= 1) log_n++;
+
+    // Precompute twiddle factors (powers of omega)
+    uint16_t zetas[n / 2];
+    for (int i = 0; i < n / 2; i++) {
+        int rev = bit_reverse(i, log_n - 1);
+        zetas[i] = mod_pow(omega, rev);
+    }
+
+    // DIT NTT
+    int stage = 0;
+    for (int len = n / 2; len >= 1; len >>= 1) {
+        int step = n / (2 * len);
+        stage++;
+        printf("stage %d:\n", stage);
+        for (int start = 0; start < n; start += 2 * len) {
+            for (int j = 0; j < len; j++) {
+                int pos = start + j;
+                uint16_t w = zetas[j * step]; //bit-reversed already
+
+                printf("butterfly (%d,%d), twiddle[%d] =%u\n", pos, pos + len, bit_reverse(j * step,log_n - 1), w);
+                
+                uint16_t u = a[pos];
+                uint16_t v = mod_mul(a[pos + len], w);
+                printf("u[%u] = %u, v[%u] = %u\n", pos, a[pos], pos + len, a[pos + len] );
+                a[pos] = mod_add(u, v);
+                a[pos + len] = mod_sub(u, v);
+                printf("U = %u, V = %u\n", a[pos], a[pos + len]);
             }
         }
     }
 }
 
-void intt_standard(uint16_t *a, int n, uint16_t omega_inv) {
-    for (int len = n; len > 1; len >>= 1) {
-        int half = len >> 1;
-        uint16_t root = mod_pow(omega_inv, n / len);
-        for (int start = 0; start < n; start += len) {
-            uint16_t w = 1;
-            for (int j = 0; j < half; ++j) {
-                uint16_t u = a[start + j];
-                uint16_t v = a[start + j + half];
-                a[start + j] = mod_add(u, v);
-                a[start + j + half] = mod_mul(w, mod_sub(u, v));
-                w = mod_mul(w, root);
+void intt_standard(uint16_t *a, int n, uint16_t omega) {
+    int log_n = 0;
+    for (int temp = n; temp > 1; temp >>= 1) log_n++;
+
+    // Precompute twiddle factors in bit-reversed order
+    uint16_t zetas[n / 2];
+    for (int i = 0; i < n / 2; i++) {
+        int rev = bit_reverse(i, log_n - 1);
+        zetas[i] = mod_pow(omega, rev);
+    }
+
+    // Gentleman-Sande INTT
+    for (int len = 1; len < n; len <<= 1) {
+        int step = n / (2 * len);
+        for (int start = 0; start < n; start += 2 * len) {
+            for (int j = 0; j < len; j++) {
+                int pos = start + j;
+                uint16_t u = a[pos];
+                uint16_t v = a[pos + len];
+                a[pos] = mod_add(u, v);
+
+                uint16_t t = mod_sub(u, v);
+                a[pos + len] = mod_mul(t, zetas[j * step]);
             }
         }
     }
 
-    uint16_t n_inv = mod_pow(n, Q - 2);  // Fermat inverse
+    // Multiply by n⁻¹ mod q (Fermat's little theorem: n⁻¹ ≡ n^(q−2) mod q)
+    uint16_t n_inv = mod_pow(n, Q - 2);
     for (int i = 0; i < n; i++) {
         a[i] = mod_mul(a[i], n_inv);
     }
@@ -102,13 +115,8 @@ void ntt_negacyclic(uint16_t *a, int n) {
     uint16_t zeta = find_primitive_2nth_root(n);
     uint16_t omega = mod_pow(zeta, 2);
 
-    for (int i = 0; i < n; ++i)
-        a[i] = mod_mul(a[i], mod_pow(zeta, i));
 
     ntt_standard(a, n, omega);
-
-    for (int i = 0; i < n; ++i)
-        a[i] = mod_mul(a[i], mod_pow(zeta, i));
 
     printf("zeta = %d\n", zeta);
 }
@@ -118,11 +126,17 @@ void intt_negacyclic(uint16_t *a, int n) {
     uint16_t omega_inv = mod_pow(mod_pow(zeta, 2), Q - 2);
     uint16_t zeta_inv = mod_pow(zeta, Q - 2);
 
-    for (int i = 0; i < n; ++i)
-        a[i] = mod_mul(a[i], mod_pow(zeta_inv, i));
-
     intt_standard(a, n, omega_inv);
 
-    for (int i = 0; i < n; ++i)
-        a[i] = mod_mul(a[i], mod_pow(zeta_inv, i));
+}
+
+// Reverse the bits of index 'x' with 'log_n' bits
+int bit_reverse(int x, int log_n) {
+    int result = 0;
+    for (int i = 0; i < log_n; i++) {
+        result <<= 1;
+        result |= (x & 1);
+        x >>= 1;
+    }
+    return result;
 }

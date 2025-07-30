@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_mod_add_sub_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_mod_add_sub" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="50.000 ns"></ZoomEndTime>
+      <Cursor1Time time="1.912 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="340"></NameColumnWidth>
+      <ValueColumnWidth column_width="150"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="4" />
+   <wvobject fp_name="/tb_mod_add_sub/A" type="array">
+      <obj_property name="ElementShortName">A[11:0]</obj_property>
+      <obj_property name="ObjectShortName">A[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mod_add_sub/B" type="array">
+      <obj_property name="ElementShortName">B[11:0]</obj_property>
+      <obj_property name="ObjectShortName">B[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mod_add_sub/add_C" type="array">
+      <obj_property name="ElementShortName">add_C[11:0]</obj_property>
+      <obj_property name="ObjectShortName">add_C[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mod_add_sub/sub_C" type="array">
+      <obj_property name="ElementShortName">sub_C[11:0]</obj_property>
+      <obj_property name="ObjectShortName">sub_C[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

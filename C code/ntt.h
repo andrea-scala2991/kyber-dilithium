@@ -10,7 +10,7 @@ uint16_t mod_mul(uint16_t a, uint16_t b);
 uint16_t mod_pow(uint16_t base, uint16_t exp);
 
 uint16_t find_primitive_2nth_root(int n);
-void bit_reverse(uint16_t *a, int n);
+int bit_reverse(int x, int log_n);
 
 void ntt_standard(uint16_t *a, int n, uint16_t omega);
 void intt_standard(uint16_t *a, int n, uint16_t omega_inv);

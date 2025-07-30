@@ -33,7 +33,7 @@ module Mod_mul(
     input wire valid_in;
     
     output wire valid_out;
-    output reg[11:0] OUT;
+    output wire[11:0] OUT;
  
     
     localparam q = 3329; //KYBER module
@@ -135,10 +135,5 @@ module Mod_mul(
     assign x = c_stage3 - q_mul_m_reg;
     
     //STEP 5: if x < 0 then x = x + q
-    always @(*) begin
-        case(x[12])
-            1'b0: OUT = x[11:0];
-            1'b1: OUT = x[11:0] + q;        
-        endcase
-    end
+    assign OUT = x[12] ? x[11:0] + q : x[11:0]; 
 endmodule
