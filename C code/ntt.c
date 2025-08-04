@@ -94,12 +94,15 @@ void intt_standard(uint16_t *a, int n, uint16_t omega) {
         for (int start = 0; start < n; start += 2 * len) {
             for (int j = 0; j < len; j++) {
                 int pos = start + j;
+                printf("butterfly (%d,%d), twiddle[%d] =%u\n", pos, pos + len, bit_reverse(j * step,log_n - 1), zetas[j * step]);
                 uint16_t u = a[pos];
                 uint16_t v = a[pos + len];
+                printf("u[%u] = %u, v[%u] = %u\n", pos, a[pos], pos + len, a[pos + len] );
                 a[pos] = mod_add(u, v);
 
                 uint16_t t = mod_sub(u, v);
                 a[pos + len] = mod_mul(t, zetas[j * step]);
+                printf("U = %u, V = %u\n", a[pos], a[pos + len]);
             }
         }
     }
