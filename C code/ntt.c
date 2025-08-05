@@ -89,7 +89,10 @@ void intt_standard(uint16_t *a, int n, uint16_t omega) {
     }
 
     // Gentleman-Sande INTT
+    int stage = 0;
     for (int len = 1; len < n; len <<= 1) {
+        stage++;
+        printf("stage %d:\n", stage);
         int step = n / (2 * len);
         for (int start = 0; start < n; start += 2 * len) {
             for (int j = 0; j < len; j++) {
