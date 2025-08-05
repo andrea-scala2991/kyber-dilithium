@@ -9,6 +9,7 @@ module Full_NTT(
     //ZETA = 630, OMEGA = 749 > USED FOR TWIDDLE FACTORS
     //STAGE 1; DISTANCE 4; TWIDDLES 0, 2, 1, 3 = 1, 1729, 749, 40
     wire[11:0] u_1_1, v_1_1;
+    localparam inverse = 0;
     
     Butterfly_unit #(.twiddle(1)) B_1_1 (
         .IN_1(coeffs[0]),
@@ -17,8 +18,9 @@ module Full_NTT(
         .r(r),
         .valid_in(valid_in),
         .valid_out(B_2_1.valid_in),
-        .U(u_1_1),
-        .V(v_1_1)
+        .U_OUT(u_1_1),
+        .V_OUT(v_1_1),
+        .inverse(inverse)
     );
     
     wire[11:0] u_1_2, v_1_2;
@@ -30,8 +32,9 @@ module Full_NTT(
         .r(r),
         .valid_in(valid_in),
         .valid_out(B_2_2.valid_in),
-        .U(u_1_2),
-        .V(v_1_2)
+        .U_OUT(u_1_2),
+        .V_OUT(v_1_2),
+        .inverse(inverse)
     );
     
     wire[11:0] u_1_3, v_1_3;
@@ -43,8 +46,9 @@ module Full_NTT(
         .r(r),
         .valid_in(valid_in),
         .valid_out(B_2_3.valid_in),
-        .U(u_1_3),
-        .V(v_1_3)
+        .U_OUT(u_1_3),
+        .V_OUT(v_1_3),
+        .inverse(inverse)
     );
     
     wire[11:0] u_1_4, v_1_4;
@@ -56,8 +60,9 @@ module Full_NTT(
         .r(r),
         .valid_in(valid_in),
         .valid_out(B_2_4.valid_in),
-        .U(u_1_4),
-        .V(v_1_4)
+        .U_OUT(u_1_4),
+        .V_OUT(v_1_4),
+        .inverse(inverse)
     );
 
     //STAGE 2; DISTANCE 2; TWIDDLES 0, 1 = 1, 749
@@ -70,8 +75,9 @@ module Full_NTT(
         .r(r),
         .valid_in(B_1_1.valid_out),
         .valid_out(B_3_1.valid_in),
-        .U(u_2_1),
-        .V(v_2_1)
+        .U_OUT(u_2_1),
+        .V_OUT(v_2_1),
+        .inverse(inverse)
     );
     
     wire[11:0] u_2_2, v_2_2;
@@ -83,8 +89,9 @@ module Full_NTT(
         .r(r),
         .valid_in(B_1_2.valid_out),
         .valid_out(B_3_2.valid_in),
-        .U(u_2_2),
-        .V(v_2_2)
+        .U_OUT(u_2_2),
+        .V_OUT(v_2_2),
+        .inverse(inverse)
     );
     
     wire[11:0] u_2_3, v_2_3;
@@ -96,8 +103,9 @@ module Full_NTT(
         .r(r),
         .valid_in(B_1_3.valid_out),
         .valid_out(B_3_3.valid_in),
-        .U(u_2_3),
-        .V(v_2_3)
+        .U_OUT(u_2_3),
+        .V_OUT(v_2_3),
+        .inverse(inverse)
     );
     
     wire[11:0] u_2_4, v_2_4;
@@ -109,8 +117,9 @@ module Full_NTT(
         .r(r),
         .valid_in(B_1_4.valid_out),
         .valid_out(B_3_4.valid_in),
-        .U(u_2_4),
-        .V(v_2_4)
+        .U_OUT(u_2_4),
+        .V_OUT(v_2_4),
+        .inverse(inverse)
     );
     
     //STAGE 3; DISTANCE 1; TWIDDLES 0 = 1
@@ -124,8 +133,9 @@ module Full_NTT(
         .r(r),
         .valid_in(B_2_1.valid_out),
         .valid_out(valid_out_1),
-        .U(u_3_1),
-        .V(v_3_1)
+        .U_OUT(u_3_1),
+        .V_OUT(v_3_1),
+        .inverse(inverse)
     );
     
     wire[11:0] u_3_2, v_3_2;
@@ -138,8 +148,9 @@ module Full_NTT(
         .r(r),
         .valid_in(B_2_2.valid_out),
         .valid_out(valid_out_2),
-        .U(u_3_2),
-        .V(v_3_2)
+        .U_OUT(u_3_2),
+        .V_OUT(v_3_2),
+        .inverse(inverse)
     );
     
     wire[11:0] u_3_3, v_3_3;
@@ -152,8 +163,9 @@ module Full_NTT(
         .r(r),
         .valid_in(B_2_3.valid_out),
         .valid_out(valid_out_3),
-        .U(u_3_3),
-        .V(v_3_3)
+        .U_OUT(u_3_3),
+        .V_OUT(v_3_3),
+        .inverse(inverse)
     );
     
     wire[11:0] u_3_4, v_3_4;
@@ -166,8 +178,9 @@ module Full_NTT(
         .r(r),
         .valid_in(B_2_4.valid_out),
         .valid_out(valid_out_4),
-        .U(u_3_4),
-        .V(v_3_4)
+        .U_OUT(u_3_4),
+        .V_OUT(v_3_4),
+        .inverse(inverse)
     );
     
     assign coeffs_out[0] = u_3_1;

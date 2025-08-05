@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_Full_iNTT_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_Full_iNTT" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="220.001 ns"></ZoomEndTime>
+      <Cursor1Time time="125.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="208"></NameColumnWidth>
+      <ValueColumnWidth column_width="167"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="33" />
+   <wvobject fp_name="/tb_Full_iNTT/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/r" type="logic">
+      <obj_property name="ElementShortName">r</obj_property>
+      <obj_property name="ObjectShortName">r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/valid_in" type="logic">
+      <obj_property name="ElementShortName">valid_in</obj_property>
+      <obj_property name="ObjectShortName">valid_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/coeffs" type="array">
+      <obj_property name="ElementShortName">coeffs[7:0][11:0]</obj_property>
+      <obj_property name="ObjectShortName">coeffs[7:0][11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/valid_out" type="logic">
+      <obj_property name="ElementShortName">valid_out</obj_property>
+      <obj_property name="ObjectShortName">valid_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/coeffs_out" type="array">
+      <obj_property name="ElementShortName">coeffs_out[7:0][11:0]</obj_property>
+      <obj_property name="ObjectShortName">coeffs_out[7:0][11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <wvobject fp_name="/tb_Full_iNTT/coeffs_out[7]" type="array">
+         <obj_property name="ElementShortName">[7][11:0]</obj_property>
+         <obj_property name="ObjectShortName">[7][11:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_Full_iNTT/coeffs_out[6]" type="array">
+         <obj_property name="ElementShortName">[6][11:0]</obj_property>
+         <obj_property name="ObjectShortName">[6][11:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_Full_iNTT/coeffs_out[5]" type="array">
+         <obj_property name="ElementShortName">[5][11:0]</obj_property>
+         <obj_property name="ObjectShortName">[5][11:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_Full_iNTT/coeffs_out[4]" type="array">
+         <obj_property name="ElementShortName">[4][11:0]</obj_property>
+         <obj_property name="ObjectShortName">[4][11:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_Full_iNTT/coeffs_out[3]" type="array">
+         <obj_property name="ElementShortName">[3][11:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][11:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_Full_iNTT/coeffs_out[2]" type="array">
+         <obj_property name="ElementShortName">[2][11:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][11:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_Full_iNTT/coeffs_out[1]" type="array">
+         <obj_property name="ElementShortName">[1][11:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][11:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_Full_iNTT/coeffs_out[0]" type="array">
+         <obj_property name="ElementShortName">[0][11:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][11:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider162">
+      <obj_property name="label">STAGE 1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/dut/u_1_1" type="array">
+      <obj_property name="ElementShortName">u_1_1[11:0]</obj_property>
+      <obj_property name="ObjectShortName">u_1_1[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/dut/v_1_1" type="array">
+      <obj_property name="ElementShortName">v_1_1[11:0]</obj_property>
+      <obj_property name="ObjectShortName">v_1_1[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/dut/u_1_2" type="array">
+      <obj_property name="ElementShortName">u_1_2[11:0]</obj_property>
+      <obj_property name="ObjectShortName">u_1_2[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/dut/v_1_2" type="array">
+      <obj_property name="ElementShortName">v_1_2[11:0]</obj_property>
+      <obj_property name="ObjectShortName">v_1_2[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/dut/u_1_3" type="array">
+      <obj_property name="ElementShortName">u_1_3[11:0]</obj_property>
+      <obj_property name="ObjectShortName">u_1_3[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/dut/v_1_3" type="array">
+      <obj_property name="ElementShortName">v_1_3[11:0]</obj_property>
+      <obj_property name="ObjectShortName">v_1_3[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/dut/u_1_4" type="array">
+      <obj_property name="ElementShortName">u_1_4[11:0]</obj_property>
+      <obj_property name="ObjectShortName">u_1_4[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/dut/v_1_4" type="array">
+      <obj_property name="ElementShortName">v_1_4[11:0]</obj_property>
+      <obj_property name="ObjectShortName">v_1_4[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider163">
+      <obj_property name="label">STAGE 2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/dut/u_2_1" type="array">
+      <obj_property name="ElementShortName">u_2_1[11:0]</obj_property>
+      <obj_property name="ObjectShortName">u_2_1[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/dut/v_2_1" type="array">
+      <obj_property name="ElementShortName">v_2_1[11:0]</obj_property>
+      <obj_property name="ObjectShortName">v_2_1[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/dut/u_2_2" type="array">
+      <obj_property name="ElementShortName">u_2_2[11:0]</obj_property>
+      <obj_property name="ObjectShortName">u_2_2[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/dut/v_2_2" type="array">
+      <obj_property name="ElementShortName">v_2_2[11:0]</obj_property>
+      <obj_property name="ObjectShortName">v_2_2[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/dut/u_2_3" type="array">
+      <obj_property name="ElementShortName">u_2_3[11:0]</obj_property>
+      <obj_property name="ObjectShortName">u_2_3[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/dut/v_2_3" type="array">
+      <obj_property name="ElementShortName">v_2_3[11:0]</obj_property>
+      <obj_property name="ObjectShortName">v_2_3[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/dut/u_2_4" type="array">
+      <obj_property name="ElementShortName">u_2_4[11:0]</obj_property>
+      <obj_property name="ObjectShortName">u_2_4[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/dut/v_2_4" type="array">
+      <obj_property name="ElementShortName">v_2_4[11:0]</obj_property>
+      <obj_property name="ObjectShortName">v_2_4[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider164">
+      <obj_property name="label">STAGE 3</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/dut/u_3_1" type="array">
+      <obj_property name="ElementShortName">u_3_1[11:0]</obj_property>
+      <obj_property name="ObjectShortName">u_3_1[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/dut/v_3_1" type="array">
+      <obj_property name="ElementShortName">v_3_1[11:0]</obj_property>
+      <obj_property name="ObjectShortName">v_3_1[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/dut/u_3_2" type="array">
+      <obj_property name="ElementShortName">u_3_2[11:0]</obj_property>
+      <obj_property name="ObjectShortName">u_3_2[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/dut/v_3_2" type="array">
+      <obj_property name="ElementShortName">v_3_2[11:0]</obj_property>
+      <obj_property name="ObjectShortName">v_3_2[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/dut/u_3_3" type="array">
+      <obj_property name="ElementShortName">u_3_3[11:0]</obj_property>
+      <obj_property name="ObjectShortName">u_3_3[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/dut/v_3_3" type="array">
+      <obj_property name="ElementShortName">v_3_3[11:0]</obj_property>
+      <obj_property name="ObjectShortName">v_3_3[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/dut/u_3_4" type="array">
+      <obj_property name="ElementShortName">u_3_4[11:0]</obj_property>
+      <obj_property name="ObjectShortName">u_3_4[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Full_iNTT/dut/v_3_4" type="array">
+      <obj_property name="ElementShortName">v_3_4[11:0]</obj_property>
+      <obj_property name="ObjectShortName">v_3_4[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>
