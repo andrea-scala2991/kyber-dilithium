@@ -70,29 +70,46 @@ module Mod_mul(
     //CORRECTION FACTOR DUE TO LOSS OF INFORMATION FROM SHIFTING
     //STEP 2:correct = round((c[11:9] + c[13:11] - c[17:15] - c[19:17]) >> 3) = ((c[11:9] + c[13:11] - c[17:15] - c[19:17] + 4) >> 3)
     // Extract fields as signed (4-bit is sufficient for 3-bit fields)
-    wire signed[3:0] a11_9   = c_reg[11:9];
-    wire signed[3:0] a13_11  = c_reg[13:11];
-    wire signed[3:0] a17_15  = c_reg[17:15];
-    wire signed[3:0] a19_17  = c_reg[19:17];
+    wire[2:0] a11_9   = c_reg[11:9];
+    wire[2:0] a13_11  = c_reg[13:11];
+    wire[2:0] a17_15  = c_reg[17:15];
+    wire[2:0] a19_17  = c_reg[19:17];
+    
     
     // Compute raw correction
-    wire signed[5:0] correct_raw = a11_9 + a13_11 - a17_15 - a19_17;
-    
+    wire[4:0] correct_raw = (a11_9 + a13_11 - a17_15 - a19_17);
+    wire signed[4:0] correct_raw_signed = correct_raw;
     // True signed rounding to nearest
-    wire signed[1:0] correct_temp;
-    assign correct_temp = (correct_raw >= 0) ?
-                     ((correct_raw + 6'sd4) >>> 3) :
-                     ((correct_raw - 6'sd4) >>> 3);
+    wire signed [5:0] biased;
+    assign biased = (correct_raw_signed >= 0) ? 
+                    (correct_raw_signed + 4) : (correct_raw_signed - 4);
     
-    wire signed[1:0] correct;
+    // Perform logic shift right (acts as unsigned division by 8)
+    wire signed[2:0] abs_shifted;
+    assign abs_shifted = (biased > -8 && biased < 0) ? 0 :
+                         (biased <= -8 && biased > -16) ? -1 :
+                         (biased <= -16) ? -2 : biased >> 3;
+    
+    // Now manually restore sign
+    wire signed [2:0] correct;
+    assign correct = abs_shifted;
+    
+    /*wire signed[4:0] correct_temp;
+    assign correct_temp = (correct_raw >= 0) ?
+                     ((correct_raw + 6'sd4)) :
+                     ((correct_raw - 6'sd4));
+    
+    wire signed[1:0] correct_temp_shift = correct_temp[4:3];
+    
+    wire signed[1:0] correct = correct_raw[4:3];
     assign correct = (correct_temp > 1)  ? 2'sd1 :
                      (correct_temp < -1) ? -2'sd1 :
-                        correct_temp;
+                        correct_temp;*/
     
     //STEP 3: m = m_hat + correct
     wire[23:0] m;
+    //assign m = (m_hat === 0) ? $signed(m_hat) : $signed(m_hat) + correct;
     assign m = $signed(m_hat) + correct;
-
     
     //STAGE 2 PIPELINE INPUT
     reg[23:0] c_stage2;

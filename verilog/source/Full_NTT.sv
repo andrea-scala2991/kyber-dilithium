@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 //NTT MODULE FOR N = 8
 module Full_NTT(
         input wire[11:0] coeffs [7:0], //INPUT COEFFICIENTS
@@ -9,7 +11,7 @@ module Full_NTT(
     //ZETA = 630, OMEGA = 749 > USED FOR TWIDDLE FACTORS
     //STAGE 1; DISTANCE 4; TWIDDLES 0, 2, 1, 3 = 1, 1729, 749, 40
     wire[11:0] u_1_1, v_1_1;
-    localparam inverse = 0;
+    localparam inverse = 1'b0;
     
     Butterfly_unit #(.twiddle(1)) B_1_1 (
         .IN_1(coeffs[0]),

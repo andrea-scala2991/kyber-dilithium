@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 //iNTT MODULE FOR N = 8, DECIMATION IN FREQUENCY
 module Full_iNTT(
         input wire[11:0] coeffs [7:0], //INPUT COEFFICIENTS
@@ -8,7 +10,7 @@ module Full_iNTT(
     );
     //ZETA = 630, OMEGA_INV = 3289 > USED FOR TWIDDLE FACTORS
     
-    localparam inverse = 1;
+    localparam inverse = 1'b1;
     //STAGE 1; DISTANCE 1; TWIDDLES 0 = 1
     wire valid_s1_out1, valid_s1_out2, valid_s1_out3, valid_s1_out4;
     wire [11:0] u_1_1, v_1_1, u_1_2, v_1_2, u_1_3, v_1_3, u_1_4, v_1_4;
@@ -57,14 +59,16 @@ module Full_iNTT(
     Butterfly_unit #(.twiddle(2580))  B_3_4 (.IN_1(v_2_2), .IN_2(v_2_4), .clk(clk), .r(r),
         .valid_in(valid_s2_out4), .valid_out(valid_s3_out4), .U_OUT(u_3_4), .V_OUT(v_3_4), .inverse(inverse));
     
-    assign coeffs_out[0] = u_3_1 >> 3;
-    assign coeffs_out[1] = u_3_2 >> 3;
-    assign coeffs_out[2] = u_3_3 >> 3;
-    assign coeffs_out[3] = u_3_4 >> 3;
-    assign coeffs_out[4] = v_3_1 >> 3;
-    assign coeffs_out[5] = v_3_2 >> 3;
-    assign coeffs_out[6] = v_3_3 >> 3;
-    assign coeffs_out[7] = v_3_4 >> 3;
+    
+    assign coeffs_out[0] = u_3_1;
+    assign coeffs_out[1] = u_3_2;
+    assign coeffs_out[2] = u_3_3;
+    assign coeffs_out[3] = u_3_4;
+    assign coeffs_out[4] = v_3_1;
+    assign coeffs_out[5] = v_3_2;
+    assign coeffs_out[6] = v_3_3;
+    assign coeffs_out[7] = v_3_4;
+    
 
-    assign valid_out = valid_s3_out1 & valid_s3_out2 & valid_s3_out3 & valid_s3_out4;      
+    assign valid_out = valid_s3_out1 & valid_s3_out2 & valid_s3_out3 & valid_s3_out4;
 endmodule

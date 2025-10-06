@@ -1,7 +1,8 @@
 `timescale 1ns / 1ps
 
-module Butterfly_unit #(parameter twiddle = 1)(
+module Butterfly_unit (
     IN_1,IN_2, //12-BIT INPUTS
+    twiddle, //TWIDDLE FACTOR
     clk,r, //CLOCK AND RESET FOR MULTIPLIER AND FLIP FLOPS
     inverse,valid_in, valid_out, //PIPELINE CONTROL SIGNALS FOR MULTIPLIER AND BIT FOR INTT
     
@@ -9,7 +10,7 @@ module Butterfly_unit #(parameter twiddle = 1)(
     );
     
     input wire clk, r;
-    input wire[11:0] IN_1, IN_2;
+    input wire[11:0] IN_1, IN_2, twiddle;
     input wire valid_in, inverse;
     
     output wire valid_out;
@@ -38,7 +39,7 @@ module Butterfly_unit #(parameter twiddle = 1)(
             delay_pipe[1] <= 0;
             delay_pipe[2] <= 0;
         end
-        else /*if (!transition & valid_in)*/ begin
+        else begin
             delay_pipe[0] <= IN_1;
             delay_pipe[1] <= delay_pipe[0];
             delay_pipe[2] <= delay_pipe[1];
@@ -86,7 +87,12 @@ module Butterfly_unit #(parameter twiddle = 1)(
     //FINAL OUTPUTS
     output wire[11:0] U_OUT, V_OUT;
     
-     // ?????????????????????????????????????????????
+    //conditional right shift for odd numbers (normal right shift outputs wrong results)
+    wire[11:0] U_shift;
+    
+    //check if U is odd
+    assign U_shift = U[0] ? ((11'd1664) + ((U + 1'b1) >> 1'b1)) : U >> 1'b1;
+    
     // Delay adder output (U) in iNTT mode to match multiplier latency
     reg [11:0] U_pipe [0:2];
     always @(posedge clk or posedge r) begin
@@ -96,13 +102,20 @@ module Butterfly_unit #(parameter twiddle = 1)(
             U_pipe[2] <= 0;
         end
         else begin
-            U_pipe[0] <= U;
+            U_pipe[0] <= U_shift;
             U_pipe[1] <= U_pipe[0];
             U_pipe[2] <= U_pipe[1];
         end
     end
     
     assign U_OUT = inverse_synced ? (U_pipe[2]) : U;
-    assign V_OUT = inverse_synced ? (mul_out) : V;
+    
+    //conditional right shift for odd numbers (normal right shift outputs wrong results)
+    wire[11:0] V_shift;
+    
+    //check if U is odd
+    assign V_shift = mul_out[0] ? ((11'd1664) + ((mul_out + 1'b1) >> 1'b1)) : mul_out >> 1'b1;
+    
+    assign V_OUT = inverse_synced ? (V_shift) : V;
 
 endmodule

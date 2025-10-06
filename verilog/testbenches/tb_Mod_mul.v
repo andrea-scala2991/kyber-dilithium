@@ -55,7 +55,7 @@ module tb_Mod_mul;
     assign c_stage3 = mul.c_stage3;
 
     
-    wire signed[1:0] correct;
+    wire signed[2:0] correct;
     assign correct = mul.correct;
     
     wire[23:0] m_hat;
@@ -109,8 +109,21 @@ module tb_Mod_mul;
         A = 12'd3328; B = 12'd1;#10;
         
         // Test 7
-         valid_in = 1'b0;
-         A = 12'd0; B = 12'd0;#50;
+        A = 12'd79; B = 12'd1729;#10;
+        
+        // TEST 8
+        A = 12'd730; B = 12'd749;#10;
+        
+        A = 12'd2581; B = 12'd1;#10;
+        
+        A = 12'd7; B = 12'd1729;#10;
+        
+        A = 12'd9; B = 12'd1729;#10;
+        
+        A = 12'd3328; B = 12'd1729;#10; 
+        valid_in = 1'b0;
+        #50;
+        
         $finish;
     end
 

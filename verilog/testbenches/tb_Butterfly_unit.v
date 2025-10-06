@@ -4,7 +4,7 @@ module tb_Butterfly_unit;
 
     // Parameters
     localparam q = 3329;
-    localparam twiddle = 2; // example zeta
+    localparam twiddle = 2001; // example zeta
 
     // DUT Signals
     reg clk, r, valid_in, inverse;
@@ -17,6 +17,7 @@ module tb_Butterfly_unit;
     reg[11:0] in2_pipe [0:2];
 
     reg[11:0] expected_u, expected_v;
+    integer u, v;
     integer error_count = 0;
     integer i;
 
@@ -102,42 +103,43 @@ module tb_Butterfly_unit;
                     error_count = error_count + 1;
                 end
             end
-            else begin 
-                if (valid_out & (dut.inverse_pipe[3])) begin
-                    expected_u <= mod_add(in1_pipe[1], in2_pipe[2]);
-                    expected_v <= mod_mul(twiddle, mod_sub(in1_pipe[1], in2_pipe[1]));
-        
-                    if (U !== expected_u || V !== expected_v) begin
-                        $display("ERROR at test %0d:", i - 3);
-                        $display("  IN_1 = %d, IN_2 = %d", in1_pipe[2], in2_pipe[2]);
-                        $display("  U = %d (expected %d)", U, expected_u);
-                        $display("  V = %d (expected %d)", V, expected_v);
-                        error_count = error_count + 1;
-                    end
-                end
-            end     
-
         end
         
         #10;
         inverse <= 1;
         valid_in <= 0;#40;
+        
         for (i = 500; i < 1000; i = i + 1) begin
             @(posedge clk);
             IN_1 <= $urandom % q;
             IN_2 <= $urandom % q;
             valid_in <= 1;
 
+
             in2_pipe[0] <= IN_2;
             in2_pipe[1] <= in2_pipe[0];
             in2_pipe[2] <= in2_pipe[1];
-            
-                        
-            if (!(dut.inverse_pipe[2])) begin
-                // Compute expected results
-                expected_u <= mod_add(in1_pipe[1], mod_mul(twiddle, in2_pipe[1]));
-                expected_v <= mod_sub(in1_pipe[1], mod_mul(twiddle, in2_pipe[1]));
-    
+                
+            if (dut.inverse_pipe[2]) begin
+               
+                u = mod_add(in1_pipe[1], in2_pipe[1]);
+                v = mod_mul(twiddle, mod_sub(in1_pipe[1], in2_pipe[1]));
+                
+                expected_u <= in2_pipe[2];
+                if (u[0] == 1'b1) begin
+                    expected_u <= 1664 + ((u + 1'b1) >> 1'b1);                
+                end 
+                else begin
+                    expected_u <= u >> 1;
+                end
+
+                if (v[0] == 1'b1) begin
+                    expected_v <= 1664 + ((v + 1'b1) >> 1'b1);                 
+                end 
+                else begin
+                    expected_v <= v >> 1;
+                end
+
                 if (valid_out & (U !== expected_u || V !== expected_v)) begin
                     $display("ERROR at test %0d:", i - 3);
                     $display("  IN_1 = %d, IN_2 = %d", in1_pipe[2], in2_pipe[2]);
@@ -146,21 +148,7 @@ module tb_Butterfly_unit;
                     error_count = error_count + 1;
                 end
             end
-            else begin
-                if ((dut.inverse_pipe[2])) begin
-                    expected_u <= (mod_add(in1_pipe[1], in2_pipe[1]));
-                    expected_v <= (mod_mul(twiddle, mod_sub(in1_pipe[1], in2_pipe[1])));
         
-                    if (valid_out & (U !== expected_u || V !== expected_v)) begin
-                        $display("ERROR at test %0d:", i - 3);
-                        $display("  IN_1 = %d, IN_2 = %d", in1_pipe[2], in2_pipe[2]);
-                        $display("  U = %d (expected %d)", U, expected_u);
-                        $display("  V = %d (expected %d)", V, expected_v);
-                        error_count = error_count + 1;
-                    end
-                end
-            end
-            
         end
         
         
