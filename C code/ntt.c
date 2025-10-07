@@ -24,6 +24,13 @@ uint16_t mod_pow(uint16_t base, uint16_t exp) {
     return res;
 }
 
+uint16_t mod_div2(uint16_t a){
+    if ((a % 2) == 0)
+        return a / 2;
+    else
+        return (1664 + ((a + 1) / 2));
+}
+
 // Finds the smallest ζ such that ζ^(2n) ≡ 1 mod q and ζ^k ≠ 1 for all 0 < k < 2n
 uint16_t find_primitive_2nth_root(int n) {
     int order = 2 * n;
@@ -105,16 +112,18 @@ void intt_standard(uint16_t *a, int n, uint16_t omega) {
 
                 uint16_t t = mod_sub(u, v);
                 a[pos + len] = mod_mul(t, zetas[j * step]);
+                a[pos] = mod_div2(a[pos]);
+                a[pos + len] = mod_div2(a[pos + len]);
                 printf("U = %u, V = %u\n", a[pos], a[pos + len]);
             }
         }
     }
 
-    // Multiply by n⁻¹ mod q (Fermat's little theorem: n⁻¹ ≡ n^(q−2) mod q)
+    /*// Multiply by n⁻¹ mod q (Fermat's little theorem: n⁻¹ ≡ n^(q−2) mod q)
     uint16_t n_inv = mod_pow(n, Q - 2);
     for (int i = 0; i < n; i++) {
         a[i] = mod_mul(a[i], n_inv);
-    }
+    }*/
 }
 
 void ntt_negacyclic(uint16_t *a, int n) {
