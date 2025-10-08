@@ -71,7 +71,7 @@ void ntt_standard(uint16_t *a, int n, uint16_t omega) {
                 int pos = start + j;
                 uint16_t w = zetas[j * step]; //bit-reversed already
 
-                printf("butterfly (%d,%d), twiddle[%d] =%u\n", pos, pos + len, bit_reverse(j * step,log_n - 1), w);
+                printf("butterfly (%d,%d), twiddle[%d] =%u\n", pos, pos + len, j*step, w);
                 
                 uint16_t u = a[pos];
                 uint16_t v = mod_mul(a[pos + len], w);
@@ -82,6 +82,8 @@ void ntt_standard(uint16_t *a, int n, uint16_t omega) {
             }
         }
     }
+    for (int i = 0; i < n/2;i++)
+        printf("twiddle[%d]:%d\n", i, zetas[i]);
 }
 
 void intt_standard(uint16_t *a, int n, uint16_t omega) {
@@ -104,7 +106,7 @@ void intt_standard(uint16_t *a, int n, uint16_t omega) {
         for (int start = 0; start < n; start += 2 * len) {
             for (int j = 0; j < len; j++) {
                 int pos = start + j;
-                printf("butterfly (%d,%d), twiddle[%d] =%u\n", pos, pos + len, bit_reverse(j * step,log_n - 1), zetas[j * step]);
+                printf("butterfly (%d,%d), twiddle[%d] =%u\n", pos, pos + len, j*step, zetas[j * step]);
                 uint16_t u = a[pos];
                 uint16_t v = a[pos + len];
                 printf("u[%u] = %u, v[%u] = %u\n", pos, a[pos], pos + len, a[pos + len] );
@@ -117,6 +119,8 @@ void intt_standard(uint16_t *a, int n, uint16_t omega) {
                 printf("U = %u, V = %u\n", a[pos], a[pos + len]);
             }
         }
+        for (int i = 0; i < n/2;i++)
+        printf("twiddle[%d]:%d\n", i, zetas[i]);
     }
 
     /*// Multiply by n⁻¹ mod q (Fermat's little theorem: n⁻¹ ≡ n^(q−2) mod q)
@@ -131,7 +135,7 @@ void ntt_negacyclic(uint16_t *a, int n) {
     uint16_t omega = mod_pow(zeta, 2);
 
 
-    ntt_standard(a, n, omega);
+    ntt_standard(a, n, 910);
 
     printf("zeta = %d\n", zeta);
 }
@@ -141,7 +145,7 @@ void intt_negacyclic(uint16_t *a, int n) {
     uint16_t omega_inv = mod_pow(mod_pow(zeta, 2), Q - 2);
     uint16_t zeta_inv = mod_pow(zeta, Q - 2);
 
-    intt_standard(a, n, omega_inv);
+    intt_standard(a, n, 3040);
 
 }
 
