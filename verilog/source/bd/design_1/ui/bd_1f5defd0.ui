@@ -1,0 +1,122 @@
+{
+   "ActiveEmotionalView":"No Loops",
+   "Addressing View_Layers":"/clk_0_1:false|/rst_0_1:false|",
+   "Addressing View_ScaleFactor":"1.25",
+   "Addressing View_TopLeft":"-548,-286",
+   "Color Coded_Layers":"/clk_0_1:true|/rst_0_1:true|",
+   "Color Coded_ScaleFactor":"0.825",
+   "Color Coded_TopLeft":"-401,0",
+   "Default View_ScaleFactor":"0.6",
+   "Default View_TopLeft":"-918,0",
+   "Display-PortTypeClock":"true",
+   "Display-PortTypeOthers":"true",
+   "Display-PortTypeReset":"true",
+   "ExpandedHierarchyInLayout":"",
+   "Grouping and No Loops_ScaleFactor":"0.678505",
+   "Grouping and No Loops_TopLeft":"-898,0",
+   "Interfaces View_Layers":"/clk_0_1:false|/rst_0_1:false|",
+   "Interfaces View_ScaleFactor":"1.25",
+   "Interfaces View_TopLeft":"-573,-286",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port port-id_enable -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace port port-id_mode -pg 1 -lvl 0 -x 0 -y 150 -defaultsOSRD
+preplace port port-id_done -pg 1 -lvl 4 -x 760 -y 340 -defaultsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
+preplace inst Butterfly_unit -pg 1 -lvl 1 -x 130 -y 210 -defaultsOSRD -pinBusDir IN_1 right -pinBusY IN_1 0R -pinBusDir IN_2 right -pinBusY IN_2 20R -pinBusDir twiddle right -pinBusY twiddle 40R -pinDir clk left -pinY clk 0L -pinDir r left -pinY r 20L -pinDir inverse right -pinY inverse 60R -pinDir valid_in right -pinY valid_in 80R -pinDir valid_out right -pinY valid_out 100R -pinBusDir U_OUT right -pinBusY U_OUT 120R -pinBusDir V_OUT right -pinBusY V_OUT 140R
+preplace inst coef_BRAM_0 -pg 1 -lvl 3 -x 640 -y 60 -defaultsOSRD -pinDir BRAM_PORTA left -pinY BRAM_PORTA 0L -pinDir BRAM_PORTA.addra left -pinY BRAM_PORTA.addra 20L -pinDir BRAM_PORTA.clka left -pinY BRAM_PORTA.clka 40L -pinDir BRAM_PORTA.dina left -pinY BRAM_PORTA.dina 60L -pinDir BRAM_PORTA.douta left -pinY BRAM_PORTA.douta 80L -pinDir BRAM_PORTA.wea left -pinY BRAM_PORTA.wea 100L -pinDir BRAM_PORTB left -pinY BRAM_PORTB 120L -pinDir BRAM_PORTB.addrb left -pinY BRAM_PORTB.addrb 140L -pinDir BRAM_PORTB.clkb left -pinY BRAM_PORTB.clkb 160L -pinDir BRAM_PORTB.dinb left -pinY BRAM_PORTB.dinb 180L -pinDir BRAM_PORTB.doutb left -pinY BRAM_PORTB.doutb 200L -pinDir BRAM_PORTB.web left -pinY BRAM_PORTB.web 220L
+preplace inst NTT_Controller_0 -pg 1 -lvl 2 -x 380 -y 80 -swap {0 1 2 3 12 4 8 7 11 6 10 5 9 13 17 16 20 15 19 14 18 21 22 23 24 25 26 27 28 29 30} -defaultsOSRD -pinDir clk left -pinY clk 0L -pinDir rst left -pinY rst 20L -pinDir enable left -pinY enable 40L -pinDir mode left -pinY mode 70L -pinDir done right -pinY done 260R -pinBusDir bram0_addr_a right -pinBusY bram0_addr_a 0R -pinBusDir bram0_addr_b right -pinBusY bram0_addr_b 120R -pinDir bram0_we_a right -pinY bram0_we_a 80R -pinDir bram0_we_b right -pinY bram0_we_b 200R -pinBusDir bram0_dout_a right -pinBusY bram0_dout_a 60R -pinBusDir bram0_dout_b right -pinBusY bram0_dout_b 180R -pinBusDir bram0_din_a right -pinBusY bram0_din_a 40R -pinBusDir bram0_din_b right -pinBusY bram0_din_b 160R -pinBusDir bram1_addr_a right -pinBusY bram1_addr_a 340R -pinBusDir bram1_addr_b right -pinBusY bram1_addr_b 460R -pinDir bram1_we_a right -pinY bram1_we_a 420R -pinDir bram1_we_b right -pinY bram1_we_b 540R -pinBusDir bram1_dout_a right -pinBusY bram1_dout_a 400R -pinBusDir bram1_dout_b right -pinBusY bram1_dout_b 520R -pinBusDir bram1_din_a right -pinBusY bram1_din_a 380R -pinBusDir bram1_din_b right -pinBusY bram1_din_b 500R -pinBusDir rom_addr right -pinBusY rom_addr 660R -pinBusDir rom_dout right -pinBusY rom_dout 700R -pinBusDir butterfly_in1 left -pinBusY butterfly_in1 130L -pinBusDir butterfly_in2 left -pinBusY butterfly_in2 150L -pinBusDir butterfly_twiddle left -pinBusY butterfly_twiddle 170L -pinDir butterfly_inverse left -pinY butterfly_inverse 190L -pinDir valid_in left -pinY valid_in 210L -pinDir valid_out left -pinY valid_out 230L -pinBusDir butterfly_u left -pinBusY butterfly_u 250L -pinBusDir butterfly_v left -pinBusY butterfly_v 270L
+preplace inst twiddle_ROM -pg 1 -lvl 3 -x 640 -y 720 -defaultsOSRD -pinDir BRAM_PORTA left -pinY BRAM_PORTA 0L -pinDir BRAM_PORTA.addra left -pinY BRAM_PORTA.addra 20L -pinDir BRAM_PORTA.clka left -pinY BRAM_PORTA.clka 40L -pinDir BRAM_PORTA.douta left -pinY BRAM_PORTA.douta 60L
+preplace inst coef_BRAM_1 -pg 1 -lvl 3 -x 640 -y 400 -defaultsOSRD -pinDir BRAM_PORTA left -pinY BRAM_PORTA 0L -pinDir BRAM_PORTA.addra left -pinY BRAM_PORTA.addra 20L -pinDir BRAM_PORTA.clka left -pinY BRAM_PORTA.clka 40L -pinDir BRAM_PORTA.dina left -pinY BRAM_PORTA.dina 60L -pinDir BRAM_PORTA.douta left -pinY BRAM_PORTA.douta 80L -pinDir BRAM_PORTA.wea left -pinY BRAM_PORTA.wea 100L -pinDir BRAM_PORTB left -pinY BRAM_PORTB 120L -pinDir BRAM_PORTB.addrb left -pinY BRAM_PORTB.addrb 140L -pinDir BRAM_PORTB.clkb left -pinY BRAM_PORTB.clkb 160L -pinDir BRAM_PORTB.dinb left -pinY BRAM_PORTB.dinb 180L -pinDir BRAM_PORTB.doutb left -pinY BRAM_PORTB.doutb 200L -pinDir BRAM_PORTB.web left -pinY BRAM_PORTB.web 220L
+preplace netloc Butterfly_unit_U_OUT 1 1 1 N 330
+preplace netloc Butterfly_unit_V_OUT 1 1 1 N 350
+preplace netloc Butterfly_unit_valid_out 1 1 1 N 310
+preplace netloc NTT_Controller_0_bram0_addr_a 1 2 1 N 80
+preplace netloc NTT_Controller_0_bram0_addr_b 1 2 1 N 200
+preplace netloc NTT_Controller_0_bram0_din_a 1 2 1 N 120
+preplace netloc NTT_Controller_0_bram0_din_b 1 2 1 N 240
+preplace netloc NTT_Controller_0_bram0_we_a 1 2 1 N 160
+preplace netloc NTT_Controller_0_bram0_we_b 1 2 1 N 280
+preplace netloc NTT_Controller_0_bram1_addr_a 1 2 1 N 420
+preplace netloc NTT_Controller_0_bram1_addr_b 1 2 1 N 540
+preplace netloc NTT_Controller_0_bram1_din_a 1 2 1 N 460
+preplace netloc NTT_Controller_0_bram1_din_b 1 2 1 N 580
+preplace netloc NTT_Controller_0_bram1_we_a 1 2 1 N 500
+preplace netloc NTT_Controller_0_bram1_we_b 1 2 1 N 620
+preplace netloc NTT_Controller_0_butterfly_in1 1 1 1 NJ 210
+preplace netloc NTT_Controller_0_butterfly_in2 1 1 1 NJ 230
+preplace netloc NTT_Controller_0_butterfly_inverse 1 1 1 NJ 270
+preplace netloc NTT_Controller_0_butterfly_twiddle 1 1 1 NJ 250
+preplace netloc NTT_Controller_0_done 1 2 2 NJ 340 NJ
+preplace netloc NTT_Controller_0_rom_addr 1 2 1 N 740
+preplace netloc NTT_Controller_0_valid_in 1 1 1 NJ 290
+preplace netloc blk_mem_gen_0_douta 1 2 1 NJ 780
+preplace netloc coef_BRAM_0_douta 1 2 1 NJ 140
+preplace netloc coef_BRAM_0_doutb 1 2 1 NJ 260
+preplace netloc coef_BRAM_1_douta 1 2 1 NJ 480
+preplace netloc coef_BRAM_1_doutb 1 2 1 NJ 600
+preplace netloc enable_0_1 1 0 2 NJ 120 NJ
+preplace netloc mode_0_1 1 0 2 NJ 150 NJ
+preplace netloc clk_0_1 1 0 3 40 60 220 20 540
+preplace netloc rst_0_1 1 0 2 20 100 N
+levelinfo -pg 1 0 130 380 640 760
+pagesize -pg 1 -db -bbox -sgen -100 0 850 840
+",
+   "No Loops_ScaleFactor":"0.865476",
+   "No Loops_TopLeft":"-533,1",
+   "Reduced Jogs_Layers":"/clk_0_1:true|/rst_0_1:true|",
+   "Reduced Jogs_ScaleFactor":"0.631304",
+   "Reduced Jogs_TopLeft":"-699,0",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_enable -pg 1 -lvl 0 -x -10 -y 470 -defaultsOSRD
+preplace port port-id_mode -pg 1 -lvl 0 -x -10 -y 500 -defaultsOSRD
+preplace port port-id_done -pg 1 -lvl 3 -x 900 -y 30 -defaultsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x -10 -y 270 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x -10 -y 440 -defaultsOSRD
+preplace inst Butterfly_unit -pg 1 -lvl 2 -x 740 -y 1050 -defaultsOSRD
+preplace inst coef_BRAM_0 -pg 1 -lvl 2 -x 740 -y 220 -defaultsOSRD
+preplace inst NTT_Controller_0 -pg 1 -lvl 1 -x 260 -y 530 -defaultsOSRD
+preplace inst twiddle_ROM -pg 1 -lvl 2 -x 740 -y 850 -defaultsOSRD
+preplace inst coef_BRAM_1 -pg 1 -lvl 2 -x 740 -y 580 -defaultsOSRD
+preplace netloc Butterfly_unit_U_OUT 1 0 3 50 770 550J 750 880
+preplace netloc Butterfly_unit_V_OUT 1 0 3 40 790 560J 760 870
+preplace netloc Butterfly_unit_valid_out 1 0 3 20 1170 NJ 1170 860
+preplace netloc NTT_Controller_0_bram0_addr_a 1 1 1 450 130n
+preplace netloc NTT_Controller_0_bram0_addr_b 1 1 1 470 250n
+preplace netloc NTT_Controller_0_bram0_din_a 1 1 1 480 170n
+preplace netloc NTT_Controller_0_bram0_din_b 1 1 1 520 290n
+preplace netloc NTT_Controller_0_bram0_we_a 1 1 1 460 210n
+preplace netloc NTT_Controller_0_bram0_we_b 1 1 1 510 330n
+preplace netloc NTT_Controller_0_bram1_addr_a 1 1 1 N 490
+preplace netloc NTT_Controller_0_bram1_addr_b 1 1 1 480 510n
+preplace netloc NTT_Controller_0_bram1_din_a 1 1 1 520 530n
+preplace netloc NTT_Controller_0_bram1_din_b 1 1 1 500 590n
+preplace netloc NTT_Controller_0_bram1_we_a 1 1 1 460 530n
+preplace netloc NTT_Controller_0_bram1_we_b 1 1 1 510 550n
+preplace netloc NTT_Controller_0_butterfly_in1 1 1 1 460 630n
+preplace netloc NTT_Controller_0_butterfly_in2 1 1 1 450 650n
+preplace netloc NTT_Controller_0_butterfly_inverse 1 1 1 430 690n
+preplace netloc NTT_Controller_0_butterfly_twiddle 1 1 1 440 670n
+preplace netloc NTT_Controller_0_done 1 1 2 440J 30 NJ
+preplace netloc NTT_Controller_0_rom_addr 1 1 1 470 610n
+preplace netloc NTT_Controller_0_valid_in 1 1 1 420 710n
+preplace netloc blk_mem_gen_0_douta 1 0 2 10 880 N
+preplace netloc coef_BRAM_0_douta 1 0 2 30 190 N
+preplace netloc coef_BRAM_0_doutb 1 0 2 40 270 510J
+preplace netloc coef_BRAM_1_douta 1 0 2 50 280 540
+preplace netloc coef_BRAM_1_doutb 1 0 2 30 780 540
+preplace netloc enable_0_1 1 0 1 10 460n
+preplace netloc mode_0_1 1 0 1 20 480n
+preplace netloc clk_0_1 1 0 2 10 260 530
+preplace netloc rst_0_1 1 0 2 20 290 490
+levelinfo -pg 1 -10 260 740 900
+pagesize -pg 1 -db -bbox -sgen -110 -20 990 1280
+"
+}
+{
+   "da_board_cnt":"3",
+   "da_clkrst_cnt":"4"
+}

@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="4,995.742 ns"></ZoomStartTime>
-      <ZoomEndTime time="5,015.893 ns"></ZoomEndTime>
-      <Cursor1Time time="5,035.842 ns"></Cursor1Time>
+      <ZoomStartTime time="5,052.708 ns"></ZoomStartTime>
+      <ZoomEndTime time="5,091.459 ns"></ZoomEndTime>
+      <Cursor1Time time="5,075.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="340"></NameColumnWidth>
-      <ValueColumnWidth column_width="85"></ValueColumnWidth>
+      <NameColumnWidth column_width="338"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="20" />
+   <WVObjectSize size="24" />
    <wvobject fp_name="/tb_Butterfly_unit/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -41,6 +41,10 @@
       <obj_property name="ElementShortName">IN_2[11:0]</obj_property>
       <obj_property name="ObjectShortName">IN_2[11:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider361">
+      <obj_property name="label">OUTPUT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_Butterfly_unit/U" type="array">
       <obj_property name="ElementShortName">U[11:0]</obj_property>
@@ -69,6 +73,18 @@
    <wvobject fp_name="/tb_Butterfly_unit/valid_out" type="logic">
       <obj_property name="ElementShortName">valid_out</obj_property>
       <obj_property name="ObjectShortName">valid_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Butterfly_unit/u" type="array">
+      <obj_property name="ElementShortName">u[31:0]</obj_property>
+      <obj_property name="ObjectShortName">u[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Butterfly_unit/v" type="array">
+      <obj_property name="ElementShortName">v[31:0]</obj_property>
+      <obj_property name="ObjectShortName">v[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider362">
+      <obj_property name="label">/OUTPUT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_Butterfly_unit/in1_pipe" type="array">
       <obj_property name="ElementShortName">in1_pipe[0:2][11:0]</obj_property>

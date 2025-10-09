@@ -30,10 +30,11 @@ int main(int argc, char *argv[]) {
         a[i] = (uint16_t)atoi(argv[i + 2]) % Q;
     }
 
-    printf("Input vector:\n");
+    /*printf("Input vector:\n");
     for (int i = 0; i < n; i++) printf("%d ", a[i]);
     printf("\n\n");
-
+*/
+    
     ntt_negacyclic(a, n);
     printf("Negacyclic NTT output:\n");
     for (int i = 0; i < n; i++) printf("%d ", a[i]);

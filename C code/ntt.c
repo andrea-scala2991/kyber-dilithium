@@ -64,26 +64,26 @@ void ntt_standard(uint16_t *a, int n, uint16_t omega) {
     int stage = 0;
     for (int len = n / 2; len >= 1; len >>= 1) {
         int step = n / (2 * len);
-        stage++;
-        printf("stage %d:\n", stage);
+        //stage++;
+        //printf("stage %d:\n", stage);
         for (int start = 0; start < n; start += 2 * len) {
             for (int j = 0; j < len; j++) {
                 int pos = start + j;
                 uint16_t w = zetas[j * step]; //bit-reversed already
 
-                printf("butterfly (%d,%d), twiddle[%d] =%u\n", pos, pos + len, j*step, w);
+                //printf("butterfly (%d,%d), twiddle[%d] =%u\n", pos, pos + len, j*step, w);
                 
                 uint16_t u = a[pos];
                 uint16_t v = mod_mul(a[pos + len], w);
-                printf("u[%u] = %u, v[%u] = %u\n", pos, a[pos], pos + len, a[pos + len] );
+                //printf("u[%u] = %u, v[%u] = %u\n", pos, a[pos], pos + len, a[pos + len] );
                 a[pos] = mod_add(u, v);
                 a[pos + len] = mod_sub(u, v);
-                printf("U = %u, V = %u\n", a[pos], a[pos + len]);
+                //printf("U = %u, V = %u\n", a[pos], a[pos + len]);
             }
         }
     }
-    for (int i = 0; i < n/2;i++)
-        printf("twiddle[%d]:%d\n", i, zetas[i]);
+    /*for (int i = 0; i < n/2;i++)
+        printf("twiddle[%d]:%d\n", i, zetas[i]);*/
 }
 
 void intt_standard(uint16_t *a, int n, uint16_t omega) {
@@ -137,7 +137,7 @@ void ntt_negacyclic(uint16_t *a, int n) {
 
     ntt_standard(a, n, 910);
 
-    printf("zeta = %d\n", zeta);
+    //printf("zeta = %d\n", zeta);
 }
 
 void intt_negacyclic(uint16_t *a, int n) {

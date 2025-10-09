@@ -12,14 +12,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="130.001 ns"></ZoomEndTime>
-      <Cursor1Time time="45.000 ns"></Cursor1Time>
+      <ZoomEndTime time="180.000 ns"></ZoomEndTime>
+      <Cursor1Time time="161.180 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="340"></NameColumnWidth>
-      <ValueColumnWidth column_width="130"></ValueColumnWidth>
+      <ValueColumnWidth column_width="90"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="24" />
+   <WVObjectSize size="32" />
    <wvobject fp_name="/tb_Mod_mul/r" type="logic">
       <obj_property name="ElementShortName">r</obj_property>
       <obj_property name="ObjectShortName">r</obj_property>
@@ -75,12 +75,55 @@
       <obj_property name="CustomSignalColor">#FFFF00</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
+   <wvobject fp_name="/tb_Mod_mul/mul/a11_9" type="array">
+      <obj_property name="ElementShortName">a11_9[2:0]</obj_property>
+      <obj_property name="ObjectShortName">a11_9[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Mod_mul/mul/a13_11" type="array">
+      <obj_property name="ElementShortName">a13_11[2:0]</obj_property>
+      <obj_property name="ObjectShortName">a13_11[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Mod_mul/mul/a17_15" type="array">
+      <obj_property name="ElementShortName">a17_15[2:0]</obj_property>
+      <obj_property name="ObjectShortName">a17_15[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Mod_mul/mul/a19_17" type="array">
+      <obj_property name="ElementShortName">a19_17[2:0]</obj_property>
+      <obj_property name="ObjectShortName">a19_17[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Mod_mul/mul/correct_raw" type="array">
+      <obj_property name="ElementShortName">correct_raw[4:0]</obj_property>
+      <obj_property name="ObjectShortName">correct_raw[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Mod_mul/mul/correct_raw_signed" type="array">
+      <obj_property name="ElementShortName">correct_raw_signed[4:0]</obj_property>
+      <obj_property name="ObjectShortName">correct_raw_signed[4:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Mod_mul/mul/biased" type="array">
+      <obj_property name="ElementShortName">biased[5:0]</obj_property>
+      <obj_property name="ObjectShortName">biased[5:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Mod_mul/mul/abs_shifted" type="array">
+      <obj_property name="ElementShortName">abs_shifted[2:0]</obj_property>
+      <obj_property name="ObjectShortName">abs_shifted[2:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
    <wvobject fp_name="/tb_Mod_mul/correct" type="array">
-      <obj_property name="ElementShortName">correct[1:0]</obj_property>
-      <obj_property name="ObjectShortName">correct[1:0]</obj_property>
+      <obj_property name="ElementShortName">correct[2:0]</obj_property>
+      <obj_property name="ObjectShortName">correct[2:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       <obj_property name="CustomSignalColor">#FFFF00</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/tb_Mod_mul/m_hat" type="array">
       <obj_property name="ElementShortName">m_hat[23:0]</obj_property>
