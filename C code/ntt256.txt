@@ -1,0 +1,4109 @@
+Negacyclic NTT output:
+3212 1918 2649 2338 3142 555 1498 1901 874 3188 1760 1832 915 469 278 2997 874 315 1490 1188 3037 1705 1898 250 1812 866 693 2721 2530 1331 1741 814 3142 920 1260 1874 1904 2714 2398 3185 3037 2797 2205 1892 191 1168 2407 2179 915 1763 2770 521 191 1917 651 3150 2530 330 991 2498 3281 825 1521 1778 2649 1048 673 3284 1260 697 2183 2292 1490 3128 278 3059 2770 692 14 1098 1760 2982 278 1582 2205 209 255 80 693 1415 33 1879 991 3306 1323 2385 1498 3215 2183 2525 2398 1064 862 1462 1898 2790 255 2406 651 1252 515 432 278 254 14 2474 2407 1890 515 1991 1741 2365 1323 655 1521 2365 1958 3139 1918 3069 1048 1061 920 3037 3215 1374 315 2819 2982 316 1763 2945 254 2887 3188 2819 3128 1066 2797 2392 2790 1007 866 2425 1415 1080 330 2158 2365 2485 555 3037 697 2601 2714 623 1064 1256 1705 2392 209 1772 1917 744 1890 1529 469 2945 692 1803 1168 744 1252 1126 1331 2158 3306 8 825 1153 2365 3319 2338 1061 3284 1305 1874 2601 2525 849 1188 1066 1582 738 521 1803 2474 423 1832 316 3059 738 1892 1772 2406 10 2721 1080 1879 499 2498 8 655 3299 1901 1374 2292 849 3185 1256 1462 1435 250 1007 80 10 3150 1126 1991 193 2997 2887 1098 423 2179 1529 432 193 814 2485 2385 3299 1778 3319 3139 639 
+
+stage 1:
+butterfly (0,1), twiddle[0] =1
+u[0] = 3212, v[1] = 1918
+U = 2565, V = 647
+butterfly (2,3), twiddle[0] =1
+u[2] = 2649, v[3] = 2338
+U = 829, V = 1820
+butterfly (4,5), twiddle[0] =1
+u[4] = 3142, v[5] = 555
+U = 184, V = 2958
+butterfly (6,7), twiddle[0] =1
+u[6] = 1498, v[7] = 1901
+U = 35, V = 1463
+butterfly (8,9), twiddle[0] =1
+u[8] = 874, v[9] = 3188
+U = 2031, V = 2172
+butterfly (10,11), twiddle[0] =1
+u[10] = 1760, v[11] = 1832
+U = 1796, V = 3293
+butterfly (12,13), twiddle[0] =1
+u[12] = 915, v[13] = 469
+U = 692, V = 223
+butterfly (14,15), twiddle[0] =1
+u[14] = 278, v[15] = 2997
+U = 3302, V = 305
+butterfly (16,17), twiddle[0] =1
+u[16] = 874, v[17] = 315
+U = 2259, V = 1944
+butterfly (18,19), twiddle[0] =1
+u[18] = 1490, v[19] = 1188
+U = 1339, V = 151
+butterfly (20,21), twiddle[0] =1
+u[20] = 3037, v[21] = 1705
+U = 2371, V = 666
+butterfly (22,23), twiddle[0] =1
+u[22] = 1898, v[23] = 250
+U = 1074, V = 824
+butterfly (24,25), twiddle[0] =1
+u[24] = 1812, v[25] = 866
+U = 1339, V = 473
+butterfly (26,27), twiddle[0] =1
+u[26] = 693, v[27] = 2721
+U = 1707, V = 2315
+butterfly (28,29), twiddle[0] =1
+u[28] = 2530, v[29] = 1331
+U = 266, V = 2264
+butterfly (30,31), twiddle[0] =1
+u[30] = 1741, v[31] = 814
+U = 2942, V = 2128
+butterfly (32,33), twiddle[0] =1
+u[32] = 3142, v[33] = 920
+U = 2031, V = 1111
+butterfly (34,35), twiddle[0] =1
+u[34] = 1260, v[35] = 1874
+U = 1567, V = 3022
+butterfly (36,37), twiddle[0] =1
+u[36] = 1904, v[37] = 2714
+U = 2309, V = 2924
+butterfly (38,39), twiddle[0] =1
+u[38] = 2398, v[39] = 3185
+U = 1127, V = 1271
+butterfly (40,41), twiddle[0] =1
+u[40] = 3037, v[41] = 2797
+U = 2917, V = 120
+butterfly (42,43), twiddle[0] =1
+u[42] = 2205, v[43] = 1892
+U = 384, V = 1821
+butterfly (44,45), twiddle[0] =1
+u[44] = 191, v[45] = 1168
+U = 2344, V = 1176
+butterfly (46,47), twiddle[0] =1
+u[46] = 2407, v[47] = 2179
+U = 2293, V = 114
+butterfly (48,49), twiddle[0] =1
+u[48] = 915, v[49] = 1763
+U = 1339, V = 2905
+butterfly (50,51), twiddle[0] =1
+u[50] = 2770, v[51] = 521
+U = 3310, V = 2789
+butterfly (52,53), twiddle[0] =1
+u[52] = 191, v[53] = 1917
+U = 1054, V = 2466
+butterfly (54,55), twiddle[0] =1
+u[54] = 651, v[55] = 3150
+U = 236, V = 415
+butterfly (56,57), twiddle[0] =1
+u[56] = 2530, v[57] = 330
+U = 1430, V = 1100
+butterfly (58,59), twiddle[0] =1
+u[58] = 991, v[59] = 2498
+U = 80, V = 911
+butterfly (60,61), twiddle[0] =1
+u[60] = 3281, v[61] = 825
+U = 2053, V = 1228
+butterfly (62,63), twiddle[0] =1
+u[62] = 1521, v[63] = 1778
+U = 3314, V = 1536
+butterfly (64,65), twiddle[0] =1
+u[64] = 2649, v[65] = 1048
+U = 184, V = 2465
+butterfly (66,67), twiddle[0] =1
+u[66] = 673, v[67] = 3284
+U = 314, V = 359
+butterfly (68,69), twiddle[0] =1
+u[68] = 1260, v[69] = 697
+U = 2643, V = 1946
+butterfly (70,71), twiddle[0] =1
+u[70] = 2183, v[71] = 2292
+U = 573, V = 1610
+butterfly (72,73), twiddle[0] =1
+u[72] = 1490, v[73] = 3128
+U = 2309, V = 2510
+butterfly (74,75), twiddle[0] =1
+u[74] = 278, v[75] = 3059
+U = 4, V = 274
+butterfly (76,77), twiddle[0] =1
+u[76] = 2770, v[77] = 692
+U = 1731, V = 1039
+butterfly (78,79), twiddle[0] =1
+u[78] = 14, v[79] = 1098
+U = 556, V = 2787
+butterfly (80,81), twiddle[0] =1
+u[80] = 1760, v[81] = 2982
+U = 2371, V = 2718
+butterfly (82,83), twiddle[0] =1
+u[82] = 278, v[83] = 1582
+U = 930, V = 2677
+butterfly (84,85), twiddle[0] =1
+u[84] = 2205, v[85] = 209
+U = 1207, V = 998
+butterfly (86,87), twiddle[0] =1
+u[86] = 255, v[87] = 80
+U = 1832, V = 1752
+butterfly (88,89), twiddle[0] =1
+u[88] = 693, v[89] = 1415
+U = 1054, V = 2968
+butterfly (90,91), twiddle[0] =1
+u[90] = 33, v[91] = 1879
+U = 956, V = 2406
+butterfly (92,93), twiddle[0] =1
+u[92] = 991, v[93] = 3306
+U = 484, V = 507
+butterfly (94,95), twiddle[0] =1
+u[94] = 1323, v[95] = 2385
+U = 1854, V = 2798
+butterfly (96,97), twiddle[0] =1
+u[96] = 1498, v[97] = 3215
+U = 692, V = 806
+butterfly (98,99), twiddle[0] =1
+u[98] = 2183, v[99] = 2525
+U = 2354, V = 3158
+butterfly (100,101), twiddle[0] =1
+u[100] = 2398, v[101] = 1064
+U = 1731, V = 667
+butterfly (102,103), twiddle[0] =1
+u[102] = 862, v[103] = 1462
+U = 1162, V = 3029
+butterfly (104,105), twiddle[0] =1
+u[104] = 1898, v[105] = 2790
+U = 2344, V = 2883
+butterfly (106,107), twiddle[0] =1
+u[106] = 255, v[107] = 2406
+U = 2995, V = 589
+butterfly (108,109), twiddle[0] =1
+u[108] = 651, v[109] = 1252
+U = 2616, V = 1364
+butterfly (110,111), twiddle[0] =1
+u[110] = 515, v[111] = 432
+U = 2138, V = 1706
+butterfly (112,113), twiddle[0] =1
+u[112] = 278, v[113] = 254
+U = 266, V = 12
+butterfly (114,115), twiddle[0] =1
+u[114] = 14, v[115] = 2474
+U = 1244, V = 2099
+butterfly (116,117), twiddle[0] =1
+u[116] = 2407, v[117] = 1890
+U = 484, V = 1923
+butterfly (118,119), twiddle[0] =1
+u[118] = 515, v[119] = 1991
+U = 1253, V = 2591
+butterfly (120,121), twiddle[0] =1
+u[120] = 1741, v[121] = 2365
+U = 2053, V = 3017
+butterfly (122,123), twiddle[0] =1
+u[122] = 1323, v[123] = 655
+U = 989, V = 334
+butterfly (124,125), twiddle[0] =1
+u[124] = 1521, v[125] = 2365
+U = 1943, V = 2907
+butterfly (126,127), twiddle[0] =1
+u[126] = 1958, v[127] = 3139
+U = 884, V = 1074
+butterfly (128,129), twiddle[0] =1
+u[128] = 1918, v[129] = 3069
+U = 829, V = 1089
+butterfly (130,131), twiddle[0] =1
+u[130] = 1048, v[131] = 1061
+U = 2719, V = 1658
+butterfly (132,133), twiddle[0] =1
+u[132] = 920, v[133] = 3037
+U = 314, V = 606
+butterfly (134,135), twiddle[0] =1
+u[134] = 3215, v[135] = 1374
+U = 630, V = 2585
+butterfly (136,137), twiddle[0] =1
+u[136] = 315, v[137] = 2819
+U = 1567, V = 2077
+butterfly (138,139), twiddle[0] =1
+u[138] = 2982, v[139] = 316
+U = 1649, V = 1333
+butterfly (140,141), twiddle[0] =1
+u[140] = 1763, v[141] = 2945
+U = 2354, V = 2738
+butterfly (142,143), twiddle[0] =1
+u[142] = 254, v[143] = 2887
+U = 3235, V = 348
+butterfly (144,145), twiddle[0] =1
+u[144] = 3188, v[145] = 2819
+U = 1339, V = 1849
+butterfly (146,147), twiddle[0] =1
+u[146] = 3128, v[147] = 1066
+U = 2097, V = 1031
+butterfly (148,149), twiddle[0] =1
+u[148] = 2797, v[149] = 2392
+U = 930, V = 1867
+butterfly (150,151), twiddle[0] =1
+u[150] = 2790, v[151] = 1007
+U = 234, V = 2556
+butterfly (152,153), twiddle[0] =1
+u[152] = 866, v[153] = 2425
+U = 3310, V = 885
+butterfly (154,155), twiddle[0] =1
+u[154] = 1415, v[155] = 1080
+U = 2912, V = 1832
+butterfly (156,157), twiddle[0] =1
+u[156] = 330, v[157] = 2158
+U = 1244, V = 2415
+butterfly (158,159), twiddle[0] =1
+u[158] = 2365, v[159] = 2485
+U = 2425, V = 3269
+butterfly (160,161), twiddle[0] =1
+u[160] = 555, v[161] = 3037
+U = 1796, V = 2088
+butterfly (162,163), twiddle[0] =1
+u[162] = 697, v[163] = 2601
+U = 1649, V = 2377
+butterfly (164,165), twiddle[0] =1
+u[164] = 2714, v[165] = 623
+U = 4, V = 2710
+butterfly (166,167), twiddle[0] =1
+u[166] = 1064, v[167] = 1256
+U = 1160, V = 3233
+butterfly (168,169), twiddle[0] =1
+u[168] = 1705, v[169] = 2392
+U = 384, V = 1321
+butterfly (170,171), twiddle[0] =1
+u[170] = 209, v[171] = 1772
+U = 2655, V = 883
+butterfly (172,173), twiddle[0] =1
+u[172] = 1917, v[173] = 744
+U = 2995, V = 2251
+butterfly (174,175), twiddle[0] =1
+u[174] = 1890, v[175] = 1529
+U = 45, V = 1845
+butterfly (176,177), twiddle[0] =1
+u[176] = 469, v[177] = 2945
+U = 1707, V = 2091
+butterfly (178,179), twiddle[0] =1
+u[178] = 692, v[179] = 1803
+U = 2912, V = 1109
+butterfly (180,181), twiddle[0] =1
+u[180] = 1168, v[181] = 744
+U = 956, V = 212
+butterfly (182,183), twiddle[0] =1
+u[182] = 1252, v[183] = 1126
+U = 1189, V = 63
+butterfly (184,185), twiddle[0] =1
+u[184] = 1331, v[185] = 2158
+U = 80, V = 1251
+butterfly (186,187), twiddle[0] =1
+u[186] = 3306, v[187] = 8
+U = 1657, V = 1649
+butterfly (188,189), twiddle[0] =1
+u[188] = 825, v[189] = 1153
+U = 989, V = 3165
+butterfly (190,191), twiddle[0] =1
+u[190] = 2365, v[191] = 3319
+U = 2842, V = 2852
+butterfly (192,193), twiddle[0] =1
+u[192] = 2338, v[193] = 1061
+U = 35, V = 2303
+butterfly (194,195), twiddle[0] =1
+u[194] = 3284, v[195] = 1305
+U = 630, V = 2654
+butterfly (196,197), twiddle[0] =1
+u[196] = 1874, v[197] = 2601
+U = 573, V = 1301
+butterfly (198,199), twiddle[0] =1
+u[198] = 2525, v[199] = 849
+U = 1687, V = 838
+butterfly (200,201), twiddle[0] =1
+u[200] = 1188, v[201] = 1066
+U = 1127, V = 61
+butterfly (202,203), twiddle[0] =1
+u[202] = 1582, v[203] = 738
+U = 1160, V = 422
+butterfly (204,205), twiddle[0] =1
+u[204] = 521, v[205] = 1803
+U = 1162, V = 2688
+butterfly (206,207), twiddle[0] =1
+u[206] = 2474, v[207] = 423
+U = 3113, V = 2690
+butterfly (208,209), twiddle[0] =1
+u[208] = 1832, v[209] = 316
+U = 1074, V = 758
+butterfly (210,211), twiddle[0] =1
+u[210] = 3059, v[211] = 738
+U = 234, V = 2825
+butterfly (212,213), twiddle[0] =1
+u[212] = 1892, v[213] = 1772
+U = 1832, V = 60
+butterfly (214,215), twiddle[0] =1
+u[214] = 2406, v[215] = 10
+U = 1208, V = 1198
+butterfly (216,217), twiddle[0] =1
+u[216] = 2721, v[217] = 1080
+U = 236, V = 2485
+butterfly (218,219), twiddle[0] =1
+u[218] = 1879, v[219] = 499
+U = 1189, V = 690
+butterfly (220,221), twiddle[0] =1
+u[220] = 2498, v[221] = 8
+U = 1253, V = 1245
+butterfly (222,223), twiddle[0] =1
+u[222] = 655, v[223] = 3299
+U = 1977, V = 2007
+butterfly (224,225), twiddle[0] =1
+u[224] = 1901, v[225] = 1374
+U = 3302, V = 1928
+butterfly (226,227), twiddle[0] =1
+u[226] = 2292, v[227] = 849
+U = 3235, V = 2386
+butterfly (228,229), twiddle[0] =1
+u[228] = 3185, v[229] = 1256
+U = 556, V = 2629
+butterfly (230,231), twiddle[0] =1
+u[230] = 1462, v[231] = 1435
+U = 3113, V = 1678
+butterfly (232,233), twiddle[0] =1
+u[232] = 250, v[233] = 1007
+U = 2293, V = 1286
+butterfly (234,235), twiddle[0] =1
+u[234] = 80, v[235] = 10
+U = 45, V = 35
+butterfly (236,237), twiddle[0] =1
+u[236] = 3150, v[237] = 1126
+U = 2138, V = 1012
+butterfly (238,239), twiddle[0] =1
+u[238] = 1991, v[239] = 193
+U = 1092, V = 899
+butterfly (240,241), twiddle[0] =1
+u[240] = 2997, v[241] = 2887
+U = 2942, V = 55
+butterfly (242,243), twiddle[0] =1
+u[242] = 1098, v[243] = 423
+U = 2425, V = 2002
+butterfly (244,245), twiddle[0] =1
+u[244] = 2179, v[245] = 1529
+U = 1854, V = 325
+butterfly (246,247), twiddle[0] =1
+u[246] = 432, v[247] = 193
+U = 1977, V = 1784
+butterfly (248,249), twiddle[0] =1
+u[248] = 814, v[249] = 2485
+U = 3314, V = 829
+butterfly (250,251), twiddle[0] =1
+u[250] = 2385, v[251] = 3299
+U = 2842, V = 2872
+butterfly (252,253), twiddle[0] =1
+u[252] = 1778, v[253] = 3319
+U = 884, V = 894
+butterfly (254,255), twiddle[0] =1
+u[254] = 3139, v[255] = 639
+U = 1889, V = 1250
+twiddle[0]:1
+twiddle[1]:3328
+twiddle[2]:1729
+twiddle[3]:1600
+twiddle[4]:2580
+twiddle[5]:749
+twiddle[6]:3289
+twiddle[7]:40
+twiddle[8]:2642
+twiddle[9]:687
+twiddle[10]:630
+twiddle[11]:2699
+twiddle[12]:1897
+twiddle[13]:1432
+twiddle[14]:848
+twiddle[15]:2481
+twiddle[16]:1062
+twiddle[17]:2267
+twiddle[18]:1919
+twiddle[19]:1410
+twiddle[20]:193
+twiddle[21]:3136
+twiddle[22]:797
+twiddle[23]:2532
+twiddle[24]:2786
+twiddle[25]:543
+twiddle[26]:3260
+twiddle[27]:69
+twiddle[28]:569
+twiddle[29]:2760
+twiddle[30]:1746
+twiddle[31]:1583
+twiddle[32]:296
+twiddle[33]:3033
+twiddle[34]:2447
+twiddle[35]:882
+twiddle[36]:1339
+twiddle[37]:1990
+twiddle[38]:1476
+twiddle[39]:1853
+twiddle[40]:3046
+twiddle[41]:283
+twiddle[42]:56
+twiddle[43]:3273
+twiddle[44]:2240
+twiddle[45]:1089
+twiddle[46]:1333
+twiddle[47]:1996
+twiddle[48]:1426
+twiddle[49]:1903
+twiddle[50]:2094
+twiddle[51]:1235
+twiddle[52]:535
+twiddle[53]:2794
+twiddle[54]:2882
+twiddle[55]:447
+twiddle[56]:2393
+twiddle[57]:936
+twiddle[58]:2879
+twiddle[59]:450
+twiddle[60]:1974
+twiddle[61]:1355
+twiddle[62]:821
+twiddle[63]:2508
+twiddle[64]:3040
+twiddle[65]:289
+twiddle[66]:2998
+twiddle[67]:331
+twiddle[68]:76
+twiddle[69]:3253
+twiddle[70]:1573
+twiddle[71]:1756
+twiddle[72]:2132
+twiddle[73]:1197
+twiddle[74]:1025
+twiddle[75]:2304
+twiddle[76]:1052
+twiddle[77]:2277
+twiddle[78]:1274
+twiddle[79]:2055
+twiddle[80]:2679
+twiddle[81]:650
+twiddle[82]:1352
+twiddle[83]:1977
+twiddle[84]:816
+twiddle[85]:2513
+twiddle[86]:2697
+twiddle[87]:632
+twiddle[88]:464
+twiddle[89]:2865
+twiddle[90]:3296
+twiddle[91]:33
+twiddle[92]:2009
+twiddle[93]:1320
+twiddle[94]:1414
+twiddle[95]:1915
+twiddle[96]:1010
+twiddle[97]:2319
+twiddle[98]:1894
+twiddle[99]:1435
+twiddle[100]:2522
+twiddle[101]:807
+twiddle[102]:2877
+twiddle[103]:452
+twiddle[104]:1891
+twiddle[105]:1438
+twiddle[106]:461
+twiddle[107]:2868
+twiddle[108]:1795
+twiddle[109]:1534
+twiddle[110]:927
+twiddle[111]:2402
+twiddle[112]:682
+twiddle[113]:2647
+twiddle[114]:712
+twiddle[115]:2617
+twiddle[116]:1848
+twiddle[117]:1481
+twiddle[118]:2681
+twiddle[119]:648
+twiddle[120]:855
+twiddle[121]:2474
+twiddle[122]:219
+twiddle[123]:3110
+twiddle[124]:2102
+twiddle[125]:1227
+twiddle[126]:2419
+twiddle[127]:910
+stage 2:
+butterfly (0,2), twiddle[0] =1
+u[0] = 2565, v[2] = 829
+U = 1697, V = 868
+butterfly (1,3), twiddle[64] =3040
+u[1] = 647, v[3] = 1820
+U = 2898, V = 1384
+butterfly (4,6), twiddle[0] =1
+u[4] = 184, v[6] = 35
+U = 1774, V = 1739
+butterfly (5,7), twiddle[64] =3040
+u[5] = 2958, v[7] = 1463
+U = 546, V = 2022
+butterfly (8,10), twiddle[0] =1
+u[8] = 2031, v[10] = 1796
+U = 249, V = 1782
+butterfly (9,11), twiddle[64] =3040
+u[9] = 2172, v[11] = 3293
+U = 1068, V = 528
+butterfly (12,14), twiddle[0] =1
+u[12] = 692, v[14] = 3302
+U = 1997, V = 2024
+butterfly (13,15), twiddle[64] =3040
+u[13] = 223, v[15] = 305
+U = 264, V = 1862
+butterfly (16,18), twiddle[0] =1
+u[16] = 2259, v[18] = 1339
+U = 1799, V = 460
+butterfly (17,19), twiddle[64] =3040
+u[17] = 1944, v[19] = 151
+U = 2712, V = 2238
+butterfly (20,22), twiddle[0] =1
+u[20] = 2371, v[22] = 1074
+U = 58, V = 2313
+butterfly (21,23), twiddle[64] =3040
+u[21] = 666, v[23] = 824
+U = 745, V = 2857
+butterfly (24,26), twiddle[0] =1
+u[24] = 1339, v[26] = 1707
+U = 1523, V = 3145
+butterfly (25,27), twiddle[64] =3040
+u[25] = 473, v[27] = 2315
+U = 1394, V = 3178
+butterfly (28,30), twiddle[0] =1
+u[28] = 266, v[30] = 2942
+U = 1604, V = 1991
+butterfly (29,31), twiddle[64] =3040
+u[29] = 2264, v[31] = 2128
+U = 2196, V = 322
+butterfly (32,34), twiddle[0] =1
+u[32] = 2031, v[34] = 1567
+U = 1799, V = 232
+butterfly (33,35), twiddle[64] =3040
+u[33] = 1111, v[35] = 3022
+U = 402, V = 1497
+butterfly (36,38), twiddle[0] =1
+u[36] = 2309, v[38] = 1127
+U = 1718, V = 591
+butterfly (37,39), twiddle[64] =3040
+u[37] = 2924, v[39] = 1271
+U = 433, V = 2494
+butterfly (40,42), twiddle[0] =1
+u[40] = 2917, v[42] = 384
+U = 3315, V = 2931
+butterfly (41,43), twiddle[64] =3040
+u[41] = 120, v[43] = 1821
+U = 2635, V = 1113
+butterfly (44,46), twiddle[0] =1
+u[44] = 2344, v[46] = 2293
+U = 654, V = 1690
+butterfly (45,47), twiddle[64] =3040
+u[45] = 1176, v[47] = 114
+U = 645, V = 3004
+butterfly (48,50), twiddle[0] =1
+u[48] = 1339, v[50] = 3310
+U = 660, V = 679
+butterfly (49,51), twiddle[64] =3040
+u[49] = 2905, v[51] = 2789
+U = 2847, V = 3212
+butterfly (52,54), twiddle[0] =1
+u[52] = 1054, v[54] = 236
+U = 645, V = 409
+butterfly (53,55), twiddle[64] =3040
+u[53] = 2466, v[55] = 415
+U = 3105, V = 1576
+butterfly (56,58), twiddle[0] =1
+u[56] = 1430, v[58] = 80
+U = 755, V = 675
+butterfly (57,59), twiddle[64] =3040
+u[57] = 1100, v[59] = 911
+U = 2670, V = 986
+butterfly (60,62), twiddle[0] =1
+u[60] = 2053, v[62] = 3314
+U = 1019, V = 1034
+butterfly (61,63), twiddle[64] =3040
+u[61] = 1228, v[63] = 1536
+U = 1382, V = 1229
+butterfly (64,66), twiddle[0] =1
+u[64] = 184, v[66] = 314
+U = 249, V = 3264
+butterfly (65,67), twiddle[64] =3040
+u[65] = 2465, v[67] = 359
+U = 1412, V = 1951
+butterfly (68,70), twiddle[0] =1
+u[68] = 2643, v[70] = 573
+U = 1608, V = 1035
+butterfly (69,71), twiddle[64] =3040
+u[69] = 1946, v[71] = 1610
+U = 1778, V = 1383
+butterfly (72,74), twiddle[0] =1
+u[72] = 2309, v[74] = 4
+U = 2821, V = 2817
+butterfly (73,75), twiddle[64] =3040
+u[73] = 2510, v[75] = 274
+U = 1392, V = 3140
+butterfly (76,78), twiddle[0] =1
+u[76] = 1731, v[78] = 556
+U = 2808, V = 2252
+butterfly (77,79), twiddle[64] =3040
+u[77] = 1039, v[79] = 2787
+U = 1913, V = 2911
+butterfly (80,82), twiddle[0] =1
+u[80] = 2371, v[82] = 930
+U = 3315, V = 2385
+butterfly (81,83), twiddle[64] =3040
+u[81] = 2718, v[83] = 2677
+U = 1033, V = 2398
+butterfly (84,86), twiddle[0] =1
+u[84] = 1207, v[86] = 1832
+U = 3184, V = 1352
+butterfly (85,87), twiddle[64] =3040
+u[85] = 998, v[87] = 1752
+U = 1375, V = 2425
+butterfly (88,90), twiddle[0] =1
+u[88] = 1054, v[90] = 956
+U = 1005, V = 49
+butterfly (89,91), twiddle[64] =3040
+u[89] = 2968, v[91] = 2406
+U = 2687, V = 2016
+butterfly (92,94), twiddle[0] =1
+u[92] = 484, v[94] = 1854
+U = 1169, V = 2644
+butterfly (93,95), twiddle[64] =3040
+u[93] = 507, v[95] = 2798
+U = 3317, V = 3143
+butterfly (96,98), twiddle[0] =1
+u[96] = 692, v[98] = 2354
+U = 1523, V = 2498
+butterfly (97,99), twiddle[64] =3040
+u[97] = 806, v[99] = 3158
+U = 1982, V = 306
+butterfly (100,102), twiddle[0] =1
+u[100] = 1731, v[102] = 1162
+U = 3111, V = 1949
+butterfly (101,103), twiddle[64] =3040
+u[101] = 667, v[103] = 3029
+U = 1848, V = 1751
+butterfly (104,106), twiddle[0] =1
+u[104] = 2344, v[106] = 2995
+U = 1005, V = 1339
+butterfly (105,107), twiddle[64] =3040
+u[105] = 2883, v[107] = 589
+U = 1736, V = 1417
+butterfly (108,110), twiddle[0] =1
+u[108] = 2616, v[110] = 2138
+U = 2377, V = 239
+butterfly (109,111), twiddle[64] =3040
+u[109] = 1364, v[111] = 1706
+U = 1535, V = 2813
+butterfly (112,114), twiddle[0] =1
+u[112] = 266, v[114] = 1244
+U = 755, V = 2840
+butterfly (113,115), twiddle[64] =3040
+u[113] = 12, v[115] = 2099
+U = 2720, V = 297
+butterfly (116,118), twiddle[0] =1
+u[116] = 484, v[118] = 1253
+U = 2533, V = 1280
+butterfly (117,119), twiddle[64] =3040
+u[117] = 1923, v[119] = 2591
+U = 2257, V = 3314
+butterfly (120,122), twiddle[0] =1
+u[120] = 2053, v[122] = 989
+U = 1521, V = 532
+butterfly (121,123), twiddle[64] =3040
+u[121] = 3017, v[123] = 334
+U = 11, V = 135
+butterfly (124,126), twiddle[0] =1
+u[124] = 1943, v[126] = 884
+U = 3078, V = 2194
+butterfly (125,127), twiddle[64] =3040
+u[125] = 2907, v[127] = 1074
+U = 326, V = 3116
+butterfly (128,130), twiddle[0] =1
+u[128] = 829, v[130] = 2719
+U = 1774, V = 2384
+butterfly (129,131), twiddle[64] =3040
+u[129] = 1089, v[131] = 1658
+U = 3038, V = 660
+butterfly (132,134), twiddle[0] =1
+u[132] = 314, v[134] = 630
+U = 472, V = 3171
+butterfly (133,135), twiddle[64] =3040
+u[133] = 606, v[135] = 2585
+U = 3260, V = 1336
+butterfly (136,138), twiddle[0] =1
+u[136] = 1567, v[138] = 1649
+U = 1608, V = 3288
+butterfly (137,139), twiddle[64] =3040
+u[137] = 2077, v[139] = 1333
+U = 1705, V = 2349
+butterfly (140,142), twiddle[0] =1
+u[140] = 2354, v[142] = 3235
+U = 1130, V = 1224
+butterfly (141,143), twiddle[64] =3040
+u[141] = 2738, v[143] = 348
+U = 1543, V = 861
+butterfly (144,146), twiddle[0] =1
+u[144] = 1339, v[146] = 2097
+U = 1718, V = 2950
+butterfly (145,147), twiddle[64] =3040
+u[145] = 1849, v[147] = 1031
+U = 1440, V = 1643
+butterfly (148,150), twiddle[0] =1
+u[148] = 930, v[150] = 234
+U = 582, V = 348
+butterfly (149,151), twiddle[64] =3040
+u[149] = 1867, v[151] = 2556
+U = 547, V = 1355
+butterfly (152,154), twiddle[0] =1
+u[152] = 3310, v[154] = 2912
+U = 3111, V = 199
+butterfly (153,155), twiddle[64] =3040
+u[153] = 885, v[155] = 1832
+U = 3023, V = 2017
+butterfly (156,158), twiddle[0] =1
+u[156] = 1244, v[158] = 2425
+U = 170, V = 1074
+butterfly (157,159), twiddle[64] =3040
+u[157] = 2415, v[159] = 3269
+U = 2842, V = 230
+butterfly (160,162), twiddle[0] =1
+u[160] = 1796, v[162] = 1649
+U = 58, V = 1738
+butterfly (161,163), twiddle[64] =3040
+u[161] = 2088, v[163] = 2377
+U = 568, V = 148
+butterfly (164,166), twiddle[0] =1
+u[164] = 4, v[166] = 1160
+U = 582, V = 2751
+butterfly (165,167), twiddle[64] =3040
+u[165] = 2710, v[167] = 3233
+U = 1307, V = 671
+butterfly (168,170), twiddle[0] =1
+u[168] = 384, v[170] = 2655
+U = 3184, V = 529
+butterfly (169,171), twiddle[64] =3040
+u[169] = 1321, v[171] = 883
+U = 1102, V = 3289
+butterfly (172,174), twiddle[0] =1
+u[172] = 2995, v[174] = 45
+U = 1520, V = 1475
+butterfly (173,175), twiddle[64] =3040
+u[173] = 2251, v[175] = 1845
+U = 2048, V = 1255
+butterfly (176,178), twiddle[0] =1
+u[176] = 1707, v[178] = 2912
+U = 645, V = 1062
+butterfly (177,179), twiddle[64] =3040
+u[177] = 2091, v[179] = 1109
+U = 1600, V = 1248
+butterfly (180,182), twiddle[0] =1
+u[180] = 956, v[182] = 1189
+U = 2737, V = 1548
+butterfly (181,183), twiddle[64] =3040
+u[181] = 212, v[183] = 63
+U = 1802, V = 108
+butterfly (184,186), twiddle[0] =1
+u[184] = 80, v[186] = 1657
+U = 2533, V = 876
+butterfly (185,187), twiddle[64] =3040
+u[185] = 1251, v[187] = 1649
+U = 1450, V = 918
+butterfly (188,190), twiddle[0] =1
+u[188] = 989, v[190] = 2842
+U = 251, V = 738
+butterfly (189,191), twiddle[64] =3040
+u[189] = 3165, v[191] = 2852
+U = 1344, V = 3042
+butterfly (192,194), twiddle[0] =1
+u[192] = 35, v[194] = 630
+U = 1997, V = 1367
+butterfly (193,195), twiddle[64] =3040
+u[193] = 2303, v[195] = 2654
+U = 814, V = 2449
+butterfly (196,198), twiddle[0] =1
+u[196] = 573, v[198] = 1687
+U = 1130, V = 2772
+butterfly (197,199), twiddle[64] =3040
+u[197] = 1301, v[199] = 838
+U = 2734, V = 1341
+butterfly (200,202), twiddle[0] =1
+u[200] = 1127, v[202] = 1160
+U = 2808, V = 1648
+butterfly (201,203), twiddle[64] =3040
+u[201] = 61, v[203] = 422
+U = 1906, V = 565
+butterfly (204,206), twiddle[0] =1
+u[204] = 1162, v[206] = 3113
+U = 473, V = 689
+butterfly (205,207), twiddle[64] =3040
+u[205] = 2688, v[207] = 2690
+U = 2689, V = 289
+butterfly (208,210), twiddle[0] =1
+u[208] = 1074, v[210] = 234
+U = 654, V = 420
+butterfly (209,211), twiddle[64] =3040
+u[209] = 758, v[211] = 2825
+U = 127, V = 736
+butterfly (212,214), twiddle[0] =1
+u[212] = 1832, v[214] = 1208
+U = 1520, V = 312
+butterfly (213,215), twiddle[64] =3040
+u[213] = 60, v[215] = 1198
+U = 629, V = 1320
+butterfly (216,218), twiddle[0] =1
+u[216] = 236, v[218] = 1189
+U = 2377, V = 1188
+butterfly (217,219), twiddle[64] =3040
+u[217] = 2485, v[219] = 690
+U = 3252, V = 1949
+butterfly (220,222), twiddle[0] =1
+u[220] = 1253, v[222] = 1977
+U = 1615, V = 2967
+butterfly (221,223), twiddle[64] =3040
+u[221] = 1245, v[223] = 2007
+U = 1626, V = 252
+butterfly (224,226), twiddle[0] =1
+u[224] = 3302, v[226] = 3235
+U = 1604, V = 1698
+butterfly (225,227), twiddle[64] =3040
+u[225] = 1928, v[227] = 2386
+U = 2157, V = 2930
+butterfly (228,230), twiddle[0] =1
+u[228] = 556, v[230] = 3113
+U = 170, V = 386
+butterfly (229,231), twiddle[64] =3040
+u[229] = 2629, v[231] = 1678
+U = 489, V = 734
+butterfly (232,234), twiddle[0] =1
+u[232] = 2293, v[234] = 45
+U = 1169, V = 1124
+butterfly (233,235), twiddle[64] =3040
+u[233] = 1286, v[235] = 35
+U = 2325, V = 661
+butterfly (236,238), twiddle[0] =1
+u[236] = 2138, v[238] = 1092
+U = 1615, V = 523
+butterfly (237,239), twiddle[64] =3040
+u[237] = 1012, v[239] = 899
+U = 2620, V = 1981
+butterfly (240,242), twiddle[0] =1
+u[240] = 2942, v[242] = 2425
+U = 1019, V = 1923
+butterfly (241,243), twiddle[64] =3040
+u[241] = 55, v[243] = 2002
+U = 2693, V = 41
+butterfly (244,246), twiddle[0] =1
+u[244] = 1854, v[246] = 1977
+U = 251, V = 1603
+butterfly (245,247), twiddle[64] =3040
+u[245] = 325, v[247] = 1784
+U = 2719, V = 2763
+butterfly (248,250), twiddle[0] =1
+u[248] = 3314, v[250] = 2842
+U = 3078, V = 236
+butterfly (249,251), twiddle[64] =3040
+u[249] = 829, v[251] = 2872
+U = 186, V = 597
+butterfly (252,254), twiddle[0] =1
+u[252] = 884, v[254] = 1889
+U = 3051, V = 1162
+butterfly (253,255), twiddle[64] =3040
+u[253] = 894, v[255] = 1250
+U = 1072, V = 1507
+twiddle[0]:1
+twiddle[1]:3328
+twiddle[2]:1729
+twiddle[3]:1600
+twiddle[4]:2580
+twiddle[5]:749
+twiddle[6]:3289
+twiddle[7]:40
+twiddle[8]:2642
+twiddle[9]:687
+twiddle[10]:630
+twiddle[11]:2699
+twiddle[12]:1897
+twiddle[13]:1432
+twiddle[14]:848
+twiddle[15]:2481
+twiddle[16]:1062
+twiddle[17]:2267
+twiddle[18]:1919
+twiddle[19]:1410
+twiddle[20]:193
+twiddle[21]:3136
+twiddle[22]:797
+twiddle[23]:2532
+twiddle[24]:2786
+twiddle[25]:543
+twiddle[26]:3260
+twiddle[27]:69
+twiddle[28]:569
+twiddle[29]:2760
+twiddle[30]:1746
+twiddle[31]:1583
+twiddle[32]:296
+twiddle[33]:3033
+twiddle[34]:2447
+twiddle[35]:882
+twiddle[36]:1339
+twiddle[37]:1990
+twiddle[38]:1476
+twiddle[39]:1853
+twiddle[40]:3046
+twiddle[41]:283
+twiddle[42]:56
+twiddle[43]:3273
+twiddle[44]:2240
+twiddle[45]:1089
+twiddle[46]:1333
+twiddle[47]:1996
+twiddle[48]:1426
+twiddle[49]:1903
+twiddle[50]:2094
+twiddle[51]:1235
+twiddle[52]:535
+twiddle[53]:2794
+twiddle[54]:2882
+twiddle[55]:447
+twiddle[56]:2393
+twiddle[57]:936
+twiddle[58]:2879
+twiddle[59]:450
+twiddle[60]:1974
+twiddle[61]:1355
+twiddle[62]:821
+twiddle[63]:2508
+twiddle[64]:3040
+twiddle[65]:289
+twiddle[66]:2998
+twiddle[67]:331
+twiddle[68]:76
+twiddle[69]:3253
+twiddle[70]:1573
+twiddle[71]:1756
+twiddle[72]:2132
+twiddle[73]:1197
+twiddle[74]:1025
+twiddle[75]:2304
+twiddle[76]:1052
+twiddle[77]:2277
+twiddle[78]:1274
+twiddle[79]:2055
+twiddle[80]:2679
+twiddle[81]:650
+twiddle[82]:1352
+twiddle[83]:1977
+twiddle[84]:816
+twiddle[85]:2513
+twiddle[86]:2697
+twiddle[87]:632
+twiddle[88]:464
+twiddle[89]:2865
+twiddle[90]:3296
+twiddle[91]:33
+twiddle[92]:2009
+twiddle[93]:1320
+twiddle[94]:1414
+twiddle[95]:1915
+twiddle[96]:1010
+twiddle[97]:2319
+twiddle[98]:1894
+twiddle[99]:1435
+twiddle[100]:2522
+twiddle[101]:807
+twiddle[102]:2877
+twiddle[103]:452
+twiddle[104]:1891
+twiddle[105]:1438
+twiddle[106]:461
+twiddle[107]:2868
+twiddle[108]:1795
+twiddle[109]:1534
+twiddle[110]:927
+twiddle[111]:2402
+twiddle[112]:682
+twiddle[113]:2647
+twiddle[114]:712
+twiddle[115]:2617
+twiddle[116]:1848
+twiddle[117]:1481
+twiddle[118]:2681
+twiddle[119]:648
+twiddle[120]:855
+twiddle[121]:2474
+twiddle[122]:219
+twiddle[123]:3110
+twiddle[124]:2102
+twiddle[125]:1227
+twiddle[126]:2419
+twiddle[127]:910
+stage 3:
+butterfly (0,4), twiddle[0] =1
+u[0] = 1697, v[4] = 1774
+U = 71, V = 1626
+butterfly (1,5), twiddle[32] =296
+u[1] = 2898, v[5] = 546
+U = 1722, V = 1880
+butterfly (2,6), twiddle[64] =3040
+u[2] = 868, v[6] = 1739
+U = 2968, V = 1022
+butterfly (3,7), twiddle[96] =1010
+u[3] = 1384, v[7] = 2022
+U = 1703, V = 723
+butterfly (8,12), twiddle[0] =1
+u[8] = 249, v[12] = 1997
+U = 1123, V = 2455
+butterfly (9,13), twiddle[32] =296
+u[9] = 1068, v[13] = 264
+U = 666, V = 2477
+butterfly (10,14), twiddle[64] =3040
+u[10] = 1782, v[14] = 2024
+U = 1903, V = 1679
+butterfly (11,15), twiddle[96] =1010
+u[11] = 528, v[15] = 1862
+U = 1195, V = 2117
+butterfly (16,20), twiddle[0] =1
+u[16] = 1799, v[20] = 58
+U = 2593, V = 2535
+butterfly (17,21), twiddle[32] =296
+u[17] = 2712, v[21] = 745
+U = 64, V = 1493
+butterfly (18,22), twiddle[64] =3040
+u[18] = 460, v[22] = 2313
+U = 3051, V = 3103
+butterfly (19,23), twiddle[96] =1010
+u[19] = 2238, v[23] = 2857
+U = 883, V = 331
+butterfly (24,28), twiddle[0] =1
+u[24] = 1523, v[28] = 1604
+U = 3228, V = 1624
+butterfly (25,29), twiddle[32] =296
+u[25] = 1394, v[29] = 2196
+U = 1795, V = 1148
+butterfly (26,30), twiddle[64] =3040
+u[26] = 3145, v[30] = 1991
+U = 2568, V = 3026
+butterfly (27,31), twiddle[96] =1010
+u[27] = 3178, v[31] = 322
+U = 1750, V = 823
+butterfly (32,36), twiddle[0] =1
+u[32] = 1799, v[36] = 1718
+U = 94, V = 1705
+butterfly (33,37), twiddle[32] =296
+u[33] = 402, v[37] = 433
+U = 2082, V = 2070
+butterfly (34,38), twiddle[64] =3040
+u[34] = 232, v[38] = 591
+U = 2076, V = 276
+butterfly (35,39), twiddle[96] =1010
+u[35] = 1497, v[39] = 2494
+U = 331, V = 2523
+butterfly (40,44), twiddle[0] =1
+u[40] = 3315, v[44] = 654
+U = 320, V = 2995
+butterfly (41,45), twiddle[32] =296
+u[41] = 2635, v[45] = 645
+U = 1640, V = 1568
+butterfly (42,46), twiddle[64] =3040
+u[42] = 2931, v[46] = 1690
+U = 646, V = 2106
+butterfly (43,47), twiddle[96] =1010
+u[43] = 1113, v[47] = 3004
+U = 394, V = 468
+butterfly (48,52), twiddle[0] =1
+u[48] = 660, v[52] = 645
+U = 2317, V = 1672
+butterfly (49,53), twiddle[32] =296
+u[49] = 2847, v[53] = 3105
+U = 2976, V = 1764
+butterfly (50,54), twiddle[64] =3040
+u[50] = 679, v[54] = 409
+U = 544, V = 933
+butterfly (51,55), twiddle[96] =1010
+u[51] = 3212, v[55] = 1576
+U = 2394, V = 588
+butterfly (56,60), twiddle[0] =1
+u[56] = 755, v[60] = 1019
+U = 887, V = 3197
+butterfly (57,61), twiddle[32] =296
+u[57] = 2670, v[61] = 1382
+U = 2026, V = 871
+butterfly (58,62), twiddle[64] =3040
+u[58] = 675, v[62] = 1034
+U = 2519, V = 276
+butterfly (59,63), twiddle[96] =1010
+u[59] = 986, v[63] = 1229
+U = 2772, V = 458
+butterfly (64,68), twiddle[0] =1
+u[64] = 249, v[68] = 1608
+U = 2593, V = 985
+butterfly (65,69), twiddle[32] =296
+u[65] = 1412, v[69] = 1778
+U = 1595, V = 2425
+butterfly (66,70), twiddle[64] =3040
+u[66] = 3264, v[70] = 1035
+U = 485, V = 2487
+butterfly (67,71), twiddle[96] =1010
+u[67] = 1951, v[71] = 1383
+U = 1667, V = 546
+butterfly (72,76), twiddle[0] =1
+u[72] = 2821, v[76] = 2808
+U = 1150, V = 1671
+butterfly (73,77), twiddle[32] =296
+u[73] = 1392, v[77] = 1913
+U = 3317, V = 2788
+butterfly (74,78), twiddle[64] =3040
+u[74] = 2817, v[78] = 2252
+U = 870, V = 3247
+butterfly (75,79), twiddle[96] =1010
+u[75] = 3140, v[79] = 2911
+U = 1361, V = 2459
+butterfly (80,84), twiddle[0] =1
+u[80] = 3315, v[84] = 3184
+U = 1585, V = 1730
+butterfly (81,85), twiddle[32] =296
+u[81] = 1033, v[85] = 1375
+U = 1204, V = 2648
+butterfly (82,86), twiddle[64] =3040
+u[82] = 2385, v[86] = 1352
+U = 204, V = 2201
+butterfly (83,87), twiddle[96] =1010
+u[83] = 2398, v[87] = 2425
+U = 747, V = 3010
+butterfly (88,92), twiddle[0] =1
+u[88] = 1005, v[92] = 1169
+U = 1087, V = 3247
+butterfly (89,93), twiddle[32] =296
+u[89] = 2687, v[93] = 3317
+U = 3002, V = 3301
+butterfly (90,94), twiddle[64] =3040
+u[90] = 49, v[94] = 2644
+U = 3011, V = 465
+butterfly (91,95), twiddle[96] =1010
+u[91] = 2016, v[95] = 3143
+U = 915, V = 124
+butterfly (96,100), twiddle[0] =1
+u[96] = 1523, v[100] = 3111
+U = 2317, V = 2535
+butterfly (97,101), twiddle[32] =296
+u[97] = 1982, v[101] = 1848
+U = 1915, V = 3187
+butterfly (98,102), twiddle[64] =3040
+u[98] = 2498, v[102] = 1949
+U = 559, V = 2230
+butterfly (99,103), twiddle[96] =1010
+u[99] = 306, v[103] = 1751
+U = 2693, V = 2655
+butterfly (104,108), twiddle[0] =1
+u[104] = 1005, v[108] = 2377
+U = 1691, V = 2643
+butterfly (105,109), twiddle[32] =296
+u[105] = 1736, v[109] = 1535
+U = 3300, V = 3116
+butterfly (106,110), twiddle[64] =3040
+u[106] = 1339, v[110] = 239
+U = 789, V = 842
+butterfly (107,111), twiddle[96] =1010
+u[107] = 1417, v[111] = 2813
+U = 2115, V = 768
+butterfly (112,116), twiddle[0] =1
+u[112] = 755, v[116] = 2533
+U = 1644, V = 2440
+butterfly (113,117), twiddle[32] =296
+u[113] = 2720, v[117] = 2257
+U = 824, V = 1944
+butterfly (114,118), twiddle[64] =3040
+u[114] = 2840, v[118] = 1280
+U = 2060, V = 952
+butterfly (115,119), twiddle[96] =1010
+u[115] = 297, v[119] = 3314
+U = 141, V = 1097
+butterfly (120,124), twiddle[0] =1
+u[120] = 1521, v[124] = 3078
+U = 635, V = 886
+butterfly (121,125), twiddle[32] =296
+u[121] = 11, v[125] = 326
+U = 1833, V = 3315
+butterfly (122,126), twiddle[64] =3040
+u[122] = 532, v[126] = 2194
+U = 1363, V = 471
+butterfly (123,127), twiddle[96] =1010
+u[123] = 135, v[127] = 3116
+U = 3290, V = 2632
+butterfly (128,132), twiddle[0] =1
+u[128] = 1774, v[132] = 472
+U = 1123, V = 651
+butterfly (129,133), twiddle[32] =296
+u[129] = 3038, v[133] = 3260
+U = 3149, V = 434
+butterfly (130,134), twiddle[64] =3040
+u[130] = 2384, v[134] = 3171
+U = 1113, V = 2200
+butterfly (131,135), twiddle[96] =1010
+u[131] = 660, v[135] = 1336
+U = 998, V = 1507
+butterfly (136,140), twiddle[0] =1
+u[136] = 1608, v[140] = 1130
+U = 1369, V = 239
+butterfly (137,141), twiddle[32] =296
+u[137] = 1705, v[141] = 1543
+U = 1624, V = 673
+butterfly (138,142), twiddle[64] =3040
+u[138] = 3288, v[142] = 1224
+U = 2256, V = 1362
+butterfly (139,143), twiddle[96] =1010
+u[139] = 2349, v[143] = 861
+U = 1605, V = 2415
+butterfly (144,148), twiddle[0] =1
+u[144] = 1718, v[148] = 582
+U = 1150, V = 568
+butterfly (145,149), twiddle[32] =296
+u[145] = 1440, v[149] = 547
+U = 2658, V = 2333
+butterfly (146,150), twiddle[64] =3040
+u[146] = 2950, v[150] = 348
+U = 1649, V = 188
+butterfly (147,151), twiddle[96] =1010
+u[147] = 1643, v[151] = 1355
+U = 1499, V = 2293
+butterfly (152,156), twiddle[0] =1
+u[152] = 3111, v[156] = 170
+U = 3305, V = 3135
+butterfly (153,157), twiddle[32] =296
+u[153] = 3023, v[157] = 2842
+U = 1268, V = 156
+butterfly (154,158), twiddle[64] =3040
+u[154] = 199, v[158] = 1074
+U = 2301, V = 1600
+butterfly (155,159), twiddle[96] =1010
+u[155] = 2017, v[159] = 230
+U = 2788, V = 276
+butterfly (160,164), twiddle[0] =1
+u[160] = 58, v[164] = 582
+U = 320, V = 3067
+butterfly (161,165), twiddle[32] =296
+u[161] = 568, v[165] = 1307
+U = 2602, V = 485
+butterfly (162,166), twiddle[64] =3040
+u[162] = 1738, v[166] = 2751
+U = 580, V = 1567
+butterfly (163,167), twiddle[96] =1010
+u[163] = 148, v[167] = 671
+U = 2074, V = 2205
+butterfly (168,172), twiddle[0] =1
+u[168] = 3184, v[172] = 1520
+U = 2352, V = 832
+butterfly (169,173), twiddle[32] =296
+u[169] = 1102, v[173] = 2048
+U = 1575, V = 3139
+butterfly (170,174), twiddle[64] =3040
+u[170] = 529, v[174] = 1475
+U = 1002, V = 208
+butterfly (171,175), twiddle[96] =1010
+u[171] = 3289, v[175] = 1255
+U = 2272, V = 1838
+butterfly (176,180), twiddle[0] =1
+u[176] = 645, v[180] = 2737
+U = 1691, V = 2283
+butterfly (177,181), twiddle[32] =296
+u[177] = 1600, v[181] = 1802
+U = 1701, V = 65
+butterfly (178,182), twiddle[64] =3040
+u[178] = 1062, v[182] = 1548
+U = 1305, V = 318
+butterfly (179,183), twiddle[96] =1010
+u[179] = 1248, v[183] = 108
+U = 678, V = 3112
+butterfly (184,188), twiddle[0] =1
+u[184] = 2533, v[188] = 251
+U = 1392, V = 1141
+butterfly (185,189), twiddle[32] =296
+u[185] = 1450, v[189] = 1344
+U = 1397, V = 2372
+butterfly (186,190), twiddle[64] =3040
+u[186] = 876, v[190] = 738
+U = 807, V = 33
+butterfly (187,191), twiddle[96] =1010
+u[187] = 918, v[191] = 3042
+U = 1980, V = 2647
+butterfly (192,196), twiddle[0] =1
+u[192] = 1997, v[196] = 1130
+U = 3228, V = 2098
+butterfly (193,197), twiddle[32] =296
+u[193] = 814, v[197] = 2734
+U = 1774, V = 2134
+butterfly (194,198), twiddle[64] =3040
+u[194] = 1367, v[198] = 2772
+U = 405, V = 1618
+butterfly (195,199), twiddle[96] =1010
+u[195] = 2449, v[199] = 1341
+U = 1895, V = 268
+butterfly (200,204), twiddle[0] =1
+u[200] = 2808, v[204] = 473
+U = 3305, V = 2832
+butterfly (201,205), twiddle[32] =296
+u[201] = 1906, v[205] = 2689
+U = 633, V = 631
+butterfly (202,206), twiddle[64] =3040
+u[202] = 1648, v[206] = 689
+U = 2833, V = 2907
+butterfly (203,207), twiddle[96] =1010
+u[203] = 565, v[207] = 289
+U = 427, V = 2891
+butterfly (208,212), twiddle[0] =1
+u[208] = 654, v[212] = 1520
+U = 1087, V = 2896
+butterfly (209,213), twiddle[32] =296
+u[209] = 127, v[213] = 629
+U = 378, V = 2271
+butterfly (210,214), twiddle[64] =3040
+u[210] = 420, v[214] = 312
+U = 366, V = 1039
+butterfly (211,215), twiddle[96] =1010
+u[211] = 736, v[215] = 1320
+U = 1028, V = 1361
+butterfly (216,220), twiddle[0] =1
+u[216] = 2377, v[220] = 1615
+U = 1996, V = 381
+butterfly (217,221), twiddle[32] =296
+u[217] = 3252, v[221] = 1626
+U = 2439, V = 960
+butterfly (218,222), twiddle[64] =3040
+u[218] = 1188, v[222] = 2967
+U = 413, V = 2397
+butterfly (219,223), twiddle[96] =1010
+u[219] = 1949, v[223] = 252
+U = 2765, V = 1432
+butterfly (224,228), twiddle[0] =1
+u[224] = 1604, v[228] = 170
+U = 887, V = 717
+butterfly (225,229), twiddle[32] =296
+u[225] = 2157, v[229] = 489
+U = 1323, V = 518
+butterfly (226,230), twiddle[64] =3040
+u[226] = 1698, v[230] = 386
+U = 1042, V = 169
+butterfly (227,231), twiddle[96] =1010
+u[227] = 2930, v[231] = 734
+U = 1832, V = 423
+butterfly (232,236), twiddle[0] =1
+u[232] = 1169, v[236] = 1615
+U = 1392, V = 3106
+butterfly (233,237), twiddle[32] =296
+u[233] = 2325, v[237] = 2620
+U = 808, V = 2946
+butterfly (234,238), twiddle[64] =3040
+u[234] = 1124, v[238] = 523
+U = 2488, V = 1374
+butterfly (235,239), twiddle[96] =1010
+u[235] = 661, v[239] = 1981
+U = 1321, V = 2529
+butterfly (240,244), twiddle[0] =1
+u[240] = 1019, v[244] = 251
+U = 635, V = 384
+butterfly (241,245), twiddle[32] =296
+u[241] = 2693, v[245] = 2719
+U = 2706, V = 2810
+butterfly (242,246), twiddle[64] =3040
+u[242] = 1923, v[246] = 1603
+U = 1763, V = 366
+butterfly (243,247), twiddle[96] =1010
+u[243] = 41, v[247] = 2763
+U = 1402, V = 267
+butterfly (248,252), twiddle[0] =1
+u[248] = 3078, v[252] = 3051
+U = 1400, V = 1678
+butterfly (249,253), twiddle[32] =296
+u[249] = 186, v[253] = 1072
+U = 629, V = 2032
+butterfly (250,254), twiddle[64] =3040
+u[250] = 236, v[254] = 1162
+U = 699, V = 647
+butterfly (251,255), twiddle[96] =1010
+u[251] = 597, v[255] = 1507
+U = 1052, V = 3181
+twiddle[0]:1
+twiddle[1]:3328
+twiddle[2]:1729
+twiddle[3]:1600
+twiddle[4]:2580
+twiddle[5]:749
+twiddle[6]:3289
+twiddle[7]:40
+twiddle[8]:2642
+twiddle[9]:687
+twiddle[10]:630
+twiddle[11]:2699
+twiddle[12]:1897
+twiddle[13]:1432
+twiddle[14]:848
+twiddle[15]:2481
+twiddle[16]:1062
+twiddle[17]:2267
+twiddle[18]:1919
+twiddle[19]:1410
+twiddle[20]:193
+twiddle[21]:3136
+twiddle[22]:797
+twiddle[23]:2532
+twiddle[24]:2786
+twiddle[25]:543
+twiddle[26]:3260
+twiddle[27]:69
+twiddle[28]:569
+twiddle[29]:2760
+twiddle[30]:1746
+twiddle[31]:1583
+twiddle[32]:296
+twiddle[33]:3033
+twiddle[34]:2447
+twiddle[35]:882
+twiddle[36]:1339
+twiddle[37]:1990
+twiddle[38]:1476
+twiddle[39]:1853
+twiddle[40]:3046
+twiddle[41]:283
+twiddle[42]:56
+twiddle[43]:3273
+twiddle[44]:2240
+twiddle[45]:1089
+twiddle[46]:1333
+twiddle[47]:1996
+twiddle[48]:1426
+twiddle[49]:1903
+twiddle[50]:2094
+twiddle[51]:1235
+twiddle[52]:535
+twiddle[53]:2794
+twiddle[54]:2882
+twiddle[55]:447
+twiddle[56]:2393
+twiddle[57]:936
+twiddle[58]:2879
+twiddle[59]:450
+twiddle[60]:1974
+twiddle[61]:1355
+twiddle[62]:821
+twiddle[63]:2508
+twiddle[64]:3040
+twiddle[65]:289
+twiddle[66]:2998
+twiddle[67]:331
+twiddle[68]:76
+twiddle[69]:3253
+twiddle[70]:1573
+twiddle[71]:1756
+twiddle[72]:2132
+twiddle[73]:1197
+twiddle[74]:1025
+twiddle[75]:2304
+twiddle[76]:1052
+twiddle[77]:2277
+twiddle[78]:1274
+twiddle[79]:2055
+twiddle[80]:2679
+twiddle[81]:650
+twiddle[82]:1352
+twiddle[83]:1977
+twiddle[84]:816
+twiddle[85]:2513
+twiddle[86]:2697
+twiddle[87]:632
+twiddle[88]:464
+twiddle[89]:2865
+twiddle[90]:3296
+twiddle[91]:33
+twiddle[92]:2009
+twiddle[93]:1320
+twiddle[94]:1414
+twiddle[95]:1915
+twiddle[96]:1010
+twiddle[97]:2319
+twiddle[98]:1894
+twiddle[99]:1435
+twiddle[100]:2522
+twiddle[101]:807
+twiddle[102]:2877
+twiddle[103]:452
+twiddle[104]:1891
+twiddle[105]:1438
+twiddle[106]:461
+twiddle[107]:2868
+twiddle[108]:1795
+twiddle[109]:1534
+twiddle[110]:927
+twiddle[111]:2402
+twiddle[112]:682
+twiddle[113]:2647
+twiddle[114]:712
+twiddle[115]:2617
+twiddle[116]:1848
+twiddle[117]:1481
+twiddle[118]:2681
+twiddle[119]:648
+twiddle[120]:855
+twiddle[121]:2474
+twiddle[122]:219
+twiddle[123]:3110
+twiddle[124]:2102
+twiddle[125]:1227
+twiddle[126]:2419
+twiddle[127]:910
+stage 4:
+butterfly (0,8), twiddle[0] =1
+u[0] = 71, v[8] = 1123
+U = 597, V = 2803
+butterfly (1,9), twiddle[16] =1062
+u[1] = 1722, v[9] = 666
+U = 1194, V = 1464
+butterfly (2,10), twiddle[32] =296
+u[2] = 2968, v[10] = 1903
+U = 771, V = 1157
+butterfly (3,11), twiddle[48] =1426
+u[3] = 1703, v[11] = 1195
+U = 1449, V = 2672
+butterfly (4,12), twiddle[64] =3040
+u[4] = 1626, v[12] = 2455
+U = 376, V = 1611
+butterfly (5,13), twiddle[80] =2679
+u[5] = 1880, v[13] = 2477
+U = 514, V = 943
+butterfly (6,14), twiddle[96] =1010
+u[6] = 1022, v[14] = 1679
+U = 3015, V = 1115
+butterfly (7,15), twiddle[112] =682
+u[7] = 723, v[15] = 2117
+U = 1420, V = 693
+butterfly (16,24), twiddle[0] =1
+u[16] = 2593, v[24] = 3228
+U = 1246, V = 1347
+butterfly (17,25), twiddle[16] =1062
+u[17] = 64, v[25] = 1795
+U = 2594, V = 2972
+butterfly (18,26), twiddle[32] =296
+u[18] = 3051, v[26] = 2568
+U = 1145, V = 1575
+butterfly (19,27), twiddle[48] =1426
+u[19] = 883, v[27] = 1750
+U = 2981, V = 1023
+butterfly (20,28), twiddle[64] =3040
+u[20] = 2535, v[28] = 1624
+U = 415, V = 3185
+butterfly (21,29), twiddle[80] =2679
+u[21] = 1493, v[29] = 1148
+U = 2985, V = 1061
+butterfly (22,30), twiddle[96] =1010
+u[22] = 3103, v[30] = 3026
+U = 1400, V = 2266
+butterfly (23,31), twiddle[112] =682
+u[23] = 331, v[31] = 823
+U = 577, V = 2007
+butterfly (32,40), twiddle[0] =1
+u[32] = 94, v[40] = 320
+U = 207, V = 3216
+butterfly (33,41), twiddle[16] =1062
+u[33] = 2082, v[41] = 1640
+U = 1861, V = 1672
+butterfly (34,42), twiddle[32] =296
+u[34] = 2076, v[42] = 646
+U = 1361, V = 1913
+butterfly (35,43), twiddle[48] =1426
+u[35] = 331, v[43] = 394
+U = 2027, V = 1687
+butterfly (36,44), twiddle[64] =3040
+u[36] = 1705, v[44] = 2995
+U = 2350, V = 3310
+butterfly (37,45), twiddle[80] =2679
+u[37] = 2070, v[45] = 1568
+U = 1819, V = 3300
+butterfly (38,46), twiddle[96] =1010
+u[38] = 276, v[46] = 2106
+U = 1191, V = 1312
+butterfly (39,47), twiddle[112] =682
+u[39] = 2523, v[47] = 468
+U = 3160, V = 1665
+butterfly (48,56), twiddle[0] =1
+u[48] = 2317, v[56] = 887
+U = 1602, V = 715
+butterfly (49,57), twiddle[16] =1062
+u[49] = 2976, v[57] = 2026
+U = 2501, V = 1771
+butterfly (50,58), twiddle[32] =296
+u[50] = 544, v[58] = 2519
+U = 3196, V = 652
+butterfly (51,59), twiddle[48] =1426
+u[51] = 2394, v[59] = 2772
+U = 2583, V = 135
+butterfly (52,60), twiddle[64] =3040
+u[52] = 1672, v[60] = 3197
+U = 770, V = 2313
+butterfly (53,61), twiddle[80] =2679
+u[53] = 1764, v[61] = 871
+U = 2982, V = 2727
+butterfly (54,62), twiddle[96] =1010
+u[54] = 933, v[62] = 276
+U = 2269, V = 2214
+butterfly (55,63), twiddle[112] =682
+u[55] = 588, v[63] = 458
+U = 523, V = 1053
+butterfly (64,72), twiddle[0] =1
+u[64] = 2593, v[72] = 1150
+U = 207, V = 2386
+butterfly (65,73), twiddle[16] =1062
+u[65] = 1595, v[73] = 3317
+U = 2456, V = 1093
+butterfly (66,74), twiddle[32] =296
+u[66] = 485, v[74] = 870
+U = 2342, V = 2942
+butterfly (67,75), twiddle[48] =1426
+u[67] = 1667, v[75] = 1361
+U = 1514, V = 1793
+butterfly (68,76), twiddle[64] =3040
+u[68] = 985, v[76] = 1671
+U = 1328, V = 2586
+butterfly (69,77), twiddle[80] =2679
+u[69] = 2425, v[77] = 2788
+U = 942, V = 1460
+butterfly (70,78), twiddle[96] =1010
+u[70] = 2487, v[78] = 3247
+U = 2867, V = 2364
+butterfly (71,79), twiddle[112] =682
+u[71] = 546, v[79] = 2459
+U = 3167, V = 151
+butterfly (80,88), twiddle[0] =1
+u[80] = 1585, v[88] = 1087
+U = 1336, V = 249
+butterfly (81,89), twiddle[16] =1062
+u[81] = 1204, v[89] = 3002
+U = 2103, V = 685
+butterfly (82,90), twiddle[32] =296
+u[82] = 204, v[90] = 3011
+U = 3272, V = 689
+butterfly (83,91), twiddle[48] =1426
+u[83] = 747, v[91] = 915
+U = 831, V = 60
+butterfly (84,92), twiddle[64] =3040
+u[84] = 1730, v[92] = 3247
+U = 824, V = 1157
+butterfly (85,93), twiddle[80] =2679
+u[85] = 2648, v[93] = 3301
+U = 1310, V = 2498
+butterfly (86,94), twiddle[96] =1010
+u[86] = 2201, v[94] = 465
+U = 1333, V = 1153
+butterfly (87,95), twiddle[112] =682
+u[87] = 3010, v[95] = 124
+U = 1567, V = 2071
+butterfly (96,104), twiddle[0] =1
+u[96] = 2317, v[104] = 1691
+U = 2004, V = 313
+butterfly (97,105), twiddle[16] =1062
+u[97] = 1915, v[105] = 3300
+U = 943, V = 274
+butterfly (98,106), twiddle[32] =296
+u[98] = 559, v[106] = 789
+U = 674, V = 2579
+butterfly (99,107), twiddle[48] =1426
+u[99] = 2693, v[107] = 2115
+U = 2404, V = 2647
+butterfly (100,108), twiddle[64] =3040
+u[100] = 2535, v[108] = 2643
+U = 2589, V = 2290
+butterfly (101,109), twiddle[80] =2679
+u[101] = 3187, v[109] = 3116
+U = 1487, V = 228
+butterfly (102,110), twiddle[96] =1010
+u[102] = 2230, v[110] = 842
+U = 1536, V = 1850
+butterfly (103,111), twiddle[112] =682
+u[103] = 2655, v[111] = 768
+U = 47, V = 970
+butterfly (112,120), twiddle[0] =1
+u[112] = 1644, v[120] = 635
+U = 2804, V = 2169
+butterfly (113,121), twiddle[16] =1062
+u[113] = 824, v[121] = 1833
+U = 2993, V = 190
+butterfly (114,122), twiddle[32] =296
+u[114] = 2060, v[122] = 1363
+U = 47, V = 3286
+butterfly (115,123), twiddle[48] =1426
+u[115] = 141, v[123] = 3290
+U = 51, V = 1838
+butterfly (116,124), twiddle[64] =3040
+u[116] = 2440, v[124] = 886
+U = 1663, V = 1819
+butterfly (117,125), twiddle[80] =2679
+u[117] = 1944, v[125] = 3315
+U = 965, V = 2818
+butterfly (118,126), twiddle[96] =1010
+u[118] = 952, v[126] = 471
+U = 2376, V = 3217
+butterfly (119,127), twiddle[112] =682
+u[119] = 1097, v[127] = 2632
+U = 200, V = 2547
+butterfly (128,136), twiddle[0] =1
+u[128] = 1123, v[136] = 1369
+U = 1246, V = 3206
+butterfly (129,137), twiddle[16] =1062
+u[129] = 3149, v[137] = 1624
+U = 722, V = 828
+butterfly (130,138), twiddle[32] =296
+u[130] = 1113, v[138] = 2256
+U = 20, V = 615
+butterfly (131,139), twiddle[48] =1426
+u[131] = 998, v[139] = 1605
+U = 2966, V = 3308
+butterfly (132,140), twiddle[64] =3040
+u[132] = 651, v[140] = 239
+U = 445, V = 388
+butterfly (133,141), twiddle[80] =2679
+u[133] = 434, v[141] = 673
+U = 2218, V = 1108
+butterfly (134,142), twiddle[96] =1010
+u[134] = 2200, v[142] = 1362
+U = 1781, V = 407
+butterfly (135,143), twiddle[112] =682
+u[135] = 1507, v[143] = 2415
+U = 1961, V = 3298
+butterfly (144,152), twiddle[0] =1
+u[144] = 1150, v[152] = 3305
+U = 563, V = 587
+butterfly (145,153), twiddle[16] =1062
+u[145] = 2658, v[153] = 1268
+U = 1963, V = 2381
+butterfly (146,154), twiddle[32] =296
+u[146] = 1649, v[154] = 2301
+U = 1975, V = 45
+butterfly (147,155), twiddle[48] =1426
+u[147] = 1499, v[155] = 2788
+U = 479, V = 3076
+butterfly (148,156), twiddle[64] =3040
+u[148] = 568, v[156] = 3135
+U = 187, V = 3077
+butterfly (149,157), twiddle[80] =2679
+u[149] = 2333, v[157] = 156
+U = 2909, V = 1552
+butterfly (150,158), twiddle[96] =1010
+u[150] = 188, v[158] = 1600
+U = 894, V = 2675
+butterfly (151,159), twiddle[112] =682
+u[151] = 2293, v[159] = 276
+U = 2949, V = 2023
+butterfly (160,168), twiddle[0] =1
+u[160] = 320, v[168] = 2352
+U = 1336, V = 2313
+butterfly (161,169), twiddle[16] =1062
+u[161] = 2602, v[169] = 1575
+U = 424, V = 2710
+butterfly (162,170), twiddle[32] =296
+u[162] = 580, v[170] = 1002
+U = 791, V = 795
+butterfly (163,171), twiddle[48] =1426
+u[163] = 2074, v[171] = 2272
+U = 2173, V = 1973
+butterfly (164,172), twiddle[64] =3040
+u[164] = 3067, v[172] = 832
+U = 285, V = 1620
+butterfly (165,173), twiddle[80] =2679
+u[165] = 485, v[173] = 3139
+U = 1812, V = 339
+butterfly (166,174), twiddle[96] =1010
+u[166] = 1567, v[174] = 208
+U = 2552, V = 521
+butterfly (167,175), twiddle[112] =682
+u[167] = 2205, v[175] = 1838
+U = 357, V = 1974
+butterfly (176,184), twiddle[0] =1
+u[176] = 1691, v[184] = 1392
+U = 3206, V = 1814
+butterfly (177,185), twiddle[16] =1062
+u[177] = 1701, v[185] = 1397
+U = 1549, V = 1632
+butterfly (178,186), twiddle[32] =296
+u[178] = 1305, v[186] = 807
+U = 1056, V = 466
+butterfly (179,187), twiddle[48] =1426
+u[179] = 678, v[187] = 1980
+U = 1329, V = 465
+butterfly (180,188), twiddle[64] =3040
+u[180] = 2283, v[188] = 1141
+U = 1712, V = 1431
+butterfly (181,189), twiddle[80] =2679
+u[181] = 65, v[189] = 2372
+U = 2883, V = 750
+butterfly (182,190), twiddle[96] =1010
+u[182] = 318, v[190] = 33
+U = 1840, V = 778
+butterfly (183,191), twiddle[112] =682
+u[183] = 3112, v[191] = 2647
+U = 1215, V = 2102
+butterfly (192,200), twiddle[0] =1
+u[192] = 3228, v[200] = 3305
+U = 1602, V = 1626
+butterfly (193,201), twiddle[16] =1062
+u[193] = 1774, v[201] = 633
+U = 2868, V = 3322
+butterfly (194,202), twiddle[32] =296
+u[194] = 405, v[202] = 2833
+U = 1619, V = 188
+butterfly (195,203), twiddle[48] =1426
+u[195] = 1895, v[203] = 427
+U = 1161, V = 1378
+butterfly (196,204), twiddle[64] =3040
+u[196] = 2098, v[204] = 2832
+U = 2465, V = 2864
+butterfly (197,205), twiddle[80] =2679
+u[197] = 2134, v[205] = 631
+U = 3047, V = 888
+butterfly (198,206), twiddle[96] =1010
+u[198] = 1618, v[206] = 2907
+U = 598, V = 1539
+butterfly (199,207), twiddle[112] =682
+u[199] = 268, v[207] = 2891
+U = 3244, V = 1058
+butterfly (208,216), twiddle[0] =1
+u[208] = 1087, v[216] = 1996
+U = 3206, V = 1210
+butterfly (209,217), twiddle[16] =1062
+u[209] = 378, v[217] = 2439
+U = 3073, V = 850
+butterfly (210,218), twiddle[32] =296
+u[210] = 366, v[218] = 413
+U = 2054, V = 3031
+butterfly (211,219), twiddle[48] =1426
+u[211] = 1028, v[219] = 2765
+U = 232, V = 3236
+butterfly (212,220), twiddle[64] =3040
+u[212] = 2896, v[220] = 381
+U = 3303, V = 1108
+butterfly (213,221), twiddle[80] =2679
+u[213] = 2271, v[221] = 960
+U = 3280, V = 37
+butterfly (214,222), twiddle[96] =1010
+u[214] = 1039, v[222] = 2397
+U = 1718, V = 3313
+butterfly (215,223), twiddle[112] =682
+u[215] = 1361, v[223] = 1432
+U = 3061, V = 2421
+butterfly (224,232), twiddle[0] =1
+u[224] = 887, v[232] = 1392
+U = 2804, V = 1412
+butterfly (225,233), twiddle[16] =1062
+u[225] = 1323, v[233] = 808
+U = 2730, V = 487
+butterfly (226,234), twiddle[32] =296
+u[226] = 1042, v[234] = 2488
+U = 1765, V = 2377
+butterfly (227,235), twiddle[48] =1426
+u[227] = 1832, v[235] = 1321
+U = 3241, V = 1482
+butterfly (228,236), twiddle[64] =3040
+u[228] = 717, v[236] = 3106
+U = 247, V = 659
+butterfly (229,237), twiddle[80] =2679
+u[229] = 518, v[237] = 2946
+U = 1732, V = 127
+butterfly (230,238), twiddle[96] =1010
+u[230] = 169, v[238] = 1374
+U = 2436, V = 682
+butterfly (231,239), twiddle[112] =682
+u[231] = 423, v[239] = 2529
+U = 1476, V = 918
+butterfly (240,248), twiddle[0] =1
+u[240] = 635, v[248] = 1400
+U = 2682, V = 1282
+butterfly (241,249), twiddle[16] =1062
+u[241] = 2706, v[249] = 629
+U = 3, V = 988
+butterfly (242,250), twiddle[32] =296
+u[242] = 1763, v[250] = 699
+U = 1231, V = 1009
+butterfly (243,251), twiddle[48] =1426
+u[243] = 1402, v[251] = 1052
+U = 1227, V = 3204
+butterfly (244,252), twiddle[64] =3040
+u[244] = 384, v[252] = 1678
+U = 1031, V = 559
+butterfly (245,253), twiddle[80] =2679
+u[245] = 2810, v[253] = 2032
+U = 2421, V = 154
+butterfly (246,254), twiddle[96] =1010
+u[246] = 366, v[254] = 647
+U = 2171, V = 1242
+butterfly (247,255), twiddle[112] =682
+u[247] = 267, v[255] = 3181
+U = 1724, V = 1697
+twiddle[0]:1
+twiddle[1]:3328
+twiddle[2]:1729
+twiddle[3]:1600
+twiddle[4]:2580
+twiddle[5]:749
+twiddle[6]:3289
+twiddle[7]:40
+twiddle[8]:2642
+twiddle[9]:687
+twiddle[10]:630
+twiddle[11]:2699
+twiddle[12]:1897
+twiddle[13]:1432
+twiddle[14]:848
+twiddle[15]:2481
+twiddle[16]:1062
+twiddle[17]:2267
+twiddle[18]:1919
+twiddle[19]:1410
+twiddle[20]:193
+twiddle[21]:3136
+twiddle[22]:797
+twiddle[23]:2532
+twiddle[24]:2786
+twiddle[25]:543
+twiddle[26]:3260
+twiddle[27]:69
+twiddle[28]:569
+twiddle[29]:2760
+twiddle[30]:1746
+twiddle[31]:1583
+twiddle[32]:296
+twiddle[33]:3033
+twiddle[34]:2447
+twiddle[35]:882
+twiddle[36]:1339
+twiddle[37]:1990
+twiddle[38]:1476
+twiddle[39]:1853
+twiddle[40]:3046
+twiddle[41]:283
+twiddle[42]:56
+twiddle[43]:3273
+twiddle[44]:2240
+twiddle[45]:1089
+twiddle[46]:1333
+twiddle[47]:1996
+twiddle[48]:1426
+twiddle[49]:1903
+twiddle[50]:2094
+twiddle[51]:1235
+twiddle[52]:535
+twiddle[53]:2794
+twiddle[54]:2882
+twiddle[55]:447
+twiddle[56]:2393
+twiddle[57]:936
+twiddle[58]:2879
+twiddle[59]:450
+twiddle[60]:1974
+twiddle[61]:1355
+twiddle[62]:821
+twiddle[63]:2508
+twiddle[64]:3040
+twiddle[65]:289
+twiddle[66]:2998
+twiddle[67]:331
+twiddle[68]:76
+twiddle[69]:3253
+twiddle[70]:1573
+twiddle[71]:1756
+twiddle[72]:2132
+twiddle[73]:1197
+twiddle[74]:1025
+twiddle[75]:2304
+twiddle[76]:1052
+twiddle[77]:2277
+twiddle[78]:1274
+twiddle[79]:2055
+twiddle[80]:2679
+twiddle[81]:650
+twiddle[82]:1352
+twiddle[83]:1977
+twiddle[84]:816
+twiddle[85]:2513
+twiddle[86]:2697
+twiddle[87]:632
+twiddle[88]:464
+twiddle[89]:2865
+twiddle[90]:3296
+twiddle[91]:33
+twiddle[92]:2009
+twiddle[93]:1320
+twiddle[94]:1414
+twiddle[95]:1915
+twiddle[96]:1010
+twiddle[97]:2319
+twiddle[98]:1894
+twiddle[99]:1435
+twiddle[100]:2522
+twiddle[101]:807
+twiddle[102]:2877
+twiddle[103]:452
+twiddle[104]:1891
+twiddle[105]:1438
+twiddle[106]:461
+twiddle[107]:2868
+twiddle[108]:1795
+twiddle[109]:1534
+twiddle[110]:927
+twiddle[111]:2402
+twiddle[112]:682
+twiddle[113]:2647
+twiddle[114]:712
+twiddle[115]:2617
+twiddle[116]:1848
+twiddle[117]:1481
+twiddle[118]:2681
+twiddle[119]:648
+twiddle[120]:855
+twiddle[121]:2474
+twiddle[122]:219
+twiddle[123]:3110
+twiddle[124]:2102
+twiddle[125]:1227
+twiddle[126]:2419
+twiddle[127]:910
+stage 5:
+butterfly (0,16), twiddle[0] =1
+u[0] = 597, v[16] = 1246
+U = 2586, V = 1340
+butterfly (1,17), twiddle[8] =2642
+u[1] = 1194, v[17] = 2594
+U = 1894, V = 1524
+butterfly (2,18), twiddle[16] =1062
+u[2] = 771, v[18] = 1145
+U = 958, V = 1146
+butterfly (3,19), twiddle[24] =2786
+u[3] = 1449, v[19] = 2981
+U = 2215, V = 3142
+butterfly (4,20), twiddle[32] =296
+u[4] = 376, v[20] = 415
+U = 2060, V = 886
+butterfly (5,21), twiddle[40] =3046
+u[5] = 514, v[21] = 2985
+U = 85, V = 1766
+butterfly (6,22), twiddle[48] =1426
+u[6] = 3015, v[22] = 1400
+U = 543, V = 2990
+butterfly (7,23), twiddle[56] =2393
+u[7] = 1420, v[23] = 577
+U = 2663, V = 1627
+butterfly (8,24), twiddle[64] =3040
+u[8] = 2803, v[24] = 1347
+U = 2075, V = 2664
+butterfly (9,25), twiddle[72] =2132
+u[9] = 1464, v[25] = 2972
+U = 2218, V = 379
+butterfly (10,26), twiddle[80] =2679
+u[10] = 1157, v[26] = 1575
+U = 1366, V = 2690
+butterfly (11,27), twiddle[88] =464
+u[11] = 2672, v[27] = 1023
+U = 183, V = 3062
+butterfly (12,28), twiddle[96] =1010
+u[12] = 1611, v[28] = 3185
+U = 2398, V = 761
+butterfly (13,29), twiddle[104] =1891
+u[13] = 943, v[29] = 1061
+U = 1002, V = 1617
+butterfly (14,30), twiddle[112] =682
+u[14] = 1115, v[30] = 2266
+U = 26, V = 331
+butterfly (15,31), twiddle[120] =855
+u[15] = 693, v[31] = 2007
+U = 1350, V = 866
+butterfly (32,48), twiddle[0] =1
+u[32] = 207, v[48] = 1602
+U = 2569, V = 967
+butterfly (33,49), twiddle[8] =2642
+u[33] = 1861, v[49] = 2501
+U = 2181, V = 126
+butterfly (34,50), twiddle[16] =1062
+u[34] = 1361, v[50] = 3196
+U = 614, V = 1012
+butterfly (35,51), twiddle[24] =2786
+u[35] = 2027, v[51] = 2583
+U = 2305, V = 1149
+butterfly (36,52), twiddle[32] =296
+u[36] = 2350, v[52] = 770
+U = 1560, V = 810
+butterfly (37,53), twiddle[40] =3046
+u[37] = 1819, v[53] = 2982
+U = 736, V = 3108
+butterfly (38,54), twiddle[48] =1426
+u[38] = 1191, v[54] = 2269
+U = 1730, V = 385
+butterfly (39,55), twiddle[56] =2393
+u[39] = 3160, v[55] = 523
+U = 177, V = 943
+butterfly (40,56), twiddle[64] =3040
+u[40] = 3216, v[56] = 715
+U = 301, V = 3131
+butterfly (41,57), twiddle[72] =2132
+u[41] = 1672, v[57] = 1771
+U = 57, V = 994
+butterfly (42,58), twiddle[80] =2679
+u[42] = 1913, v[58] = 652
+U = 2947, V = 2971
+butterfly (43,59), twiddle[88] =464
+u[43] = 1687, v[59] = 135
+U = 911, V = 532
+butterfly (44,60), twiddle[96] =1010
+u[44] = 3310, v[60] = 2313
+U = 1147, V = 806
+butterfly (45,61), twiddle[104] =1891
+u[45] = 3300, v[61] = 2727
+U = 1349, V = 809
+butterfly (46,62), twiddle[112] =682
+u[46] = 1312, v[62] = 2214
+U = 1763, V = 2015
+butterfly (47,63), twiddle[120] =855
+u[47] = 1665, v[63] = 1053
+U = 1359, V = 1968
+butterfly (64,80), twiddle[0] =1
+u[64] = 207, v[80] = 1336
+U = 2436, V = 1100
+butterfly (65,81), twiddle[8] =2642
+u[65] = 2456, v[81] = 2103
+U = 615, V = 253
+butterfly (66,82), twiddle[16] =1062
+u[66] = 2342, v[82] = 3272
+U = 2807, V = 2191
+butterfly (67,83), twiddle[24] =2786
+u[67] = 1514, v[83] = 831
+U = 2837, V = 2654
+butterfly (68,84), twiddle[32] =296
+u[68] = 1328, v[84] = 824
+U = 1076, V = 1354
+butterfly (69,85), twiddle[40] =3046
+u[69] = 942, v[85] = 1310
+U = 1126, V = 2137
+butterfly (70,86), twiddle[48] =1426
+u[70] = 2867, v[86] = 1333
+U = 2100, V = 1830
+butterfly (71,87), twiddle[56] =2393
+u[71] = 3167, v[87] = 1567
+U = 2367, V = 225
+butterfly (72,88), twiddle[64] =3040
+u[72] = 2386, v[88] = 249
+U = 2982, V = 2465
+butterfly (73,89), twiddle[72] =2132
+u[73] = 1093, v[89] = 685
+U = 889, V = 2158
+butterfly (74,90), twiddle[80] =2679
+u[74] = 2942, v[90] = 689
+U = 151, V = 155
+butterfly (75,91), twiddle[88] =464
+u[75] = 1793, v[91] = 60
+U = 2591, V = 2576
+butterfly (76,92), twiddle[96] =1010
+u[76] = 2586, v[92] = 1157
+U = 207, V = 2581
+butterfly (77,93), twiddle[104] =1891
+u[77] = 1460, v[93] = 2498
+U = 1979, V = 626
+butterfly (78,94), twiddle[112] =682
+u[78] = 2364, v[94] = 1153
+U = 94, V = 155
+butterfly (79,95), twiddle[120] =855
+u[79] = 151, v[95] = 2071
+U = 1111, V = 1463
+butterfly (96,112), twiddle[0] =1
+u[96] = 2004, v[112] = 2804
+U = 2404, V = 2929
+butterfly (97,113), twiddle[8] =2642
+u[97] = 943, v[113] = 2993
+U = 1968, V = 1756
+butterfly (98,114), twiddle[16] =1062
+u[98] = 674, v[114] = 47
+U = 2025, V = 37
+butterfly (99,115), twiddle[24] =2786
+u[99] = 2404, v[115] = 51
+U = 2892, V = 1993
+butterfly (100,116), twiddle[32] =296
+u[100] = 2589, v[116] = 1663
+U = 2126, V = 559
+butterfly (101,117), twiddle[40] =3046
+u[101] = 1487, v[117] = 965
+U = 1226, V = 2704
+butterfly (102,118), twiddle[48] =1426
+u[102] = 1536, v[118] = 2376
+U = 1956, V = 300
+butterfly (103,119), twiddle[56] =2393
+u[103] = 47, v[119] = 200
+U = 1788, V = 1695
+butterfly (104,120), twiddle[64] =3040
+u[104] = 313, v[120] = 2169
+U = 1241, V = 1872
+butterfly (105,121), twiddle[72] =2132
+u[105] = 274, v[121] = 190
+U = 232, V = 2990
+butterfly (106,122), twiddle[80] =2679
+u[106] = 2579, v[122] = 3286
+U = 1268, V = 74
+butterfly (107,123), twiddle[88] =464
+u[107] = 2647, v[123] = 1838
+U = 578, V = 1264
+butterfly (108,124), twiddle[96] =1010
+u[108] = 2290, v[124] = 1819
+U = 390, V = 1496
+butterfly (109,125), twiddle[104] =1891
+u[109] = 228, v[125] = 2818
+U = 1523, V = 1299
+butterfly (110,126), twiddle[112] =682
+u[110] = 1850, v[126] = 3217
+U = 869, V = 3242
+butterfly (111,127), twiddle[120] =855
+u[111] = 970, v[127] = 2547
+U = 94, V = 3284
+butterfly (128,144), twiddle[0] =1
+u[128] = 1246, v[144] = 563
+U = 2569, V = 2006
+butterfly (129,145), twiddle[8] =2642
+u[129] = 722, v[145] = 1963
+U = 3007, V = 1836
+butterfly (130,146), twiddle[16] =1062
+u[130] = 20, v[146] = 1975
+U = 2662, V = 543
+butterfly (131,147), twiddle[24] =2786
+u[131] = 2966, v[147] = 479
+U = 58, V = 2231
+butterfly (132,148), twiddle[32] =296
+u[132] = 445, v[148] = 187
+U = 316, V = 1565
+butterfly (133,149), twiddle[40] =3046
+u[133] = 2218, v[149] = 2909
+U = 899, V = 2900
+butterfly (134,150), twiddle[48] =1426
+u[134] = 1781, v[150] = 894
+U = 3002, V = 3250
+butterfly (135,151), twiddle[56] =2393
+u[135] = 1961, v[151] = 2949
+U = 2455, V = 2982
+butterfly (136,152), twiddle[64] =3040
+u[136] = 3206, v[152] = 587
+U = 232, V = 2725
+butterfly (137,153), twiddle[72] =2132
+u[137] = 828, v[153] = 2381
+U = 3269, V = 2344
+butterfly (138,154), twiddle[80] =2679
+u[138] = 615, v[154] = 45
+U = 330, V = 1174
+butterfly (139,155), twiddle[88] =464
+u[139] = 3308, v[155] = 3076
+U = 3192, V = 560
+butterfly (140,156), twiddle[96] =1010
+u[140] = 388, v[156] = 3077
+U = 68, V = 287
+butterfly (141,157), twiddle[104] =1891
+u[141] = 1108, v[157] = 1552
+U = 1330, V = 2981
+butterfly (142,158), twiddle[112] =682
+u[142] = 407, v[158] = 2675
+U = 1541, V = 2269
+butterfly (143,159), twiddle[120] =855
+u[143] = 3298, v[159] = 2023
+U = 996, V = 771
+butterfly (160,176), twiddle[0] =1
+u[160] = 1336, v[176] = 3206
+U = 2271, V = 2394
+butterfly (161,177), twiddle[8] =2642
+u[161] = 424, v[177] = 1549
+U = 2651, V = 1938
+butterfly (162,178), twiddle[16] =1062
+u[162] = 791, v[178] = 1056
+U = 2588, V = 2432
+butterfly (163,179), twiddle[24] =2786
+u[163] = 2173, v[179] = 1329
+U = 1751, V = 555
+butterfly (164,180), twiddle[32] =296
+u[164] = 285, v[180] = 1712
+U = 2663, V = 1860
+butterfly (165,181), twiddle[40] =3046
+u[165] = 1812, v[181] = 2883
+U = 683, V = 77
+butterfly (166,182), twiddle[48] =1426
+u[166] = 2552, v[182] = 1840
+U = 2196, V = 1648
+butterfly (167,183), twiddle[56] =2393
+u[167] = 357, v[183] = 1215
+U = 786, V = 2064
+butterfly (168,184), twiddle[64] =3040
+u[168] = 2313, v[184] = 1814
+U = 399, V = 2797
+butterfly (169,185), twiddle[72] =2132
+u[169] = 2710, v[185] = 1632
+U = 2171, V = 643
+butterfly (170,186), twiddle[80] =2679
+u[170] = 795, v[186] = 466
+U = 2295, V = 2932
+butterfly (171,187), twiddle[88] =464
+u[171] = 1973, v[187] = 465
+U = 1219, V = 311
+butterfly (172,188), twiddle[96] =1010
+u[172] = 1620, v[188] = 1431
+U = 3190, V = 2233
+butterfly (173,189), twiddle[104] =1891
+u[173] = 339, v[189] = 750
+U = 2209, V = 2557
+butterfly (174,190), twiddle[112] =682
+u[174] = 521, v[190] = 778
+U = 2314, V = 2246
+butterfly (175,191), twiddle[120] =855
+u[175] = 1974, v[191] = 2102
+U = 2038, V = 1873
+butterfly (192,208), twiddle[0] =1
+u[192] = 1602, v[208] = 3206
+U = 2404, V = 2527
+butterfly (193,209), twiddle[8] =2642
+u[193] = 2868, v[209] = 3073
+U = 1306, V = 2173
+butterfly (194,210), twiddle[16] =1062
+u[194] = 1619, v[210] = 2054
+U = 172, V = 2045
+butterfly (195,211), twiddle[24] =2786
+u[195] = 1161, v[211] = 232
+U = 2361, V = 2445
+butterfly (196,212), twiddle[32] =296
+u[196] = 2465, v[212] = 3303
+U = 2884, V = 2478
+butterfly (197,213), twiddle[40] =3046
+u[197] = 3047, v[213] = 3280
+U = 1499, V = 1344
+butterfly (198,214), twiddle[48] =1426
+u[198] = 598, v[214] = 1718
+U = 1158, V = 400
+butterfly (199,215), twiddle[56] =2393
+u[199] = 3244, v[215] = 3061
+U = 1488, V = 910
+butterfly (200,216), twiddle[64] =3040
+u[200] = 1626, v[216] = 1210
+U = 1418, V = 3139
+butterfly (201,217), twiddle[72] =2132
+u[201] = 3322, v[217] = 850
+U = 2086, V = 1913
+butterfly (202,218), twiddle[80] =2679
+u[202] = 188, v[218] = 3031
+U = 3274, V = 1842
+butterfly (203,219), twiddle[88] =464
+u[203] = 1378, v[219] = 3236
+U = 2307, V = 1714
+butterfly (204,220), twiddle[96] =1010
+u[204] = 2864, v[220] = 1108
+U = 1986, V = 1266
+butterfly (205,221), twiddle[104] =1891
+u[205] = 888, v[221] = 37
+U = 2127, V = 667
+butterfly (206,222), twiddle[112] =682
+u[206] = 1539, v[222] = 3313
+U = 2426, V = 944
+butterfly (207,223), twiddle[120] =855
+u[207] = 1058, v[223] = 2421
+U = 75, V = 1557
+butterfly (224,240), twiddle[0] =1
+u[224] = 2804, v[240] = 2682
+U = 2743, V = 61
+butterfly (225,241), twiddle[8] =2642
+u[225] = 2730, v[241] = 3
+U = 3031, V = 389
+butterfly (226,242), twiddle[16] =1062
+u[226] = 1765, v[242] = 1231
+U = 1498, V = 589
+butterfly (227,243), twiddle[24] =2786
+u[227] = 3241, v[243] = 1227
+U = 2234, V = 2484
+butterfly (228,244), twiddle[32] =296
+u[228] = 247, v[244] = 1031
+U = 639, V = 483
+butterfly (229,245), twiddle[40] =3046
+u[229] = 1732, v[245] = 2421
+U = 412, V = 2617
+butterfly (230,246), twiddle[48] =1426
+u[230] = 2436, v[246] = 2171
+U = 639, V = 2521
+butterfly (231,247), twiddle[56] =2393
+u[231] = 1476, v[247] = 1724
+U = 1600, V = 2878
+butterfly (232,248), twiddle[64] =3040
+u[232] = 1412, v[248] = 1282
+U = 1347, V = 1189
+butterfly (233,249), twiddle[72] =2132
+u[233] = 487, v[249] = 988
+U = 2402, V = 1903
+butterfly (234,250), twiddle[80] =2679
+u[234] = 2377, v[250] = 1009
+U = 1693, V = 1486
+butterfly (235,251), twiddle[88] =464
+u[235] = 1482, v[251] = 3204
+U = 2343, V = 3305
+butterfly (236,252), twiddle[96] =1010
+u[236] = 659, v[252] = 559
+U = 609, V = 565
+butterfly (237,253), twiddle[104] =1891
+u[237] = 127, v[253] = 154
+U = 1805, V = 2768
+butterfly (238,254), twiddle[112] =682
+u[238] = 682, v[254] = 1242
+U = 962, V = 2122
+butterfly (239,255), twiddle[120] =855
+u[239] = 918, v[255] = 1697
+U = 2972, V = 1542
+twiddle[0]:1
+twiddle[1]:3328
+twiddle[2]:1729
+twiddle[3]:1600
+twiddle[4]:2580
+twiddle[5]:749
+twiddle[6]:3289
+twiddle[7]:40
+twiddle[8]:2642
+twiddle[9]:687
+twiddle[10]:630
+twiddle[11]:2699
+twiddle[12]:1897
+twiddle[13]:1432
+twiddle[14]:848
+twiddle[15]:2481
+twiddle[16]:1062
+twiddle[17]:2267
+twiddle[18]:1919
+twiddle[19]:1410
+twiddle[20]:193
+twiddle[21]:3136
+twiddle[22]:797
+twiddle[23]:2532
+twiddle[24]:2786
+twiddle[25]:543
+twiddle[26]:3260
+twiddle[27]:69
+twiddle[28]:569
+twiddle[29]:2760
+twiddle[30]:1746
+twiddle[31]:1583
+twiddle[32]:296
+twiddle[33]:3033
+twiddle[34]:2447
+twiddle[35]:882
+twiddle[36]:1339
+twiddle[37]:1990
+twiddle[38]:1476
+twiddle[39]:1853
+twiddle[40]:3046
+twiddle[41]:283
+twiddle[42]:56
+twiddle[43]:3273
+twiddle[44]:2240
+twiddle[45]:1089
+twiddle[46]:1333
+twiddle[47]:1996
+twiddle[48]:1426
+twiddle[49]:1903
+twiddle[50]:2094
+twiddle[51]:1235
+twiddle[52]:535
+twiddle[53]:2794
+twiddle[54]:2882
+twiddle[55]:447
+twiddle[56]:2393
+twiddle[57]:936
+twiddle[58]:2879
+twiddle[59]:450
+twiddle[60]:1974
+twiddle[61]:1355
+twiddle[62]:821
+twiddle[63]:2508
+twiddle[64]:3040
+twiddle[65]:289
+twiddle[66]:2998
+twiddle[67]:331
+twiddle[68]:76
+twiddle[69]:3253
+twiddle[70]:1573
+twiddle[71]:1756
+twiddle[72]:2132
+twiddle[73]:1197
+twiddle[74]:1025
+twiddle[75]:2304
+twiddle[76]:1052
+twiddle[77]:2277
+twiddle[78]:1274
+twiddle[79]:2055
+twiddle[80]:2679
+twiddle[81]:650
+twiddle[82]:1352
+twiddle[83]:1977
+twiddle[84]:816
+twiddle[85]:2513
+twiddle[86]:2697
+twiddle[87]:632
+twiddle[88]:464
+twiddle[89]:2865
+twiddle[90]:3296
+twiddle[91]:33
+twiddle[92]:2009
+twiddle[93]:1320
+twiddle[94]:1414
+twiddle[95]:1915
+twiddle[96]:1010
+twiddle[97]:2319
+twiddle[98]:1894
+twiddle[99]:1435
+twiddle[100]:2522
+twiddle[101]:807
+twiddle[102]:2877
+twiddle[103]:452
+twiddle[104]:1891
+twiddle[105]:1438
+twiddle[106]:461
+twiddle[107]:2868
+twiddle[108]:1795
+twiddle[109]:1534
+twiddle[110]:927
+twiddle[111]:2402
+twiddle[112]:682
+twiddle[113]:2647
+twiddle[114]:712
+twiddle[115]:2617
+twiddle[116]:1848
+twiddle[117]:1481
+twiddle[118]:2681
+twiddle[119]:648
+twiddle[120]:855
+twiddle[121]:2474
+twiddle[122]:219
+twiddle[123]:3110
+twiddle[124]:2102
+twiddle[125]:1227
+twiddle[126]:2419
+twiddle[127]:910
+stage 6:
+butterfly (0,32), twiddle[0] =1
+u[0] = 2586, v[32] = 2569
+U = 913, V = 1673
+butterfly (1,33), twiddle[4] =2580
+u[1] = 1894, v[33] = 2181
+U = 373, V = 2618
+butterfly (2,34), twiddle[8] =2642
+u[2] = 958, v[34] = 614
+U = 786, V = 1680
+butterfly (3,35), twiddle[12] =1897
+u[3] = 2215, v[35] = 2305
+U = 2260, V = 1189
+butterfly (4,36), twiddle[16] =1062
+u[4] = 2060, v[36] = 1560
+U = 1810, V = 2509
+butterfly (5,37), twiddle[20] =193
+u[5] = 85, v[37] = 736
+U = 2075, V = 2094
+butterfly (6,38), twiddle[24] =2786
+u[6] = 543, v[38] = 1730
+U = 2801, V = 1022
+butterfly (7,39), twiddle[28] =569
+u[7] = 2663, v[39] = 177
+U = 1420, V = 1519
+butterfly (8,40), twiddle[32] =296
+u[8] = 2075, v[40] = 301
+U = 1188, V = 2890
+butterfly (9,41), twiddle[36] =1339
+u[9] = 2218, v[41] = 57
+U = 2802, V = 339
+butterfly (10,42), twiddle[40] =3046
+u[10] = 1366, v[42] = 2947
+U = 492, V = 2333
+butterfly (11,43), twiddle[44] =2240
+u[11] = 183, v[43] = 911
+U = 547, V = 245
+butterfly (12,44), twiddle[48] =1426
+u[12] = 2398, v[44] = 1147
+U = 108, V = 3120
+butterfly (13,45), twiddle[52] =535
+u[13] = 1002, v[45] = 1349
+U = 2840, V = 2054
+butterfly (14,46), twiddle[56] =2393
+u[14] = 26, v[46] = 1763
+U = 2559, V = 640
+butterfly (15,47), twiddle[60] =1974
+u[15] = 1350, v[47] = 1359
+U = 3019, V = 1104
+butterfly (16,48), twiddle[64] =3040
+u[16] = 1340, v[48] = 967
+U = 2818, V = 1030
+butterfly (17,49), twiddle[68] =76
+u[17] = 1524, v[49] = 126
+U = 825, V = 3189
+butterfly (18,50), twiddle[72] =2132
+u[18] = 1146, v[50] = 1012
+U = 1079, V = 3026
+butterfly (19,51), twiddle[76] =1052
+u[19] = 3142, v[51] = 1149
+U = 481, V = 3012
+butterfly (20,52), twiddle[80] =2679
+u[20] = 886, v[52] = 810
+U = 848, V = 1932
+butterfly (21,53), twiddle[84] =816
+u[21] = 1766, v[53] = 3108
+U = 2437, V = 1749
+butterfly (22,54), twiddle[88] =464
+u[22] = 2990, v[54] = 385
+U = 23, V = 1811
+butterfly (23,55), twiddle[92] =2009
+u[23] = 1627, v[55] = 943
+U = 1285, V = 1304
+butterfly (24,56), twiddle[96] =1010
+u[24] = 2664, v[56] = 3131
+U = 1233, V = 524
+butterfly (25,57), twiddle[100] =2522
+u[25] = 379, v[57] = 994
+U = 2351, V = 142
+butterfly (26,58), twiddle[104] =1891
+u[26] = 2690, v[58] = 2971
+U = 1166, V = 2299
+butterfly (27,59), twiddle[108] =1795
+u[27] = 3062, v[59] = 532
+U = 1797, V = 297
+butterfly (28,60), twiddle[112] =682
+u[28] = 761, v[60] = 806
+U = 2448, V = 1300
+butterfly (29,61), twiddle[116] =1848
+u[29] = 1617, v[61] = 809
+U = 1213, V = 896
+butterfly (30,62), twiddle[120] =855
+u[30] = 331, v[62] = 2015
+U = 1173, V = 2483
+butterfly (31,63), twiddle[124] =2102
+u[31] = 866, v[63] = 1968
+U = 1417, V = 290
+butterfly (64,96), twiddle[0] =1
+u[64] = 2436, v[96] = 2404
+U = 2420, V = 16
+butterfly (65,97), twiddle[4] =2580
+u[65] = 615, v[97] = 1968
+U = 2956, V = 2355
+butterfly (66,98), twiddle[8] =2642
+u[66] = 2807, v[98] = 2025
+U = 2416, V = 1032
+butterfly (67,99), twiddle[12] =1897
+u[67] = 2837, v[99] = 2892
+U = 1200, V = 2761
+butterfly (68,100), twiddle[16] =1062
+u[68] = 1076, v[100] = 2126
+U = 1601, V = 1722
+butterfly (69,101), twiddle[20] =193
+u[69] = 1126, v[101] = 1226
+U = 1176, V = 337
+butterfly (70,102), twiddle[24] =2786
+u[70] = 2100, v[102] = 1956
+U = 2028, V = 852
+butterfly (71,103), twiddle[28] =569
+u[71] = 2367, v[103] = 1788
+U = 413, V = 3269
+butterfly (72,104), twiddle[32] =296
+u[72] = 2982, v[104] = 1241
+U = 447, V = 1335
+butterfly (73,105), twiddle[36] =1339
+u[73] = 889, v[105] = 232
+U = 2225, V = 2098
+butterfly (74,106), twiddle[40] =3046
+u[74] = 151, v[106] = 1268
+U = 2374, V = 3257
+butterfly (75,107), twiddle[44] =2240
+u[75] = 2591, v[107] = 578
+U = 3249, V = 827
+butterfly (76,108), twiddle[48] =1426
+u[76] = 207, v[108] = 390
+U = 1963, V = 2681
+butterfly (77,109), twiddle[52] =535
+u[77] = 1979, v[109] = 1523
+U = 1751, V = 2136
+butterfly (78,110), twiddle[56] =2393
+u[78] = 94, v[110] = 869
+U = 2146, V = 3168
+butterfly (79,111), twiddle[60] =1974
+u[79] = 1111, v[111] = 94
+U = 2267, V = 1750
+butterfly (80,112), twiddle[64] =3040
+u[80] = 1100, v[112] = 2929
+U = 350, V = 2964
+butterfly (81,113), twiddle[68] =76
+u[81] = 253, v[113] = 1756
+U = 2669, V = 2808
+butterfly (82,114), twiddle[72] =2132
+u[82] = 2191, v[114] = 37
+U = 1114, V = 2483
+butterfly (83,115), twiddle[76] =1052
+u[83] = 2654, v[115] = 1993
+U = 659, V = 1470
+butterfly (84,116), twiddle[80] =2679
+u[84] = 1354, v[116] = 559
+U = 2621, V = 1287
+butterfly (85,117), twiddle[84] =816
+u[85] = 2137, v[117] = 2704
+U = 756, V = 1694
+butterfly (86,118), twiddle[88] =464
+u[86] = 1830, v[118] = 300
+U = 1065, V = 2086
+butterfly (87,119), twiddle[92] =2009
+u[87] = 225, v[119] = 1695
+U = 960, V = 1461
+butterfly (88,120), twiddle[96] =1010
+u[88] = 2465, v[120] = 1872
+U = 504, V = 3184
+butterfly (89,121), twiddle[100] =2522
+u[89] = 2158, v[121] = 2990
+U = 2574, V = 2812
+butterfly (90,122), twiddle[104] =1891
+u[90] = 155, v[122] = 74
+U = 1779, V = 1683
+butterfly (91,123), twiddle[108] =1795
+u[91] = 2576, v[123] = 1264
+U = 1920, V = 2383
+butterfly (92,124), twiddle[112] =682
+u[92] = 2581, v[124] = 1496
+U = 374, V = 466
+butterfly (93,125), twiddle[116] =1848
+u[93] = 626, v[125] = 1299
+U = 2627, V = 671
+butterfly (94,126), twiddle[120] =855
+u[94] = 155, v[126] = 3242
+U = 34, V = 256
+butterfly (95,127), twiddle[124] =2102
+u[95] = 1463, v[127] = 3284
+U = 709, V = 304
+butterfly (128,160), twiddle[0] =1
+u[128] = 2569, v[160] = 2271
+U = 2420, V = 149
+butterfly (129,161), twiddle[4] =2580
+u[129] = 3007, v[161] = 2651
+U = 2829, V = 3167
+butterfly (130,162), twiddle[8] =2642
+u[130] = 2662, v[162] = 2588
+U = 2625, V = 1213
+butterfly (131,163), twiddle[12] =1897
+u[131] = 58, v[163] = 1751
+U = 2569, V = 432
+butterfly (132,164), twiddle[16] =1062
+u[132] = 316, v[164] = 2663
+U = 3154, V = 2118
+butterfly (133,165), twiddle[20] =193
+u[133] = 899, v[165] = 683
+U = 791, V = 870
+butterfly (134,166), twiddle[24] =2786
+u[134] = 3002, v[166] = 2196
+U = 2599, V = 885
+butterfly (135,167), twiddle[28] =569
+u[135] = 2455, v[167] = 786
+U = 3285, V = 448
+butterfly (136,168), twiddle[32] =296
+u[136] = 232, v[168] = 399
+U = 1980, V = 1916
+butterfly (137,169), twiddle[36] =1339
+u[137] = 3269, v[169] = 2171
+U = 2720, V = 2731
+butterfly (138,170), twiddle[40] =3046
+u[138] = 330, v[170] = 2295
+U = 2977, V = 76
+butterfly (139,171), twiddle[44] =2240
+u[139] = 3192, v[171] = 1219
+U = 541, V = 2633
+butterfly (140,172), twiddle[48] =1426
+u[140] = 68, v[172] = 3190
+U = 1629, V = 1115
+butterfly (141,173), twiddle[52] =535
+u[141] = 1330, v[173] = 2209
+U = 105, V = 2891
+butterfly (142,174), twiddle[56] =2393
+u[142] = 1541, v[174] = 2314
+U = 263, V = 2232
+butterfly (143,175), twiddle[60] =1974
+u[143] = 996, v[175] = 2038
+U = 1517, V = 207
+butterfly (144,176), twiddle[64] =3040
+u[144] = 2006, v[176] = 2394
+U = 2200, V = 2802
+butterfly (145,177), twiddle[68] =76
+u[145] = 1836, v[177] = 1938
+U = 1887, V = 2782
+butterfly (146,178), twiddle[72] =2132
+u[146] = 543, v[178] = 2432
+U = 3152, V = 371
+butterfly (147,179), twiddle[76] =1052
+u[147] = 2231, v[179] = 555
+U = 1393, V = 2720
+butterfly (148,180), twiddle[80] =2679
+u[148] = 1565, v[180] = 1860
+U = 48, V = 2663
+butterfly (149,181), twiddle[84] =816
+u[149] = 2900, v[181] = 77
+U = 3153, V = 3279
+butterfly (150,182), twiddle[88] =464
+u[150] = 3250, v[182] = 1648
+U = 2449, V = 2145
+butterfly (151,183), twiddle[92] =2009
+u[151] = 2982, v[183] = 2064
+U = 2523, V = 3327
+butterfly (152,184), twiddle[96] =1010
+u[152] = 2725, v[184] = 2797
+U = 2761, V = 259
+butterfly (153,185), twiddle[100] =2522
+u[153] = 2344, v[185] = 643
+U = 3158, V = 1085
+butterfly (154,186), twiddle[104] =1891
+u[154] = 1174, v[186] = 2932
+U = 2053, V = 2311
+butterfly (155,187), twiddle[108] =1795
+u[155] = 560, v[187] = 311
+U = 2100, V = 2099
+butterfly (156,188), twiddle[112] =682
+u[156] = 287, v[188] = 2233
+U = 1260, V = 2214
+butterfly (157,189), twiddle[116] =1848
+u[157] = 2981, v[189] = 2557
+U = 2769, V = 2283
+butterfly (158,190), twiddle[120] =855
+u[158] = 2269, v[190] = 2246
+U = 593, V = 1510
+butterfly (159,191), twiddle[124] =2102
+u[159] = 771, v[191] = 1873
+U = 1322, V = 290
+butterfly (192,224), twiddle[0] =1
+u[192] = 2404, v[224] = 2743
+U = 909, V = 1495
+butterfly (193,225), twiddle[4] =2580
+u[193] = 1306, v[225] = 3031
+U = 504, V = 1851
+butterfly (194,226), twiddle[8] =2642
+u[194] = 172, v[226] = 1498
+U = 835, V = 2737
+butterfly (195,227), twiddle[12] =1897
+u[195] = 2361, v[227] = 2234
+U = 633, V = 2280
+butterfly (196,228), twiddle[16] =1062
+u[196] = 2884, v[228] = 639
+U = 97, V = 313
+butterfly (197,229), twiddle[20] =193
+u[197] = 1499, v[229] = 412
+U = 2620, V = 32
+butterfly (198,230), twiddle[24] =2786
+u[198] = 1158, v[230] = 639
+U = 2563, V = 574
+butterfly (199,231), twiddle[28] =569
+u[199] = 1488, v[231] = 1600
+U = 1544, V = 1426
+butterfly (200,232), twiddle[32] =296
+u[200] = 1418, v[232] = 1347
+U = 3047, V = 521
+butterfly (201,233), twiddle[36] =1339
+u[201] = 2086, v[233] = 2402
+U = 2244, V = 1494
+butterfly (202,234), twiddle[40] =3046
+u[202] = 3274, v[234] = 1693
+U = 819, V = 996
+butterfly (203,235), twiddle[44] =2240
+u[203] = 2307, v[235] = 2343
+U = 2325, V = 2957
+butterfly (204,236), twiddle[48] =1426
+u[204] = 1986, v[236] = 609
+U = 2962, V = 3075
+butterfly (205,237), twiddle[52] =535
+u[205] = 2127, v[237] = 1805
+U = 1966, V = 2910
+butterfly (206,238), twiddle[56] =2393
+u[206] = 2426, v[238] = 962
+U = 1694, V = 622
+butterfly (207,239), twiddle[60] =1974
+u[207] = 75, v[239] = 2972
+U = 3188, V = 272
+butterfly (208,240), twiddle[64] =3040
+u[208] = 2527, v[240] = 61
+U = 1294, V = 3195
+butterfly (209,241), twiddle[68] =76
+u[209] = 2173, v[241] = 389
+U = 1281, V = 1212
+butterfly (210,242), twiddle[72] =2132
+u[210] = 2045, v[242] = 589
+U = 1317, V = 782
+butterfly (211,243), twiddle[76] =1052
+u[211] = 2445, v[243] = 2484
+U = 800, V = 2789
+butterfly (212,244), twiddle[80] =2679
+u[212] = 2478, v[244] = 483
+U = 3145, V = 780
+butterfly (213,245), twiddle[84] =816
+u[213] = 1344, v[245] = 2617
+U = 316, V = 3269
+butterfly (214,246), twiddle[88] =464
+u[214] = 400, v[246] = 2521
+U = 3125, V = 620
+butterfly (215,247), twiddle[92] =2009
+u[215] = 910, v[247] = 2878
+U = 1894, V = 570
+butterfly (216,248), twiddle[96] =1010
+u[216] = 3139, v[248] = 1189
+U = 2164, V = 2695
+butterfly (217,249), twiddle[100] =2522
+u[217] = 1913, v[249] = 1903
+U = 1908, V = 2623
+butterfly (218,250), twiddle[104] =1891
+u[218] = 1842, v[250] = 1486
+U = 1664, V = 369
+butterfly (219,251), twiddle[108] =1795
+u[219] = 1714, v[251] = 3305
+U = 845, V = 1883
+butterfly (220,252), twiddle[112] =682
+u[220] = 1266, v[252] = 565
+U = 2580, V = 2682
+butterfly (221,253), twiddle[116] =1848
+u[221] = 667, v[253] = 2768
+U = 53, V = 2812
+butterfly (222,254), twiddle[120] =855
+u[222] = 944, v[254] = 2122
+U = 1533, V = 2413
+butterfly (223,255), twiddle[124] =2102
+u[223] = 1557, v[255] = 1542
+U = 3214, V = 2449
+twiddle[0]:1
+twiddle[1]:3328
+twiddle[2]:1729
+twiddle[3]:1600
+twiddle[4]:2580
+twiddle[5]:749
+twiddle[6]:3289
+twiddle[7]:40
+twiddle[8]:2642
+twiddle[9]:687
+twiddle[10]:630
+twiddle[11]:2699
+twiddle[12]:1897
+twiddle[13]:1432
+twiddle[14]:848
+twiddle[15]:2481
+twiddle[16]:1062
+twiddle[17]:2267
+twiddle[18]:1919
+twiddle[19]:1410
+twiddle[20]:193
+twiddle[21]:3136
+twiddle[22]:797
+twiddle[23]:2532
+twiddle[24]:2786
+twiddle[25]:543
+twiddle[26]:3260
+twiddle[27]:69
+twiddle[28]:569
+twiddle[29]:2760
+twiddle[30]:1746
+twiddle[31]:1583
+twiddle[32]:296
+twiddle[33]:3033
+twiddle[34]:2447
+twiddle[35]:882
+twiddle[36]:1339
+twiddle[37]:1990
+twiddle[38]:1476
+twiddle[39]:1853
+twiddle[40]:3046
+twiddle[41]:283
+twiddle[42]:56
+twiddle[43]:3273
+twiddle[44]:2240
+twiddle[45]:1089
+twiddle[46]:1333
+twiddle[47]:1996
+twiddle[48]:1426
+twiddle[49]:1903
+twiddle[50]:2094
+twiddle[51]:1235
+twiddle[52]:535
+twiddle[53]:2794
+twiddle[54]:2882
+twiddle[55]:447
+twiddle[56]:2393
+twiddle[57]:936
+twiddle[58]:2879
+twiddle[59]:450
+twiddle[60]:1974
+twiddle[61]:1355
+twiddle[62]:821
+twiddle[63]:2508
+twiddle[64]:3040
+twiddle[65]:289
+twiddle[66]:2998
+twiddle[67]:331
+twiddle[68]:76
+twiddle[69]:3253
+twiddle[70]:1573
+twiddle[71]:1756
+twiddle[72]:2132
+twiddle[73]:1197
+twiddle[74]:1025
+twiddle[75]:2304
+twiddle[76]:1052
+twiddle[77]:2277
+twiddle[78]:1274
+twiddle[79]:2055
+twiddle[80]:2679
+twiddle[81]:650
+twiddle[82]:1352
+twiddle[83]:1977
+twiddle[84]:816
+twiddle[85]:2513
+twiddle[86]:2697
+twiddle[87]:632
+twiddle[88]:464
+twiddle[89]:2865
+twiddle[90]:3296
+twiddle[91]:33
+twiddle[92]:2009
+twiddle[93]:1320
+twiddle[94]:1414
+twiddle[95]:1915
+twiddle[96]:1010
+twiddle[97]:2319
+twiddle[98]:1894
+twiddle[99]:1435
+twiddle[100]:2522
+twiddle[101]:807
+twiddle[102]:2877
+twiddle[103]:452
+twiddle[104]:1891
+twiddle[105]:1438
+twiddle[106]:461
+twiddle[107]:2868
+twiddle[108]:1795
+twiddle[109]:1534
+twiddle[110]:927
+twiddle[111]:2402
+twiddle[112]:682
+twiddle[113]:2647
+twiddle[114]:712
+twiddle[115]:2617
+twiddle[116]:1848
+twiddle[117]:1481
+twiddle[118]:2681
+twiddle[119]:648
+twiddle[120]:855
+twiddle[121]:2474
+twiddle[122]:219
+twiddle[123]:3110
+twiddle[124]:2102
+twiddle[125]:1227
+twiddle[126]:2419
+twiddle[127]:910
+stage 7:
+butterfly (0,64), twiddle[0] =1
+u[0] = 913, v[64] = 2420
+U = 2, V = 911
+butterfly (1,65), twiddle[2] =1729
+u[1] = 373, v[65] = 2956
+U = 0, V = 2420
+butterfly (2,66), twiddle[4] =2580
+u[2] = 786, v[66] = 2416
+U = 1601, V = 1228
+butterfly (3,67), twiddle[6] =3289
+u[3] = 2260, v[67] = 1200
+U = 1730, V = 2103
+butterfly (4,68), twiddle[8] =2642
+u[4] = 1810, v[68] = 1601
+U = 41, V = 3111
+butterfly (5,69), twiddle[10] =630
+u[5] = 2075, v[69] = 1176
+U = 3290, V = 220
+butterfly (6,70), twiddle[12] =1897
+u[6] = 2801, v[70] = 2028
+U = 750, V = 2475
+butterfly (7,71), twiddle[14] =848
+u[7] = 1420, v[71] = 413
+U = 2581, V = 856
+butterfly (8,72), twiddle[16] =1062
+u[8] = 1188, v[72] = 447
+U = 2482, V = 649
+butterfly (9,73), twiddle[18] =1919
+u[9] = 2802, v[73] = 2225
+U = 849, V = 2682
+butterfly (10,74), twiddle[20] =193
+u[10] = 492, v[74] = 2374
+U = 1433, V = 1482
+butterfly (11,75), twiddle[22] =797
+u[11] = 547, v[75] = 3249
+U = 1898, V = 1849
+butterfly (12,76), twiddle[24] =2786
+u[12] = 108, v[76] = 1963
+U = 2700, V = 2618
+butterfly (13,77), twiddle[26] =3260
+u[13] = 2840, v[77] = 1751
+U = 631, V = 713
+butterfly (14,78), twiddle[28] =569
+u[14] = 2559, v[78] = 2146
+U = 688, V = 2648
+butterfly (15,79), twiddle[30] =1746
+u[15] = 3019, v[79] = 2267
+U = 2643, V = 683
+butterfly (16,80), twiddle[32] =296
+u[16] = 2818, v[80] = 350
+U = 1584, V = 2403
+butterfly (17,81), twiddle[34] =2447
+u[17] = 825, v[81] = 2669
+U = 1747, V = 928
+butterfly (18,82), twiddle[36] =1339
+u[18] = 1079, v[82] = 1114
+U = 2761, V = 1535
+butterfly (19,83), twiddle[38] =1476
+u[19] = 481, v[83] = 659
+U = 570, V = 1796
+butterfly (20,84), twiddle[40] =3046
+u[20] = 848, v[84] = 2621
+U = 70, V = 2869
+butterfly (21,85), twiddle[42] =56
+u[21] = 2437, v[85] = 756
+U = 3261, V = 462
+butterfly (22,86), twiddle[44] =2240
+u[22] = 23, v[86] = 1065
+U = 544, V = 1439
+butterfly (23,87), twiddle[46] =1333
+u[23] = 1285, v[87] = 960
+U = 2787, V = 1892
+butterfly (24,88), twiddle[48] =1426
+u[24] = 1233, v[88] = 504
+U = 2533, V = 453
+butterfly (25,89), twiddle[50] =2094
+u[25] = 2351, v[89] = 2574
+U = 798, V = 2878
+butterfly (26,90), twiddle[52] =535
+u[26] = 1166, v[90] = 1779
+U = 3137, V = 808
+butterfly (27,91), twiddle[54] =2882
+u[27] = 1797, v[91] = 1920
+U = 194, V = 2523
+butterfly (28,92), twiddle[56] =2393
+u[28] = 2448, v[92] = 374
+U = 1411, V = 1436
+butterfly (29,93), twiddle[58] =2879
+u[29] = 1213, v[93] = 2627
+U = 1920, V = 1895
+butterfly (30,94), twiddle[60] =1974
+u[30] = 1173, v[94] = 34
+U = 2268, V = 2320
+butterfly (31,95), twiddle[62] =821
+u[31] = 1417, v[95] = 709
+U = 1063, V = 1011
+butterfly (32,96), twiddle[64] =3040
+u[32] = 1673, v[96] = 16
+U = 2509, V = 1916
+butterfly (33,97), twiddle[66] =2998
+u[33] = 2618, v[97] = 2355
+U = 822, V = 1415
+butterfly (34,98), twiddle[68] =76
+u[34] = 1680, v[98] = 1032
+U = 1356, V = 1321
+butterfly (35,99), twiddle[70] =1573
+u[35] = 1189, v[99] = 2761
+U = 1975, V = 2010
+butterfly (36,100), twiddle[72] =2132
+u[36] = 2509, v[100] = 1722
+U = 451, V = 34
+butterfly (37,101), twiddle[74] =1025
+u[37] = 2094, v[101] = 337
+U = 2880, V = 3297
+butterfly (38,102), twiddle[76] =1052
+u[38] = 1022, v[102] = 852
+U = 937, V = 2866
+butterfly (39,103), twiddle[78] =1274
+u[39] = 1519, v[103] = 3269
+U = 2394, V = 465
+butterfly (40,104), twiddle[80] =2679
+u[40] = 2890, v[104] = 1335
+U = 448, V = 633
+butterfly (41,105), twiddle[82] =1352
+u[41] = 339, v[105] = 2098
+U = 2883, V = 2698
+butterfly (42,106), twiddle[84] =816
+u[42] = 2333, v[106] = 3257
+U = 2795, V = 2514
+butterfly (43,107), twiddle[86] =2697
+u[43] = 245, v[107] = 827
+U = 536, V = 817
+butterfly (44,108), twiddle[88] =464
+u[44] = 3120, v[108] = 2681
+U = 1236, V = 1978
+butterfly (45,109), twiddle[90] =3296
+u[45] = 2054, v[109] = 2136
+U = 2095, V = 1353
+butterfly (46,110), twiddle[92] =2009
+u[46] = 640, v[110] = 3168
+U = 1904, V = 651
+butterfly (47,111), twiddle[94] =1414
+u[47] = 1104, v[111] = 1750
+U = 1427, V = 2680
+butterfly (48,112), twiddle[96] =1010
+u[48] = 1030, v[112] = 2964
+U = 1997, V = 2056
+butterfly (49,113), twiddle[98] =1894
+u[49] = 3189, v[113] = 2808
+U = 1334, V = 1275
+butterfly (50,114), twiddle[100] =2522
+u[50] = 3026, v[114] = 2483
+U = 1090, V = 2278
+butterfly (51,115), twiddle[102] =2877
+u[51] = 3012, v[115] = 1470
+U = 2241, V = 1053
+butterfly (52,116), twiddle[104] =1891
+u[52] = 1932, v[116] = 1287
+U = 3274, V = 2305
+butterfly (53,117), twiddle[106] =461
+u[53] = 1749, v[117] = 1694
+U = 57, V = 1026
+butterfly (54,118), twiddle[108] =1795
+u[54] = 1811, v[118] = 2086
+U = 284, V = 1198
+butterfly (55,119), twiddle[110] =927
+u[55] = 1304, v[119] = 1461
+U = 3047, V = 2133
+butterfly (56,120), twiddle[112] =682
+u[56] = 524, v[120] = 3184
+U = 1854, V = 1757
+butterfly (57,121), twiddle[114] =712
+u[57] = 142, v[121] = 2812
+U = 1477, V = 1574
+butterfly (58,122), twiddle[116] =1848
+u[58] = 2299, v[122] = 1683
+U = 1991, V = 3254
+butterfly (59,123), twiddle[118] =2681
+u[59] = 297, v[123] = 2383
+U = 1340, V = 77
+butterfly (60,124), twiddle[120] =855
+u[60] = 1300, v[124] = 466
+U = 883, V = 332
+butterfly (61,125), twiddle[122] =219
+u[61] = 896, v[125] = 671
+U = 2448, V = 2999
+butterfly (62,126), twiddle[124] =2102
+u[62] = 2483, v[126] = 256
+U = 3034, V = 290
+butterfly (63,127), twiddle[126] =2419
+u[63] = 290, v[127] = 304
+U = 297, V = 3041
+butterfly (128,192), twiddle[0] =1
+u[128] = 2420, v[192] = 909
+U = 0, V = 2420
+butterfly (129,193), twiddle[2] =1729
+u[129] = 2829, v[193] = 504
+U = 2, V = 911
+butterfly (130,194), twiddle[4] =2580
+u[130] = 2625, v[194] = 835
+U = 1730, V = 2103
+butterfly (131,195), twiddle[6] =3289
+u[131] = 2569, v[195] = 633
+U = 1601, V = 1228
+butterfly (132,196), twiddle[8] =2642
+u[132] = 3154, v[196] = 97
+U = 3290, V = 220
+butterfly (133,197), twiddle[10] =630
+u[133] = 791, v[197] = 2620
+U = 41, V = 3111
+butterfly (134,198), twiddle[12] =1897
+u[134] = 2599, v[198] = 2563
+U = 2581, V = 856
+butterfly (135,199), twiddle[14] =848
+u[135] = 3285, v[199] = 1544
+U = 750, V = 2475
+butterfly (136,200), twiddle[16] =1062
+u[136] = 1980, v[200] = 3047
+U = 849, V = 2682
+butterfly (137,201), twiddle[18] =1919
+u[137] = 2720, v[201] = 2244
+U = 2482, V = 649
+butterfly (138,202), twiddle[20] =193
+u[138] = 2977, v[202] = 819
+U = 1898, V = 1849
+butterfly (139,203), twiddle[22] =797
+u[139] = 541, v[203] = 2325
+U = 1433, V = 1482
+butterfly (140,204), twiddle[24] =2786
+u[140] = 1629, v[204] = 2962
+U = 631, V = 713
+butterfly (141,205), twiddle[26] =3260
+u[141] = 105, v[205] = 1966
+U = 2700, V = 2618
+butterfly (142,206), twiddle[28] =569
+u[142] = 263, v[206] = 1694
+U = 2643, V = 683
+butterfly (143,207), twiddle[30] =1746
+u[143] = 1517, v[207] = 3188
+U = 688, V = 2648
+butterfly (144,208), twiddle[32] =296
+u[144] = 2200, v[208] = 1294
+U = 1747, V = 928
+butterfly (145,209), twiddle[34] =2447
+u[145] = 1887, v[209] = 1281
+U = 1584, V = 2403
+butterfly (146,210), twiddle[36] =1339
+u[146] = 3152, v[210] = 1317
+U = 570, V = 1796
+butterfly (147,211), twiddle[38] =1476
+u[147] = 1393, v[211] = 800
+U = 2761, V = 1535
+butterfly (148,212), twiddle[40] =3046
+u[148] = 48, v[212] = 3145
+U = 3261, V = 462
+butterfly (149,213), twiddle[42] =56
+u[149] = 3153, v[213] = 316
+U = 70, V = 2869
+butterfly (150,214), twiddle[44] =2240
+u[150] = 2449, v[214] = 3125
+U = 2787, V = 1892
+butterfly (151,215), twiddle[46] =1333
+u[151] = 2523, v[215] = 1894
+U = 544, V = 1439
+butterfly (152,216), twiddle[48] =1426
+u[152] = 2761, v[216] = 2164
+U = 798, V = 2878
+butterfly (153,217), twiddle[50] =2094
+u[153] = 3158, v[217] = 1908
+U = 2533, V = 453
+butterfly (154,218), twiddle[52] =535
+u[154] = 2053, v[218] = 1664
+U = 194, V = 2523
+butterfly (155,219), twiddle[54] =2882
+u[155] = 2100, v[219] = 845
+U = 3137, V = 808
+butterfly (156,220), twiddle[56] =2393
+u[156] = 1260, v[220] = 2580
+U = 1920, V = 1895
+butterfly (157,221), twiddle[58] =2879
+u[157] = 2769, v[221] = 53
+U = 1411, V = 1436
+butterfly (158,222), twiddle[60] =1974
+u[158] = 593, v[222] = 1533
+U = 1063, V = 1011
+butterfly (159,223), twiddle[62] =821
+u[159] = 1322, v[223] = 3214
+U = 2268, V = 2320
+butterfly (160,224), twiddle[64] =3040
+u[160] = 149, v[224] = 1495
+U = 822, V = 1415
+butterfly (161,225), twiddle[66] =2998
+u[161] = 3167, v[225] = 1851
+U = 2509, V = 1916
+butterfly (162,226), twiddle[68] =76
+u[162] = 1213, v[226] = 2737
+U = 1975, V = 2010
+butterfly (163,227), twiddle[70] =1573
+u[163] = 432, v[227] = 2280
+U = 1356, V = 1321
+butterfly (164,228), twiddle[72] =2132
+u[164] = 2118, v[228] = 313
+U = 2880, V = 3297
+butterfly (165,229), twiddle[74] =1025
+u[165] = 870, v[229] = 32
+U = 451, V = 34
+butterfly (166,230), twiddle[76] =1052
+u[166] = 885, v[230] = 574
+U = 2394, V = 465
+butterfly (167,231), twiddle[78] =1274
+u[167] = 448, v[231] = 1426
+U = 937, V = 2866
+butterfly (168,232), twiddle[80] =2679
+u[168] = 1916, v[232] = 521
+U = 2883, V = 2698
+butterfly (169,233), twiddle[82] =1352
+u[169] = 2731, v[233] = 1494
+U = 448, V = 633
+butterfly (170,234), twiddle[84] =816
+u[170] = 76, v[234] = 996
+U = 536, V = 817
+butterfly (171,235), twiddle[86] =2697
+u[171] = 2633, v[235] = 2957
+U = 2795, V = 2514
+butterfly (172,236), twiddle[88] =464
+u[172] = 1115, v[236] = 3075
+U = 2095, V = 1353
+butterfly (173,237), twiddle[90] =3296
+u[173] = 2891, v[237] = 2910
+U = 1236, V = 1978
+butterfly (174,238), twiddle[92] =2009
+u[174] = 2232, v[238] = 622
+U = 1427, V = 2680
+butterfly (175,239), twiddle[94] =1414
+u[175] = 207, v[239] = 272
+U = 1904, V = 651
+butterfly (176,240), twiddle[96] =1010
+u[176] = 2802, v[240] = 3195
+U = 1334, V = 1275
+butterfly (177,241), twiddle[98] =1894
+u[177] = 2782, v[241] = 1212
+U = 1997, V = 2056
+butterfly (178,242), twiddle[100] =2522
+u[178] = 371, v[242] = 782
+U = 2241, V = 1053
+butterfly (179,243), twiddle[102] =2877
+u[179] = 2720, v[243] = 2789
+U = 1090, V = 2278
+butterfly (180,244), twiddle[104] =1891
+u[180] = 2663, v[244] = 780
+U = 57, V = 1026
+butterfly (181,245), twiddle[106] =461
+u[181] = 3279, v[245] = 3269
+U = 3274, V = 2305
+butterfly (182,246), twiddle[108] =1795
+u[182] = 2145, v[246] = 620
+U = 3047, V = 2133
+butterfly (183,247), twiddle[110] =927
+u[183] = 3327, v[247] = 570
+U = 284, V = 1198
+butterfly (184,248), twiddle[112] =682
+u[184] = 259, v[248] = 2695
+U = 1477, V = 1574
+butterfly (185,249), twiddle[114] =712
+u[185] = 1085, v[249] = 2623
+U = 1854, V = 1757
+butterfly (186,250), twiddle[116] =1848
+u[186] = 2311, v[250] = 369
+U = 1340, V = 77
+butterfly (187,251), twiddle[118] =2681
+u[187] = 2099, v[251] = 1883
+U = 1991, V = 3254
+butterfly (188,252), twiddle[120] =855
+u[188] = 2214, v[252] = 2682
+U = 2448, V = 2999
+butterfly (189,253), twiddle[122] =219
+u[189] = 2283, v[253] = 2812
+U = 883, V = 332
+butterfly (190,254), twiddle[124] =2102
+u[190] = 1510, v[254] = 2413
+U = 297, V = 3041
+butterfly (191,255), twiddle[126] =2419
+u[191] = 290, v[255] = 2449
+U = 3034, V = 290
+twiddle[0]:1
+twiddle[1]:3328
+twiddle[2]:1729
+twiddle[3]:1600
+twiddle[4]:2580
+twiddle[5]:749
+twiddle[6]:3289
+twiddle[7]:40
+twiddle[8]:2642
+twiddle[9]:687
+twiddle[10]:630
+twiddle[11]:2699
+twiddle[12]:1897
+twiddle[13]:1432
+twiddle[14]:848
+twiddle[15]:2481
+twiddle[16]:1062
+twiddle[17]:2267
+twiddle[18]:1919
+twiddle[19]:1410
+twiddle[20]:193
+twiddle[21]:3136
+twiddle[22]:797
+twiddle[23]:2532
+twiddle[24]:2786
+twiddle[25]:543
+twiddle[26]:3260
+twiddle[27]:69
+twiddle[28]:569
+twiddle[29]:2760
+twiddle[30]:1746
+twiddle[31]:1583
+twiddle[32]:296
+twiddle[33]:3033
+twiddle[34]:2447
+twiddle[35]:882
+twiddle[36]:1339
+twiddle[37]:1990
+twiddle[38]:1476
+twiddle[39]:1853
+twiddle[40]:3046
+twiddle[41]:283
+twiddle[42]:56
+twiddle[43]:3273
+twiddle[44]:2240
+twiddle[45]:1089
+twiddle[46]:1333
+twiddle[47]:1996
+twiddle[48]:1426
+twiddle[49]:1903
+twiddle[50]:2094
+twiddle[51]:1235
+twiddle[52]:535
+twiddle[53]:2794
+twiddle[54]:2882
+twiddle[55]:447
+twiddle[56]:2393
+twiddle[57]:936
+twiddle[58]:2879
+twiddle[59]:450
+twiddle[60]:1974
+twiddle[61]:1355
+twiddle[62]:821
+twiddle[63]:2508
+twiddle[64]:3040
+twiddle[65]:289
+twiddle[66]:2998
+twiddle[67]:331
+twiddle[68]:76
+twiddle[69]:3253
+twiddle[70]:1573
+twiddle[71]:1756
+twiddle[72]:2132
+twiddle[73]:1197
+twiddle[74]:1025
+twiddle[75]:2304
+twiddle[76]:1052
+twiddle[77]:2277
+twiddle[78]:1274
+twiddle[79]:2055
+twiddle[80]:2679
+twiddle[81]:650
+twiddle[82]:1352
+twiddle[83]:1977
+twiddle[84]:816
+twiddle[85]:2513
+twiddle[86]:2697
+twiddle[87]:632
+twiddle[88]:464
+twiddle[89]:2865
+twiddle[90]:3296
+twiddle[91]:33
+twiddle[92]:2009
+twiddle[93]:1320
+twiddle[94]:1414
+twiddle[95]:1915
+twiddle[96]:1010
+twiddle[97]:2319
+twiddle[98]:1894
+twiddle[99]:1435
+twiddle[100]:2522
+twiddle[101]:807
+twiddle[102]:2877
+twiddle[103]:452
+twiddle[104]:1891
+twiddle[105]:1438
+twiddle[106]:461
+twiddle[107]:2868
+twiddle[108]:1795
+twiddle[109]:1534
+twiddle[110]:927
+twiddle[111]:2402
+twiddle[112]:682
+twiddle[113]:2647
+twiddle[114]:712
+twiddle[115]:2617
+twiddle[116]:1848
+twiddle[117]:1481
+twiddle[118]:2681
+twiddle[119]:648
+twiddle[120]:855
+twiddle[121]:2474
+twiddle[122]:219
+twiddle[123]:3110
+twiddle[124]:2102
+twiddle[125]:1227
+twiddle[126]:2419
+twiddle[127]:910
+stage 8:
+butterfly (0,128), twiddle[0] =1
+u[0] = 2, v[128] = 0
+U = 1, V = 1
+butterfly (1,129), twiddle[1] =3328
+u[1] = 0, v[129] = 2
+U = 1, V = 1
+butterfly (2,130), twiddle[2] =1729
+u[2] = 1601, v[130] = 1730
+U = 1, V = 1
+butterfly (3,131), twiddle[3] =1600
+u[3] = 1730, v[131] = 1601
+U = 1, V = 1
+butterfly (4,132), twiddle[4] =2580
+u[4] = 41, v[132] = 3290
+U = 1, V = 1
+butterfly (5,133), twiddle[5] =749
+u[5] = 3290, v[133] = 41
+U = 1, V = 1
+butterfly (6,134), twiddle[6] =3289
+u[6] = 750, v[134] = 2581
+U = 1, V = 1
+butterfly (7,135), twiddle[7] =40
+u[7] = 2581, v[135] = 750
+U = 1, V = 1
+butterfly (8,136), twiddle[8] =2642
+u[8] = 2482, v[136] = 849
+U = 1, V = 1
+butterfly (9,137), twiddle[9] =687
+u[9] = 849, v[137] = 2482
+U = 1, V = 1
+butterfly (10,138), twiddle[10] =630
+u[10] = 1433, v[138] = 1898
+U = 1, V = 1
+butterfly (11,139), twiddle[11] =2699
+u[11] = 1898, v[139] = 1433
+U = 1, V = 1
+butterfly (12,140), twiddle[12] =1897
+u[12] = 2700, v[140] = 631
+U = 1, V = 1
+butterfly (13,141), twiddle[13] =1432
+u[13] = 631, v[141] = 2700
+U = 1, V = 1
+butterfly (14,142), twiddle[14] =848
+u[14] = 688, v[142] = 2643
+U = 1, V = 1
+butterfly (15,143), twiddle[15] =2481
+u[15] = 2643, v[143] = 688
+U = 1, V = 1
+butterfly (16,144), twiddle[16] =1062
+u[16] = 1584, v[144] = 1747
+U = 1, V = 1
+butterfly (17,145), twiddle[17] =2267
+u[17] = 1747, v[145] = 1584
+U = 1, V = 1
+butterfly (18,146), twiddle[18] =1919
+u[18] = 2761, v[146] = 570
+U = 1, V = 1
+butterfly (19,147), twiddle[19] =1410
+u[19] = 570, v[147] = 2761
+U = 1, V = 1
+butterfly (20,148), twiddle[20] =193
+u[20] = 70, v[148] = 3261
+U = 1, V = 1
+butterfly (21,149), twiddle[21] =3136
+u[21] = 3261, v[149] = 70
+U = 1, V = 1
+butterfly (22,150), twiddle[22] =797
+u[22] = 544, v[150] = 2787
+U = 1, V = 1
+butterfly (23,151), twiddle[23] =2532
+u[23] = 2787, v[151] = 544
+U = 1, V = 1
+butterfly (24,152), twiddle[24] =2786
+u[24] = 2533, v[152] = 798
+U = 1, V = 1
+butterfly (25,153), twiddle[25] =543
+u[25] = 798, v[153] = 2533
+U = 1, V = 1
+butterfly (26,154), twiddle[26] =3260
+u[26] = 3137, v[154] = 194
+U = 1, V = 1
+butterfly (27,155), twiddle[27] =69
+u[27] = 194, v[155] = 3137
+U = 1, V = 1
+butterfly (28,156), twiddle[28] =569
+u[28] = 1411, v[156] = 1920
+U = 1, V = 1
+butterfly (29,157), twiddle[29] =2760
+u[29] = 1920, v[157] = 1411
+U = 1, V = 1
+butterfly (30,158), twiddle[30] =1746
+u[30] = 2268, v[158] = 1063
+U = 1, V = 1
+butterfly (31,159), twiddle[31] =1583
+u[31] = 1063, v[159] = 2268
+U = 1, V = 1
+butterfly (32,160), twiddle[32] =296
+u[32] = 2509, v[160] = 822
+U = 1, V = 1
+butterfly (33,161), twiddle[33] =3033
+u[33] = 822, v[161] = 2509
+U = 1, V = 1
+butterfly (34,162), twiddle[34] =2447
+u[34] = 1356, v[162] = 1975
+U = 1, V = 1
+butterfly (35,163), twiddle[35] =882
+u[35] = 1975, v[163] = 1356
+U = 1, V = 1
+butterfly (36,164), twiddle[36] =1339
+u[36] = 451, v[164] = 2880
+U = 1, V = 1
+butterfly (37,165), twiddle[37] =1990
+u[37] = 2880, v[165] = 451
+U = 1, V = 1
+butterfly (38,166), twiddle[38] =1476
+u[38] = 937, v[166] = 2394
+U = 1, V = 1
+butterfly (39,167), twiddle[39] =1853
+u[39] = 2394, v[167] = 937
+U = 1, V = 1
+butterfly (40,168), twiddle[40] =3046
+u[40] = 448, v[168] = 2883
+U = 1, V = 1
+butterfly (41,169), twiddle[41] =283
+u[41] = 2883, v[169] = 448
+U = 1, V = 1
+butterfly (42,170), twiddle[42] =56
+u[42] = 2795, v[170] = 536
+U = 1, V = 1
+butterfly (43,171), twiddle[43] =3273
+u[43] = 536, v[171] = 2795
+U = 1, V = 1
+butterfly (44,172), twiddle[44] =2240
+u[44] = 1236, v[172] = 2095
+U = 1, V = 1
+butterfly (45,173), twiddle[45] =1089
+u[45] = 2095, v[173] = 1236
+U = 1, V = 1
+butterfly (46,174), twiddle[46] =1333
+u[46] = 1904, v[174] = 1427
+U = 1, V = 1
+butterfly (47,175), twiddle[47] =1996
+u[47] = 1427, v[175] = 1904
+U = 1, V = 1
+butterfly (48,176), twiddle[48] =1426
+u[48] = 1997, v[176] = 1334
+U = 1, V = 1
+butterfly (49,177), twiddle[49] =1903
+u[49] = 1334, v[177] = 1997
+U = 1, V = 1
+butterfly (50,178), twiddle[50] =2094
+u[50] = 1090, v[178] = 2241
+U = 1, V = 1
+butterfly (51,179), twiddle[51] =1235
+u[51] = 2241, v[179] = 1090
+U = 1, V = 1
+butterfly (52,180), twiddle[52] =535
+u[52] = 3274, v[180] = 57
+U = 1, V = 1
+butterfly (53,181), twiddle[53] =2794
+u[53] = 57, v[181] = 3274
+U = 1, V = 1
+butterfly (54,182), twiddle[54] =2882
+u[54] = 284, v[182] = 3047
+U = 1, V = 1
+butterfly (55,183), twiddle[55] =447
+u[55] = 3047, v[183] = 284
+U = 1, V = 1
+butterfly (56,184), twiddle[56] =2393
+u[56] = 1854, v[184] = 1477
+U = 1, V = 1
+butterfly (57,185), twiddle[57] =936
+u[57] = 1477, v[185] = 1854
+U = 1, V = 1
+butterfly (58,186), twiddle[58] =2879
+u[58] = 1991, v[186] = 1340
+U = 1, V = 1
+butterfly (59,187), twiddle[59] =450
+u[59] = 1340, v[187] = 1991
+U = 1, V = 1
+butterfly (60,188), twiddle[60] =1974
+u[60] = 883, v[188] = 2448
+U = 1, V = 1
+butterfly (61,189), twiddle[61] =1355
+u[61] = 2448, v[189] = 883
+U = 1, V = 1
+butterfly (62,190), twiddle[62] =821
+u[62] = 3034, v[190] = 297
+U = 1, V = 1
+butterfly (63,191), twiddle[63] =2508
+u[63] = 297, v[191] = 3034
+U = 1, V = 1
+butterfly (64,192), twiddle[64] =3040
+u[64] = 911, v[192] = 2420
+U = 1, V = 1
+butterfly (65,193), twiddle[65] =289
+u[65] = 2420, v[193] = 911
+U = 1, V = 1
+butterfly (66,194), twiddle[66] =2998
+u[66] = 1228, v[194] = 2103
+U = 1, V = 1
+butterfly (67,195), twiddle[67] =331
+u[67] = 2103, v[195] = 1228
+U = 1, V = 1
+butterfly (68,196), twiddle[68] =76
+u[68] = 3111, v[196] = 220
+U = 1, V = 1
+butterfly (69,197), twiddle[69] =3253
+u[69] = 220, v[197] = 3111
+U = 1, V = 1
+butterfly (70,198), twiddle[70] =1573
+u[70] = 2475, v[198] = 856
+U = 1, V = 1
+butterfly (71,199), twiddle[71] =1756
+u[71] = 856, v[199] = 2475
+U = 1, V = 1
+butterfly (72,200), twiddle[72] =2132
+u[72] = 649, v[200] = 2682
+U = 1, V = 1
+butterfly (73,201), twiddle[73] =1197
+u[73] = 2682, v[201] = 649
+U = 1, V = 1
+butterfly (74,202), twiddle[74] =1025
+u[74] = 1482, v[202] = 1849
+U = 1, V = 1
+butterfly (75,203), twiddle[75] =2304
+u[75] = 1849, v[203] = 1482
+U = 1, V = 1
+butterfly (76,204), twiddle[76] =1052
+u[76] = 2618, v[204] = 713
+U = 1, V = 1
+butterfly (77,205), twiddle[77] =2277
+u[77] = 713, v[205] = 2618
+U = 1, V = 1
+butterfly (78,206), twiddle[78] =1274
+u[78] = 2648, v[206] = 683
+U = 1, V = 1
+butterfly (79,207), twiddle[79] =2055
+u[79] = 683, v[207] = 2648
+U = 1, V = 1
+butterfly (80,208), twiddle[80] =2679
+u[80] = 2403, v[208] = 928
+U = 1, V = 1
+butterfly (81,209), twiddle[81] =650
+u[81] = 928, v[209] = 2403
+U = 1, V = 1
+butterfly (82,210), twiddle[82] =1352
+u[82] = 1535, v[210] = 1796
+U = 1, V = 1
+butterfly (83,211), twiddle[83] =1977
+u[83] = 1796, v[211] = 1535
+U = 1, V = 1
+butterfly (84,212), twiddle[84] =816
+u[84] = 2869, v[212] = 462
+U = 1, V = 1
+butterfly (85,213), twiddle[85] =2513
+u[85] = 462, v[213] = 2869
+U = 1, V = 1
+butterfly (86,214), twiddle[86] =2697
+u[86] = 1439, v[214] = 1892
+U = 1, V = 1
+butterfly (87,215), twiddle[87] =632
+u[87] = 1892, v[215] = 1439
+U = 1, V = 1
+butterfly (88,216), twiddle[88] =464
+u[88] = 453, v[216] = 2878
+U = 1, V = 1
+butterfly (89,217), twiddle[89] =2865
+u[89] = 2878, v[217] = 453
+U = 1, V = 1
+butterfly (90,218), twiddle[90] =3296
+u[90] = 808, v[218] = 2523
+U = 1, V = 1
+butterfly (91,219), twiddle[91] =33
+u[91] = 2523, v[219] = 808
+U = 1, V = 1
+butterfly (92,220), twiddle[92] =2009
+u[92] = 1436, v[220] = 1895
+U = 1, V = 1
+butterfly (93,221), twiddle[93] =1320
+u[93] = 1895, v[221] = 1436
+U = 1, V = 1
+butterfly (94,222), twiddle[94] =1414
+u[94] = 2320, v[222] = 1011
+U = 1, V = 1
+butterfly (95,223), twiddle[95] =1915
+u[95] = 1011, v[223] = 2320
+U = 1, V = 1
+butterfly (96,224), twiddle[96] =1010
+u[96] = 1916, v[224] = 1415
+U = 1, V = 1
+butterfly (97,225), twiddle[97] =2319
+u[97] = 1415, v[225] = 1916
+U = 1, V = 1
+butterfly (98,226), twiddle[98] =1894
+u[98] = 1321, v[226] = 2010
+U = 1, V = 1
+butterfly (99,227), twiddle[99] =1435
+u[99] = 2010, v[227] = 1321
+U = 1, V = 1
+butterfly (100,228), twiddle[100] =2522
+u[100] = 34, v[228] = 3297
+U = 1, V = 1
+butterfly (101,229), twiddle[101] =807
+u[101] = 3297, v[229] = 34
+U = 1, V = 1
+butterfly (102,230), twiddle[102] =2877
+u[102] = 2866, v[230] = 465
+U = 1, V = 1
+butterfly (103,231), twiddle[103] =452
+u[103] = 465, v[231] = 2866
+U = 1, V = 1
+butterfly (104,232), twiddle[104] =1891
+u[104] = 633, v[232] = 2698
+U = 1, V = 1
+butterfly (105,233), twiddle[105] =1438
+u[105] = 2698, v[233] = 633
+U = 1, V = 1
+butterfly (106,234), twiddle[106] =461
+u[106] = 2514, v[234] = 817
+U = 1, V = 1
+butterfly (107,235), twiddle[107] =2868
+u[107] = 817, v[235] = 2514
+U = 1, V = 1
+butterfly (108,236), twiddle[108] =1795
+u[108] = 1978, v[236] = 1353
+U = 1, V = 1
+butterfly (109,237), twiddle[109] =1534
+u[109] = 1353, v[237] = 1978
+U = 1, V = 1
+butterfly (110,238), twiddle[110] =927
+u[110] = 651, v[238] = 2680
+U = 1, V = 1
+butterfly (111,239), twiddle[111] =2402
+u[111] = 2680, v[239] = 651
+U = 1, V = 1
+butterfly (112,240), twiddle[112] =682
+u[112] = 2056, v[240] = 1275
+U = 1, V = 1
+butterfly (113,241), twiddle[113] =2647
+u[113] = 1275, v[241] = 2056
+U = 1, V = 1
+butterfly (114,242), twiddle[114] =712
+u[114] = 2278, v[242] = 1053
+U = 1, V = 1
+butterfly (115,243), twiddle[115] =2617
+u[115] = 1053, v[243] = 2278
+U = 1, V = 1
+butterfly (116,244), twiddle[116] =1848
+u[116] = 2305, v[244] = 1026
+U = 1, V = 1
+butterfly (117,245), twiddle[117] =1481
+u[117] = 1026, v[245] = 2305
+U = 1, V = 1
+butterfly (118,246), twiddle[118] =2681
+u[118] = 1198, v[246] = 2133
+U = 1, V = 1
+butterfly (119,247), twiddle[119] =648
+u[119] = 2133, v[247] = 1198
+U = 1, V = 1
+butterfly (120,248), twiddle[120] =855
+u[120] = 1757, v[248] = 1574
+U = 1, V = 1
+butterfly (121,249), twiddle[121] =2474
+u[121] = 1574, v[249] = 1757
+U = 1, V = 1
+butterfly (122,250), twiddle[122] =219
+u[122] = 3254, v[250] = 77
+U = 1, V = 1
+butterfly (123,251), twiddle[123] =3110
+u[123] = 77, v[251] = 3254
+U = 1, V = 1
+butterfly (124,252), twiddle[124] =2102
+u[124] = 332, v[252] = 2999
+U = 1, V = 1
+butterfly (125,253), twiddle[125] =1227
+u[125] = 2999, v[253] = 332
+U = 1, V = 1
+butterfly (126,254), twiddle[126] =2419
+u[126] = 290, v[254] = 3041
+U = 1, V = 1
+butterfly (127,255), twiddle[127] =910
+u[127] = 3041, v[255] = 290
+U = 1, V = 1
+twiddle[0]:1
+twiddle[1]:3328
+twiddle[2]:1729
+twiddle[3]:1600
+twiddle[4]:2580
+twiddle[5]:749
+twiddle[6]:3289
+twiddle[7]:40
+twiddle[8]:2642
+twiddle[9]:687
+twiddle[10]:630
+twiddle[11]:2699
+twiddle[12]:1897
+twiddle[13]:1432
+twiddle[14]:848
+twiddle[15]:2481
+twiddle[16]:1062
+twiddle[17]:2267
+twiddle[18]:1919
+twiddle[19]:1410
+twiddle[20]:193
+twiddle[21]:3136
+twiddle[22]:797
+twiddle[23]:2532
+twiddle[24]:2786
+twiddle[25]:543
+twiddle[26]:3260
+twiddle[27]:69
+twiddle[28]:569
+twiddle[29]:2760
+twiddle[30]:1746
+twiddle[31]:1583
+twiddle[32]:296
+twiddle[33]:3033
+twiddle[34]:2447
+twiddle[35]:882
+twiddle[36]:1339
+twiddle[37]:1990
+twiddle[38]:1476
+twiddle[39]:1853
+twiddle[40]:3046
+twiddle[41]:283
+twiddle[42]:56
+twiddle[43]:3273
+twiddle[44]:2240
+twiddle[45]:1089
+twiddle[46]:1333
+twiddle[47]:1996
+twiddle[48]:1426
+twiddle[49]:1903
+twiddle[50]:2094
+twiddle[51]:1235
+twiddle[52]:535
+twiddle[53]:2794
+twiddle[54]:2882
+twiddle[55]:447
+twiddle[56]:2393
+twiddle[57]:936
+twiddle[58]:2879
+twiddle[59]:450
+twiddle[60]:1974
+twiddle[61]:1355
+twiddle[62]:821
+twiddle[63]:2508
+twiddle[64]:3040
+twiddle[65]:289
+twiddle[66]:2998
+twiddle[67]:331
+twiddle[68]:76
+twiddle[69]:3253
+twiddle[70]:1573
+twiddle[71]:1756
+twiddle[72]:2132
+twiddle[73]:1197
+twiddle[74]:1025
+twiddle[75]:2304
+twiddle[76]:1052
+twiddle[77]:2277
+twiddle[78]:1274
+twiddle[79]:2055
+twiddle[80]:2679
+twiddle[81]:650
+twiddle[82]:1352
+twiddle[83]:1977
+twiddle[84]:816
+twiddle[85]:2513
+twiddle[86]:2697
+twiddle[87]:632
+twiddle[88]:464
+twiddle[89]:2865
+twiddle[90]:3296
+twiddle[91]:33
+twiddle[92]:2009
+twiddle[93]:1320
+twiddle[94]:1414
+twiddle[95]:1915
+twiddle[96]:1010
+twiddle[97]:2319
+twiddle[98]:1894
+twiddle[99]:1435
+twiddle[100]:2522
+twiddle[101]:807
+twiddle[102]:2877
+twiddle[103]:452
+twiddle[104]:1891
+twiddle[105]:1438
+twiddle[106]:461
+twiddle[107]:2868
+twiddle[108]:1795
+twiddle[109]:1534
+twiddle[110]:927
+twiddle[111]:2402
+twiddle[112]:682
+twiddle[113]:2647
+twiddle[114]:712
+twiddle[115]:2617
+twiddle[116]:1848
+twiddle[117]:1481
+twiddle[118]:2681
+twiddle[119]:648
+twiddle[120]:855
+twiddle[121]:2474
+twiddle[122]:219
+twiddle[123]:3110
+twiddle[124]:2102
+twiddle[125]:1227
+twiddle[126]:2419
+twiddle[127]:910
+Negacyclic INTT output:
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 

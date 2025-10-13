@@ -119,10 +119,11 @@ void intt_standard(uint16_t *a, int n, uint16_t omega) {
                 printf("U = %u, V = %u\n", a[pos], a[pos + len]);
             }
         }
-        for (int i = 0; i < n/2;i++)
-        printf("twiddle[%d]:%d\n", i, zetas[i]);
     }
 
+    
+    for (int i = 0; i < n/2;i++)
+    printf("twiddle[%d]:%d\n", i, zetas[i]);
     /*// Multiply by n⁻¹ mod q (Fermat's little theorem: n⁻¹ ≡ n^(q−2) mod q)
     uint16_t n_inv = mod_pow(n, Q - 2);
     for (int i = 0; i < n; i++) {
