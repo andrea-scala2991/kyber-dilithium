@@ -55,10 +55,16 @@ module NTT_Controller #(
     typedef enum logic [2:0] { IDLE, INTT_WAIT, PIPELINE, FLUSH, DONE } state_t;
     state_t state, next_state;
 
-    // Loop counters
+    // -------------------- Loop Counters (Sequential Registers) --------------------
     logic [LOGN-1:0] stage;
     logic [LOGN-1:0] j;
     logic [LOGN-1:0] start;
+    
+    // Next-state combinational signals (Driven only by the always_comb block)
+    logic [LOGN-1:0] stage_next;
+    logic [LOGN-1:0] j_next;
+    logic [LOGN-1:0] start_next;
+    // ---------------------------------------------------------------------------
 
     // Ping-pong bank select: 0 => read bank0, write bank1; 1 => read bank1, write bank0
     logic src_bank;
@@ -66,9 +72,9 @@ module NTT_Controller #(
     logic mode_reg;
 
     always_ff @(posedge clk, posedge rst) begin
-        if (rst)
-            mode_reg <= 0;
-        else
+        if (rst || state == DONE)
+            mode_reg <= '0;
+        else           
             mode_reg <= enable ? mode : mode_reg;
     end
 
@@ -101,8 +107,9 @@ module NTT_Controller #(
     
 
     logic stage_pending;
+    logic stage_pending_next;
 
-    // -------------------- per-bank write-address FIFOs --------------------
+    // -------------------- per-bank write-address FIFOs (no change) --------------------
     // fifo0_* used when reading from bank0 (write into bank1)
     // fifo1_* used when reading from bank1 (write into bank0)
     logic [ADDR_WIDTH-1:0] fifo0_a [0:LATENCY];
@@ -110,11 +117,11 @@ module NTT_Controller #(
     logic [ADDR_WIDTH-1:0] fifo1_a [0:LATENCY];
     logic [ADDR_WIDTH-1:0] fifo1_b [0:LATENCY];
 
-    integer ii;
 
     // FIFO for src_bank = 0
-    always_ff @(posedge clk or posedge rst) begin
-        if (rst) begin
+    always_ff @(posedge clk, posedge rst) begin
+        integer ii;
+        if (rst || state == DONE) begin
             for (ii = 0; ii <= LATENCY; ii++) begin
                 fifo0_a[ii] <= '0;
                 fifo0_b[ii] <= '0;
@@ -127,12 +134,19 @@ module NTT_Controller #(
             end
             fifo0_a[0] <= addr_a_reg;
             fifo0_b[0] <= addr_b_reg;
+        end else begin           
+            // Explicitly hold value to prevent synthesis confusion when bank 1 is inactive
+            for (ii = 0; ii <= LATENCY; ii++) begin
+                fifo0_a[ii] <= fifo0_a[ii];
+                fifo0_b[ii] <= fifo0_b[ii];
+            end
         end
     end
 
     // FIFO for src_bank = 1
-    always_ff @(posedge clk or posedge rst) begin
-        if (rst) begin
+    always_ff @(posedge clk, posedge rst) begin
+        integer ii;
+        if (rst || state == DONE) begin
             for (ii = 0; ii <= LATENCY; ii++) begin
                 fifo1_a[ii] <= '0;
                 fifo1_b[ii] <= '0;
@@ -145,18 +159,25 @@ module NTT_Controller #(
             end
             fifo1_a[0] <= addr_a_reg;
             fifo1_b[0] <= addr_b_reg;
+        end else begin           
+            // Explicitly hold value to prevent synthesis confusion when bank 0 is inactive
+            for (ii = 0; ii <= LATENCY; ii++) begin
+                fifo1_a[ii] <= fifo1_a[ii];
+                fifo1_b[ii] <= fifo1_b[ii];
+            end
         end
     end
 
-    // -------------------- issued / completed counters --------------------
+    // -------------------- issued / completed counters (no change) --------------------
     logic [11:0] issued_count;
     logic [11:0] completed_count;
 
-    always_ff @(posedge clk or posedge rst) begin
-        if (rst) begin
+    always_ff @(posedge clk, posedge rst) begin
+        if (rst || state == DONE) begin
             issued_count    <= '0;
             completed_count <= '0;
         end else begin
+            // Note: stage_pending is used here, calculated below.
             if ((state == PIPELINE) && (!stage_pending))
                 issued_count <= issued_count + 1'b1;
             if (valid_out)
@@ -166,13 +187,27 @@ module NTT_Controller #(
 
     wire butterflies_in_flight = (completed_count < issued_count);
 
-    // -------------------- FSM seq / next --------------------
-    always_ff @(posedge clk or posedge rst) begin
+
+    //DELAY COUNTER FOR INTT INITIALISATION (no change)
+    logic [1:0] intt_delay_cnt;
+    
+    always_ff @(posedge clk, posedge rst) begin
+        if (rst || state == DONE) begin
+            intt_delay_cnt <= '0;
+        end else if (state == INTT_WAIT) begin
+                if (intt_delay_cnt < 2'd1)
+                    intt_delay_cnt <= intt_delay_cnt + 1'b1;
+        end else begin
+            intt_delay_cnt <= '0;
+        end
+    end
+    
+    // -------------------- FSM seq / next (no change) --------------------
+    always_ff @(posedge clk, posedge rst) begin
         if (rst) state <= IDLE;
         else     state <= next_state;
     end
     
-
     always_comb begin
         next_state = state;
         case (state)
@@ -186,10 +221,14 @@ module NTT_Controller #(
             end
     
             INTT_WAIT: begin
-                    next_state = PIPELINE;
+                    if (intt_delay_cnt == 1'b1)
+                        next_state = PIPELINE;
+                    else
+                        next_state = INTT_WAIT;
             end
     
             PIPELINE: begin
+                // Logic updated to use current values of stage/start/j
                 if ((stage == MAX_STAGE) && (start == (N - 2*len)) && (j == len - 1'b1))
                     next_state = FLUSH;
             end
@@ -200,51 +239,85 @@ module NTT_Controller #(
         endcase
     end
 
-    // -------------------- stage progression & stage_pending --------------------
+    localparam int BANKCNT_W = (LATENCY <= 1) ? 1 : $clog2(LATENCY+1);
+    logic [BANKCNT_W-1:0] bank_swap_cnt;
+        
 
+    // -------------------- COUNTER NEXT-STATE CALCULATION (COMBINATIONAL) --------------------
+    // The inner-defaults from the last attempt have been removed, as they caused
+    // a conflict with the top-level defaults. We now rely on explicit coverage
+    // within the loop logic to avoid falling back to the top-level default implicitly.
+    always_comb begin
+        // Default: Hold current value (active in all FSM states except when a branch below overrides it)
+        stage_next = stage;
+        j_next     = j;
+        start_next = start;
+        stage_pending_next = stage_pending; // Default for stage_pending
 
+        // A. STAGE TRANSITION (Highest Priority Reset)
+        if (bank_swap_cnt == 1) begin
+            stage_next = stage + 1'b1;
+            start_next = '0;
+            j_next     = '0;
+            stage_pending_next = '0;
+        end
+        
+        // B. MAIN PIPELINE LOOP ADVANCE
+        else if (state == PIPELINE && !stage_pending) begin
+            
+            if (j == len - 1'b1) begin // End of J loop?
+                j_next = '0; // J resets
+                if (start == (N - 2*len)) begin // End of START loop?
+                    // Stage complete, signal pending swap delay
+                    stage_pending_next = 1'b1; 
+                    start_next = start; // Explicitly hold start
+                end else begin
+                    // Increment start for the next block
+                    start_next = start + (len << 1'b1);
+                    // j_next is already set to '0' from the outer 'if' block
+                end
+            end else begin
+                // Normal J increment
+                j_next = j + 1'b1;
+                // Explicitly hold start
+                start_next = start; 
+            end
+        end
+    end
+
+    // -------------------- Stage/Loop Counters SEQUENTIAL UPDATE (Single Driver) --------------------
     always_ff @(posedge clk, posedge rst) begin
-        if (rst) begin
+        if (rst || state == DONE) begin // Synchronous Reset
             stage <= '0;
             j     <= '0;
             start <= '0;
             stage_pending <= '0;
         end else begin
-            if (state == PIPELINE) begin
-                if (!stage_pending) begin
-                    if (j == len - 1'b1) begin
-                        j <= '0;
-                        if (start == (N - 2*len)) begin
-                            stage_pending <= 1'b1;
-                        end else begin
-                            start <= start + (len << 1'b1);
-                        end
-                    end else begin
-                        j <= j + 1'b1;
-                    end
-                end           
-            end
+            // The next state logic is derived from the single always_comb block above.
+            stage <= stage_next;
+            j     <= j_next;
+            start <= start_next;
+            
+            // Update stage_pending
+            stage_pending <= stage_pending_next;
         end
     end
 
-    // -------------------- bank-swap delay counter --------------------
-    localparam int BANKCNT_W = (LATENCY <= 1) ? 1 : $clog2(LATENCY+1);
-    logic [BANKCNT_W-1:0] bank_swap_cnt;
+    // -------------------- bank-swap delay counter (Refactored) --------------------
+   
 
-    always_ff @(posedge clk or posedge rst) begin
-        if (rst) begin
+    always_ff @(posedge clk, posedge rst) begin
+        if (rst || state == DONE) begin
             bank_swap_cnt <= '0;
             src_bank <= 1'b0;
         end else begin
             if (stage_pending && (bank_swap_cnt == '0)) begin
                 bank_swap_cnt <= LATENCY[$clog2(LATENCY+1)-1:0];
+                src_bank <= src_bank; // explicitly hold
             end else if (bank_swap_cnt != '0) begin
                 if (bank_swap_cnt == 1) begin
-                    src_bank <= ~src_bank;
-                    stage <= stage + 1'b1;
-                    start <= '0;
-                    j     <= '0;
-                    stage_pending <= '0;
+                    // The register resets for j/start/stage are handled by the main counter block now
+                    src_bank <= ~src_bank; // Only bank swap remains here
                     bank_swap_cnt <= '0;
                 end else begin
                     bank_swap_cnt <= bank_swap_cnt - 1'b1;
@@ -253,7 +326,7 @@ module NTT_Controller #(
         end
     end
 
-    // -------------------- butterfly I/O routing --------------------
+    // -------------------- butterfly I/O routing (no change) --------------------
     assign butterfly_inverse = mode_reg;
     assign butterfly_twiddle = rom_dout;
 
@@ -267,7 +340,7 @@ module NTT_Controller #(
         end
     end
 
-    // -------------------- BRAM port address & write logic --------------------
+    // -------------------- BRAM port address & write logic (no change) --------------------
     always_comb begin
         // defaults
         bram0_addr_a = '0; bram0_addr_b = '0;
@@ -302,53 +375,19 @@ module NTT_Controller #(
         end
     end
 
-
-// -----------------------------------------------------------------------------
-// Post-operation reset block
-// Resets all relevant control and pipeline state when an NTT/INTT operation ends
-// (i.e., when the FSM reaches the DONE state).
-// -----------------------------------------------------------------------------
-always_ff @(posedge clk or posedge rst) begin
-    if (rst) begin
-        stage           <= '0;
-        j               <= '0;
-        start           <= '0;
-        src_bank        <= '0;
-        stage_pending   <= '0;
-        issued_count    <= '0;
-        completed_count <= '0;
-        bank_swap_cnt   <= '0;
-        for (int k = 0; k <= LATENCY; k++) begin
-            fifo0_a[k] <= '0;
-            fifo0_b[k] <= '0;
-            fifo1_a[k] <= '0;
-            fifo1_b[k] <= '0;
-        end
-    end else if (state == DONE) begin
-        stage           <= '0;
-        j               <= '0;
-        start           <= '0;
-        src_bank        <= '0;
-        stage_pending   <= '0;
-        issued_count    <= '0;
-        completed_count <= '0;
-        bank_swap_cnt   <= '0;
-        for (int k = 0; k <= LATENCY; k++) begin
-            fifo0_a[k] <= '0;
-            fifo0_b[k] <= '0;
-            fifo1_a[k] <= '0;
-            fifo1_b[k] <= '0;
-        end
+    // valid_in sequential logic (no change)
+    logic valid_in_next;
+    
+    always_comb begin
+        if ((state == PIPELINE) && (!stage_pending))
+            valid_in_next = 1'b1;
+        else 
+            valid_in_next = 1'b0;
     end
-end
 
-
-
-    // valid_in asserted during PIPELINE and not stage_pending
-    always_ff @(posedge clk or posedge rst) begin
+    always_ff @(posedge clk, posedge rst) begin
         if (rst) valid_in <= 1'b0;
-        else if ((state == PIPELINE) && (!stage_pending)) valid_in <= 1'b1;
-        else valid_in <= 1'b0;
+        else valid_in <= valid_in_next;
     end
 
     assign done = (state == DONE);

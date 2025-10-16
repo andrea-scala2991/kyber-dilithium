@@ -135,11 +135,6 @@ module tb_NTT_Controller;
             timeout--;
         end
         
-        $display("\n--- MEM0 ---");
-        for (int i=0;i<N;i++) $display("%0d: %0d",i,mem0[i]);
-        $display("\n--- MEM1 ---");
-        for (int i=0;i<N;i++) $display("%0d: %0d",i,mem1[i]);
-
         $finish;
     end
 endmodule

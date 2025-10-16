@@ -2,14 +2,19 @@
 
 module tb_NTT_Controller;
 
-    localparam int N = 8;
+    localparam int N = 4;
     localparam int LATENCY = 3;
     localparam int ADDR_WIDTH = $clog2(N);
     localparam int DATA_WIDTH = 12;
 
     localparam int TWIDDLE_COUNT = N;
+    //TWIDDLES FOR N = 8
+    /*localparam logic [DATA_WIDTH-1:0] twiddle_rom [0:TWIDDLE_COUNT-1] =
+        '{12'd1, 12'd1729, 12'd749, 12'd40, 12'd1, 12'd1600, 12'd3289, 12'd2580};*/
+    
+    //TWIDDLES FOR N = 4
     localparam logic [DATA_WIDTH-1:0] twiddle_rom [0:TWIDDLE_COUNT-1] =
-        '{12'd1, 12'd1729, 12'd749, 12'd40, 12'd1, 12'd1600, 12'd3289, 12'd2580};
+        '{12'd1, 12'd1600, 12'd1, 12'd1729};
 
     logic clk, rst, enable, mode, done;
 
@@ -26,7 +31,7 @@ module tb_NTT_Controller;
     logic [DATA_WIDTH-1:0] bram1_din_a, bram1_din_b;
 
     // ROM
-    logic [ADDR_WIDTH:0] rom_addr;
+    logic [ADDR_WIDTH-1:0] rom_addr;
     logic [DATA_WIDTH-1:0] rom_dout;
 
     // Butterfly
@@ -70,7 +75,7 @@ module tb_NTT_Controller;
 
     initial begin
         for (int i=0; i<N; i++) begin
-            mem0[i] = i+1;  // initial data in bank0
+            mem0[i] = i * 2;  // initial data in bank0
             mem1[i] = '0;
         end
     end
@@ -118,12 +123,18 @@ module tb_NTT_Controller;
             timeout--;
         end
 
-        $display("\n--- MEM0 ---");
-        for (int i=0;i<N;i++) $display("%0d: %0d",i,mem0[i]);
-        $display("\n--- MEM1 ---");
-        for (int i=0;i<N;i++) $display("%0d: %0d",i,mem1[i]);
+        //INTT
+        #50;
+    
+        @(posedge clk); enable = 1; mode = 1;
+        @(posedge clk); enable = 0; mode = 0;
 
+        timeout = 1000;
+        while (!done && timeout > 0) begin
+            @(posedge clk);
+            timeout--;
+        end
+        
         $finish;
     end
-
 endmodule

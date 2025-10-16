@@ -1,38 +1,29 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x2B0DE8630C8E0C4A",
+      "boundary_crc": "0xB3DE1E580D60884A",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../013_NTT_iNTT.gen/sources_1/bd/design_1",
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
-      "synth_flow_mode": "Hierarchical",
+      "synth_flow_mode": "None",
       "tool_version": "2021.2",
       "validated": "true"
     },
     "design_tree": {
-      "Butterfly_unit": "",
-      "coef_BRAM_0": "",
-      "NTT_Controller_0": "",
+      "coeff_BRAM0": "",
+      "coeff_BRAM1": "",
       "twiddle_ROM": "",
-      "coef_BRAM_1": ""
+      "Butterfly_unit": "",
+      "NTT_Controller": ""
     },
     "ports": {
-      "enable": {
-        "direction": "I"
-      },
-      "mode": {
-        "direction": "I"
-      },
-      "done": {
-        "direction": "O"
-      },
       "clk": {
         "type": "clk",
         "direction": "I",
         "parameters": {
           "ASSOCIATED_RESET": {
-            "value": "reset"
+            "value": "rst"
           },
           "CLK_DOMAIN": {
             "value": "design_1_clk_0",
@@ -56,7 +47,7 @@
           }
         }
       },
-      "reset": {
+      "rst": {
         "type": "rst",
         "direction": "I",
         "parameters": {
@@ -69,21 +60,27 @@
             "value_src": "default"
           }
         }
+      },
+      "enable": {
+        "direction": "I"
+      },
+      "mode": {
+        "direction": "I"
+      },
+      "done": {
+        "direction": "O"
       }
     },
     "components": {
-      "Butterfly_unit": {
-        "vlnv": "xilinx.com:user:Butterfly_unit:1.0",
-        "xci_name": "design_1_Butterfly_unit_0_0",
-        "xci_path": "ip\\design_1_Butterfly_unit_0_0\\design_1_Butterfly_unit_0_0.xci",
-        "inst_hier_path": "Butterfly_unit"
-      },
-      "coef_BRAM_0": {
+      "coeff_BRAM0": {
         "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
-        "xci_name": "design_1_blk_mem_gen_0_1",
-        "xci_path": "ip\\design_1_blk_mem_gen_0_1\\design_1_blk_mem_gen_0_1.xci",
-        "inst_hier_path": "coef_BRAM_0",
+        "xci_name": "design_1_blk_mem_gen_0_0",
+        "xci_path": "ip\\design_1_blk_mem_gen_0_0\\design_1_blk_mem_gen_0_0.xci",
+        "inst_hier_path": "coeff_BRAM0",
         "parameters": {
+          "Assume_Synchronous_Clk": {
+            "value": "true"
+          },
           "Coe_File": {
             "value": "../../../../../../bram_input_coeffs.coe"
           },
@@ -96,17 +93,14 @@
           "Enable_B": {
             "value": "Always_Enabled"
           },
+          "Fill_Remaining_Memory_Locations": {
+            "value": "true"
+          },
           "Load_Init_File": {
             "value": "true"
           },
           "Memory_Type": {
             "value": "True_Dual_Port_RAM"
-          },
-          "Operating_Mode_A": {
-            "value": "NO_CHANGE"
-          },
-          "Operating_Mode_B": {
-            "value": "NO_CHANGE"
           },
           "Port_B_Clock": {
             "value": "100"
@@ -135,7 +129,75 @@
           "Use_RSTA_Pin": {
             "value": "false"
           },
-          "Use_RSTB_Pin": {
+          "Write_Depth_A": {
+            "value": "256"
+          },
+          "Write_Width_A": {
+            "value": "12"
+          },
+          "Write_Width_B": {
+            "value": "12"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "coeff_BRAM1": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "design_1_coeff_BRAM0_0",
+        "xci_path": "ip\\design_1_coeff_BRAM0_0\\design_1_coeff_BRAM0_0.xci",
+        "inst_hier_path": "coeff_BRAM1",
+        "parameters": {
+          "Assume_Synchronous_Clk": {
+            "value": "true"
+          },
+          "Coe_File": {
+            "value": "../../../../../../bram_input_coeffs.coe"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Enable_B": {
+            "value": "Always_Enabled"
+          },
+          "Fill_Remaining_Memory_Locations": {
+            "value": "true"
+          },
+          "Load_Init_File": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Port_B_Clock": {
+            "value": "100"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "100"
+          },
+          "Port_B_Write_Rate": {
+            "value": "50"
+          },
+          "Read_Width_A": {
+            "value": "12"
+          },
+          "Read_Width_B": {
+            "value": "12"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Register_PortB_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
             "value": "false"
           },
           "Write_Depth_A": {
@@ -152,16 +214,10 @@
           }
         }
       },
-      "NTT_Controller_0": {
-        "vlnv": "xilinx.com:user:NTT_Controller:1.0",
-        "xci_name": "design_1_NTT_Controller_0_0",
-        "xci_path": "ip\\design_1_NTT_Controller_0_0\\design_1_NTT_Controller_0_0.xci",
-        "inst_hier_path": "NTT_Controller_0"
-      },
       "twiddle_ROM": {
         "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
-        "xci_name": "design_1_blk_mem_gen_0_2",
-        "xci_path": "ip\\design_1_blk_mem_gen_0_2\\design_1_blk_mem_gen_0_2.xci",
+        "xci_name": "design_1_blk_mem_gen_0_1",
+        "xci_path": "ip\\design_1_blk_mem_gen_0_1\\design_1_blk_mem_gen_0_1.xci",
         "inst_hier_path": "twiddle_ROM",
         "parameters": {
           "Coe_File": {
@@ -172,6 +228,9 @@
           },
           "Enable_A": {
             "value": "Always_Enabled"
+          },
+          "Fill_Remaining_Memory_Locations": {
+            "value": "true"
           },
           "Load_Init_File": {
             "value": "true"
@@ -199,270 +258,211 @@
           }
         }
       },
-      "coef_BRAM_1": {
-        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
-        "xci_name": "design_1_coef_BRAM_0",
-        "xci_path": "ip\\design_1_coef_BRAM_0\\design_1_coef_BRAM_0.xci",
-        "inst_hier_path": "coef_BRAM_1",
-        "parameters": {
-          "Enable_32bit_Address": {
-            "value": "false"
-          },
-          "Enable_A": {
-            "value": "Always_Enabled"
-          },
-          "Enable_B": {
-            "value": "Always_Enabled"
-          },
-          "Fill_Remaining_Memory_Locations": {
-            "value": "true"
-          },
-          "Memory_Type": {
-            "value": "True_Dual_Port_RAM"
-          },
-          "Operating_Mode_A": {
-            "value": "NO_CHANGE"
-          },
-          "Operating_Mode_B": {
-            "value": "NO_CHANGE"
-          },
-          "Port_B_Clock": {
-            "value": "100"
-          },
-          "Port_B_Enable_Rate": {
-            "value": "100"
-          },
-          "Port_B_Write_Rate": {
-            "value": "50"
-          },
-          "Read_Width_A": {
-            "value": "12"
-          },
-          "Read_Width_B": {
-            "value": "12"
-          },
-          "Register_PortA_Output_of_Memory_Primitives": {
-            "value": "false"
-          },
-          "Register_PortB_Output_of_Memory_Primitives": {
-            "value": "false"
-          },
-          "Use_Byte_Write_Enable": {
-            "value": "false"
-          },
-          "Use_RSTA_Pin": {
-            "value": "false"
-          },
-          "Use_RSTB_Pin": {
-            "value": "false"
-          },
-          "Write_Depth_A": {
-            "value": "256"
-          },
-          "Write_Width_A": {
-            "value": "12"
-          },
-          "Write_Width_B": {
-            "value": "12"
-          },
-          "use_bram_block": {
-            "value": "Stand_Alone"
-          }
-        }
+      "Butterfly_unit": {
+        "vlnv": "xilinx.com:user:Butterfly_unit:1.0",
+        "xci_name": "design_1_Butterfly_unit_0_0",
+        "xci_path": "ip\\design_1_Butterfly_unit_0_0\\design_1_Butterfly_unit_0_0.xci",
+        "inst_hier_path": "Butterfly_unit"
+      },
+      "NTT_Controller": {
+        "vlnv": "xilinx.com:user:NTT_Controller:1.0",
+        "xci_name": "design_1_NTT_Controller_0_0",
+        "xci_path": "ip\\design_1_NTT_Controller_0_0\\design_1_NTT_Controller_0_0.xci",
+        "inst_hier_path": "NTT_Controller"
       }
     },
     "nets": {
       "Butterfly_unit_U_OUT": {
         "ports": [
           "Butterfly_unit/U_OUT",
-          "NTT_Controller_0/butterfly_u"
+          "NTT_Controller/butterfly_u"
         ]
       },
       "Butterfly_unit_V_OUT": {
         "ports": [
           "Butterfly_unit/V_OUT",
-          "NTT_Controller_0/butterfly_v"
+          "NTT_Controller/butterfly_v"
         ]
       },
       "Butterfly_unit_valid_out": {
         "ports": [
           "Butterfly_unit/valid_out",
-          "NTT_Controller_0/valid_out"
+          "NTT_Controller/valid_out"
         ]
       },
-      "NTT_Controller_0_bram0_addr_a": {
+      "NTT_Controller_bram0_addr_a": {
         "ports": [
-          "NTT_Controller_0/bram0_addr_a",
-          "coef_BRAM_0/addra"
+          "NTT_Controller/bram0_addr_a",
+          "coeff_BRAM0/addra"
         ]
       },
-      "NTT_Controller_0_bram0_addr_b": {
+      "NTT_Controller_bram0_addr_b": {
         "ports": [
-          "NTT_Controller_0/bram0_addr_b",
-          "coef_BRAM_0/addrb"
+          "NTT_Controller/bram0_addr_b",
+          "coeff_BRAM0/addrb"
         ]
       },
-      "NTT_Controller_0_bram0_din_a": {
+      "NTT_Controller_bram0_din_a": {
         "ports": [
-          "NTT_Controller_0/bram0_din_a",
-          "coef_BRAM_0/dina"
+          "NTT_Controller/bram0_din_a",
+          "coeff_BRAM0/dina"
         ]
       },
-      "NTT_Controller_0_bram0_din_b": {
+      "NTT_Controller_bram0_din_b": {
         "ports": [
-          "NTT_Controller_0/bram0_din_b",
-          "coef_BRAM_0/dinb"
+          "NTT_Controller/bram0_din_b",
+          "coeff_BRAM0/dinb"
         ]
       },
-      "NTT_Controller_0_bram0_we_a": {
+      "NTT_Controller_bram0_we_a": {
         "ports": [
-          "NTT_Controller_0/bram0_we_a",
-          "coef_BRAM_0/wea"
+          "NTT_Controller/bram0_we_a",
+          "coeff_BRAM0/wea"
         ]
       },
-      "NTT_Controller_0_bram0_we_b": {
+      "NTT_Controller_bram0_we_b": {
         "ports": [
-          "NTT_Controller_0/bram0_we_b",
-          "coef_BRAM_0/web"
+          "NTT_Controller/bram0_we_b",
+          "coeff_BRAM0/web"
         ]
       },
-      "NTT_Controller_0_bram1_addr_a": {
+      "NTT_Controller_bram1_addr_a": {
         "ports": [
-          "NTT_Controller_0/bram1_addr_a",
-          "coef_BRAM_1/addra"
+          "NTT_Controller/bram1_addr_a",
+          "coeff_BRAM1/addra"
         ]
       },
-      "NTT_Controller_0_bram1_addr_b": {
+      "NTT_Controller_bram1_addr_b": {
         "ports": [
-          "NTT_Controller_0/bram1_addr_b",
-          "coef_BRAM_1/addrb"
+          "NTT_Controller/bram1_addr_b",
+          "coeff_BRAM1/addrb"
         ]
       },
-      "NTT_Controller_0_bram1_din_a": {
+      "NTT_Controller_bram1_din_a": {
         "ports": [
-          "NTT_Controller_0/bram1_din_a",
-          "coef_BRAM_1/dina"
+          "NTT_Controller/bram1_din_a",
+          "coeff_BRAM1/dina"
         ]
       },
-      "NTT_Controller_0_bram1_din_b": {
+      "NTT_Controller_bram1_din_b": {
         "ports": [
-          "NTT_Controller_0/bram1_din_b",
-          "coef_BRAM_1/dinb"
+          "NTT_Controller/bram1_din_b",
+          "coeff_BRAM1/dinb"
         ]
       },
-      "NTT_Controller_0_bram1_we_a": {
+      "NTT_Controller_bram1_we_a": {
         "ports": [
-          "NTT_Controller_0/bram1_we_a",
-          "coef_BRAM_1/wea"
+          "NTT_Controller/bram1_we_a",
+          "coeff_BRAM1/wea"
         ]
       },
-      "NTT_Controller_0_bram1_we_b": {
+      "NTT_Controller_bram1_we_b": {
         "ports": [
-          "NTT_Controller_0/bram1_we_b",
-          "coef_BRAM_1/web"
+          "NTT_Controller/bram1_we_b",
+          "coeff_BRAM1/web"
         ]
       },
-      "NTT_Controller_0_butterfly_in1": {
+      "NTT_Controller_butterfly_in1": {
         "ports": [
-          "NTT_Controller_0/butterfly_in1",
+          "NTT_Controller/butterfly_in1",
           "Butterfly_unit/IN_1"
         ]
       },
-      "NTT_Controller_0_butterfly_in2": {
+      "NTT_Controller_butterfly_in2": {
         "ports": [
-          "NTT_Controller_0/butterfly_in2",
+          "NTT_Controller/butterfly_in2",
           "Butterfly_unit/IN_2"
         ]
       },
-      "NTT_Controller_0_butterfly_inverse": {
+      "NTT_Controller_butterfly_inverse": {
         "ports": [
-          "NTT_Controller_0/butterfly_inverse",
+          "NTT_Controller/butterfly_inverse",
           "Butterfly_unit/inverse"
         ]
       },
-      "NTT_Controller_0_butterfly_twiddle": {
+      "NTT_Controller_butterfly_twiddle": {
         "ports": [
-          "NTT_Controller_0/butterfly_twiddle",
+          "NTT_Controller/butterfly_twiddle",
           "Butterfly_unit/twiddle"
         ]
       },
-      "NTT_Controller_0_done": {
+      "NTT_Controller_done": {
         "ports": [
-          "NTT_Controller_0/done",
+          "NTT_Controller/done",
           "done"
         ]
       },
-      "NTT_Controller_0_rom_addr": {
+      "NTT_Controller_rom_addr": {
         "ports": [
-          "NTT_Controller_0/rom_addr",
+          "NTT_Controller/rom_addr",
           "twiddle_ROM/addra"
         ]
       },
-      "NTT_Controller_0_valid_in": {
+      "NTT_Controller_valid_in": {
         "ports": [
-          "NTT_Controller_0/valid_in",
+          "NTT_Controller/valid_in",
           "Butterfly_unit/valid_in"
-        ]
-      },
-      "blk_mem_gen_0_douta": {
-        "ports": [
-          "twiddle_ROM/douta",
-          "NTT_Controller_0/rom_dout"
         ]
       },
       "clk_0_1": {
         "ports": [
           "clk",
-          "NTT_Controller_0/clk",
-          "coef_BRAM_0/clka",
-          "coef_BRAM_1/clka",
-          "coef_BRAM_0/clkb",
-          "coef_BRAM_1/clkb",
           "twiddle_ROM/clka",
-          "Butterfly_unit/clk"
+          "coeff_BRAM0/clka",
+          "coeff_BRAM0/clkb",
+          "coeff_BRAM1/clka",
+          "coeff_BRAM1/clkb",
+          "Butterfly_unit/clk",
+          "NTT_Controller/clk"
         ]
       },
-      "coef_BRAM_0_douta": {
+      "coeff_BRAM0_douta": {
         "ports": [
-          "coef_BRAM_0/douta",
-          "NTT_Controller_0/bram0_dout_a"
+          "coeff_BRAM0/douta",
+          "NTT_Controller/bram0_dout_a"
         ]
       },
-      "coef_BRAM_0_doutb": {
+      "coeff_BRAM0_doutb": {
         "ports": [
-          "coef_BRAM_0/doutb",
-          "NTT_Controller_0/bram0_dout_b"
+          "coeff_BRAM0/doutb",
+          "NTT_Controller/bram0_dout_b"
         ]
       },
-      "coef_BRAM_1_douta": {
+      "coeff_BRAM1_douta": {
         "ports": [
-          "coef_BRAM_1/douta",
-          "NTT_Controller_0/bram1_dout_a"
+          "coeff_BRAM1/douta",
+          "NTT_Controller/bram1_dout_a"
         ]
       },
-      "coef_BRAM_1_doutb": {
+      "coeff_BRAM1_doutb": {
         "ports": [
-          "coef_BRAM_1/doutb",
-          "NTT_Controller_0/bram1_dout_b"
+          "coeff_BRAM1/doutb",
+          "NTT_Controller/bram1_dout_b"
         ]
       },
       "enable_0_1": {
         "ports": [
           "enable",
-          "NTT_Controller_0/enable"
+          "NTT_Controller/enable"
         ]
       },
       "mode_0_1": {
         "ports": [
           "mode",
-          "NTT_Controller_0/mode"
+          "NTT_Controller/mode"
         ]
       },
       "rst_0_1": {
         "ports": [
-          "reset",
-          "NTT_Controller_0/rst",
-          "Butterfly_unit/r"
+          "rst",
+          "Butterfly_unit/r",
+          "NTT_Controller/rst"
+        ]
+      },
+      "twiddle_ROM_douta": {
+        "ports": [
+          "twiddle_ROM/douta",
+          "NTT_Controller/rom_dout"
         ]
       }
     }

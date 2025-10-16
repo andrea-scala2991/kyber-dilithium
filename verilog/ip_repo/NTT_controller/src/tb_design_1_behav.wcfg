@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="3.542500 us"></ZoomStartTime>
-      <ZoomEndTime time="24.797501 us"></ZoomEndTime>
-      <Cursor1Time time="21.255000 us"></Cursor1Time>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="21.255001 us"></ZoomEndTime>
+      <Cursor1Time time="0.000000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="293"></NameColumnWidth>
-      <ValueColumnWidth column_width="107"></ValueColumnWidth>
+      <ValueColumnWidth column_width="117"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="37" />
+   <WVObjectSize size="65" />
    <wvobject fp_name="/tb_design_1/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -36,25 +36,57 @@
       <obj_property name="ElementShortName">mode</obj_property>
       <obj_property name="ObjectShortName">mode</obj_property>
    </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/NTT_Controller_0/inst/mode_reg" type="logic">
+      <obj_property name="ElementShortName">mode_reg</obj_property>
+      <obj_property name="ObjectShortName">mode_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/NTT_Controller_0/inst/state" type="array">
+      <obj_property name="ElementShortName">state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/tb_design_1/done" type="logic">
       <obj_property name="ElementShortName">done</obj_property>
       <obj_property name="ObjectShortName">done</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_design_1/dut/design_1_i/NTT_Controller/inst/state" type="array">
-      <obj_property name="ElementShortName">state[2:0]</obj_property>
-      <obj_property name="ObjectShortName">state[2:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_design_1/errcnt" type="array">
       <obj_property name="ElementShortName">errcnt[31:0]</obj_property>
       <obj_property name="ObjectShortName">errcnt[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_design_1/dut/design_1_i/coeff_BRAM0/inst/\native_mem_module.blk_mem_gen_v8_4_5_inst /memory" type="array">
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/NTT_Controller_0/inst/stage" type="array">
+      <obj_property name="ElementShortName">stage[7:0]</obj_property>
+      <obj_property name="ObjectShortName">stage[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/NTT_Controller_0/inst/j" type="array">
+      <obj_property name="ElementShortName">j[7:0]</obj_property>
+      <obj_property name="ObjectShortName">j[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/NTT_Controller_0/inst/start" type="array">
+      <obj_property name="ElementShortName">start[7:0]</obj_property>
+      <obj_property name="ObjectShortName">start[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/NTT_Controller_0/inst/len" type="array">
+      <obj_property name="ElementShortName">len[7:0]</obj_property>
+      <obj_property name="ObjectShortName">len[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/coef_BRAM_0/inst/\native_mem_module.blk_mem_gen_v8_4_5_inst /memory" type="array">
       <obj_property name="ElementShortName">memory[0:255][11:0]</obj_property>
       <obj_property name="ObjectShortName">memory[0:255][11:0]</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider1125">
       <obj_property name="label">BUTTERFLY</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/NTT_Controller_0_valid_in" type="logic">
+      <obj_property name="ElementShortName">NTT_Controller_0_valid_in</obj_property>
+      <obj_property name="ObjectShortName">NTT_Controller_0_valid_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/NTT_Controller_0_butterfly_in1" type="array">
+      <obj_property name="ElementShortName">NTT_Controller_0_butterfly_in1[11:0]</obj_property>
+      <obj_property name="ObjectShortName">NTT_Controller_0_butterfly_in1[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/NTT_Controller_0_butterfly_in2" type="array">
+      <obj_property name="ElementShortName">NTT_Controller_0_butterfly_in2[11:0]</obj_property>
+      <obj_property name="ObjectShortName">NTT_Controller_0_butterfly_in2[11:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_design_1/dut/design_1_i/Butterfly_unit_valid_out" type="logic">
       <obj_property name="ElementShortName">Butterfly_unit_valid_out</obj_property>
@@ -67,6 +99,14 @@
    <wvobject fp_name="/tb_design_1/dut/design_1_i/Butterfly_unit_V_OUT" type="array">
       <obj_property name="ElementShortName">Butterfly_unit_V_OUT[11:0]</obj_property>
       <obj_property name="ObjectShortName">Butterfly_unit_V_OUT[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/NTT_Controller_0_butterfly_twiddle" type="array">
+      <obj_property name="ElementShortName">NTT_Controller_0_butterfly_twiddle[11:0]</obj_property>
+      <obj_property name="ObjectShortName">NTT_Controller_0_butterfly_twiddle[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/NTT_Controller_0_butterfly_inverse" type="logic">
+      <obj_property name="ElementShortName">NTT_Controller_0_butterfly_inverse</obj_property>
+      <obj_property name="ObjectShortName">NTT_Controller_0_butterfly_inverse</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider612">
       <obj_property name="label">BUTTERFLY INTERNAL</obj_property>
@@ -160,12 +200,84 @@
       <obj_property name="label">BRAM 0</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/NTT_Controller_0_bram0_addr_a" type="array">
+      <obj_property name="ElementShortName">NTT_Controller_0_bram0_addr_a[7:0]</obj_property>
+      <obj_property name="ObjectShortName">NTT_Controller_0_bram0_addr_a[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/NTT_Controller_0_bram0_addr_b" type="array">
+      <obj_property name="ElementShortName">NTT_Controller_0_bram0_addr_b[7:0]</obj_property>
+      <obj_property name="ObjectShortName">NTT_Controller_0_bram0_addr_b[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/NTT_Controller_0_bram0_din_a" type="array">
+      <obj_property name="ElementShortName">NTT_Controller_0_bram0_din_a[11:0]</obj_property>
+      <obj_property name="ObjectShortName">NTT_Controller_0_bram0_din_a[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/NTT_Controller_0_bram0_din_b" type="array">
+      <obj_property name="ElementShortName">NTT_Controller_0_bram0_din_b[11:0]</obj_property>
+      <obj_property name="ObjectShortName">NTT_Controller_0_bram0_din_b[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/NTT_Controller_0_bram0_we_a" type="logic">
+      <obj_property name="ElementShortName">NTT_Controller_0_bram0_we_a</obj_property>
+      <obj_property name="ObjectShortName">NTT_Controller_0_bram0_we_a</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/NTT_Controller_0_bram0_we_b" type="logic">
+      <obj_property name="ElementShortName">NTT_Controller_0_bram0_we_b</obj_property>
+      <obj_property name="ObjectShortName">NTT_Controller_0_bram0_we_b</obj_property>
+   </wvobject>
    <wvobject type="divider" fp_name="divider1127">
       <obj_property name="label">BRAM 1</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/NTT_Controller_0_bram1_addr_a" type="array">
+      <obj_property name="ElementShortName">NTT_Controller_0_bram1_addr_a[7:0]</obj_property>
+      <obj_property name="ObjectShortName">NTT_Controller_0_bram1_addr_a[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/NTT_Controller_0_bram1_addr_b" type="array">
+      <obj_property name="ElementShortName">NTT_Controller_0_bram1_addr_b[7:0]</obj_property>
+      <obj_property name="ObjectShortName">NTT_Controller_0_bram1_addr_b[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/NTT_Controller_0_bram1_din_a" type="array">
+      <obj_property name="ElementShortName">NTT_Controller_0_bram1_din_a[11:0]</obj_property>
+      <obj_property name="ObjectShortName">NTT_Controller_0_bram1_din_a[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/NTT_Controller_0_bram1_din_b" type="array">
+      <obj_property name="ElementShortName">NTT_Controller_0_bram1_din_b[11:0]</obj_property>
+      <obj_property name="ObjectShortName">NTT_Controller_0_bram1_din_b[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/NTT_Controller_0_bram1_we_a" type="logic">
+      <obj_property name="ElementShortName">NTT_Controller_0_bram1_we_a</obj_property>
+      <obj_property name="ObjectShortName">NTT_Controller_0_bram1_we_a</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/NTT_Controller_0_bram1_we_b" type="logic">
+      <obj_property name="ElementShortName">NTT_Controller_0_bram1_we_b</obj_property>
+      <obj_property name="ObjectShortName">NTT_Controller_0_bram1_we_b</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/coef_BRAM_0_douta" type="array">
+      <obj_property name="ElementShortName">coef_BRAM_0_douta[11:0]</obj_property>
+      <obj_property name="ObjectShortName">coef_BRAM_0_douta[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/coef_BRAM_0_doutb" type="array">
+      <obj_property name="ElementShortName">coef_BRAM_0_doutb[11:0]</obj_property>
+      <obj_property name="ObjectShortName">coef_BRAM_0_doutb[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/coef_BRAM_1_douta" type="array">
+      <obj_property name="ElementShortName">coef_BRAM_1_douta[11:0]</obj_property>
+      <obj_property name="ObjectShortName">coef_BRAM_1_douta[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/coef_BRAM_1_doutb" type="array">
+      <obj_property name="ElementShortName">coef_BRAM_1_doutb[11:0]</obj_property>
+      <obj_property name="ObjectShortName">coef_BRAM_1_doutb[11:0]</obj_property>
+   </wvobject>
    <wvobject type="divider" fp_name="divider382">
       <obj_property name="label">TWIDDLE ROM</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/NTT_Controller_0_rom_addr" type="array">
+      <obj_property name="ElementShortName">NTT_Controller_0_rom_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">NTT_Controller_0_rom_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_design_1/dut/design_1_i/blk_mem_gen_0_douta" type="array">
+      <obj_property name="ElementShortName">blk_mem_gen_0_douta[11:0]</obj_property>
+      <obj_property name="ObjectShortName">blk_mem_gen_0_douta[11:0]</obj_property>
    </wvobject>
 </wave_config>
