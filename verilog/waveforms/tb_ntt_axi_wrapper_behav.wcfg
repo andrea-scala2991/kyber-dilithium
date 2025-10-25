@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_ntt_axi_wrapper_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_ntt_axi_wrapper" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="4.388333 us"></ZoomStartTime>
+      <ZoomEndTime time="30.718334 us"></ZoomEndTime>
+      <Cursor1Time time="24.146606 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="293"></NameColumnWidth>
+      <ValueColumnWidth column_width="79"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="53" />
+   <wvobject type="logic" fp_name="/tb_ntt_axi_wrapper/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ntt_axi_wrapper/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ntt_axi_wrapper/start">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ntt_axi_wrapper/mode">
+      <obj_property name="ElementShortName">mode</obj_property>
+      <obj_property name="ObjectShortName">mode</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ntt_axi_wrapper/done">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/axi_bram_addr">
+      <obj_property name="ElementShortName">axi_bram_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_bram_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/axi_bram_din">
+      <obj_property name="ElementShortName">axi_bram_din[11:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_bram_din[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/axi_bram_dout">
+      <obj_property name="ElementShortName">axi_bram_dout[11:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_bram_dout[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ntt_axi_wrapper/axi_bram_we">
+      <obj_property name="ElementShortName">axi_bram_we</obj_property>
+      <obj_property name="ObjectShortName">axi_bram_we</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ntt_axi_wrapper/axi_bram_en">
+      <obj_property name="ElementShortName">axi_bram_en</obj_property>
+      <obj_property name="ObjectShortName">axi_bram_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ntt_axi_wrapper/irq">
+      <obj_property name="ElementShortName">irq</obj_property>
+      <obj_property name="ObjectShortName">irq</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/original_poly">
+      <obj_property name="ElementShortName">original_poly[0:255][11:0]</obj_property>
+      <obj_property name="ObjectShortName">original_poly[0:255][11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/output_poly">
+      <obj_property name="ElementShortName">output_poly[0:255][11:0]</obj_property>
+      <obj_property name="ObjectShortName">output_poly[0:255][11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider4442" type="divider">
+      <obj_property name="label">DMA</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/dut/axi_bram_addr">
+      <obj_property name="ElementShortName">axi_bram_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_bram_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/dut/axi_bram_din">
+      <obj_property name="ElementShortName">axi_bram_din[11:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_bram_din[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/dut/axi_bram_dout">
+      <obj_property name="ElementShortName">axi_bram_dout[11:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_bram_dout[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ntt_axi_wrapper/dut/axi_bram_we">
+      <obj_property name="ElementShortName">axi_bram_we</obj_property>
+      <obj_property name="ObjectShortName">axi_bram_we</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ntt_axi_wrapper/dut/axi_bram_en">
+      <obj_property name="ElementShortName">axi_bram_en</obj_property>
+      <obj_property name="ObjectShortName">axi_bram_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ntt_axi_wrapper/dut/irq">
+      <obj_property name="ElementShortName">irq</obj_property>
+      <obj_property name="ObjectShortName">irq</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider4443" type="divider">
+      <obj_property name="label">BRAM 0</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/dut/ctrl_bram0_addr_a">
+      <obj_property name="ElementShortName">ctrl_bram0_addr_a[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ctrl_bram0_addr_a[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/dut/ctrl_bram0_addr_b">
+      <obj_property name="ElementShortName">ctrl_bram0_addr_b[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ctrl_bram0_addr_b[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ntt_axi_wrapper/dut/ctrl_bram0_we_a">
+      <obj_property name="ElementShortName">ctrl_bram0_we_a</obj_property>
+      <obj_property name="ObjectShortName">ctrl_bram0_we_a</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ntt_axi_wrapper/dut/ctrl_bram0_we_b">
+      <obj_property name="ElementShortName">ctrl_bram0_we_b</obj_property>
+      <obj_property name="ObjectShortName">ctrl_bram0_we_b</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/dut/ctrl_bram0_din_a">
+      <obj_property name="ElementShortName">ctrl_bram0_din_a[11:0]</obj_property>
+      <obj_property name="ObjectShortName">ctrl_bram0_din_a[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/dut/ctrl_bram0_din_b">
+      <obj_property name="ElementShortName">ctrl_bram0_din_b[11:0]</obj_property>
+      <obj_property name="ObjectShortName">ctrl_bram0_din_b[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/dut/ctrl_bram0_dout_a">
+      <obj_property name="ElementShortName">ctrl_bram0_dout_a[11:0]</obj_property>
+      <obj_property name="ObjectShortName">ctrl_bram0_dout_a[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/dut/ctrl_bram0_dout_b">
+      <obj_property name="ElementShortName">ctrl_bram0_dout_b[11:0]</obj_property>
+      <obj_property name="ObjectShortName">ctrl_bram0_dout_b[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/dut/bram0_addr_a">
+      <obj_property name="ElementShortName">bram0_addr_a[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bram0_addr_a[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/dut/bram0_din_a">
+      <obj_property name="ElementShortName">bram0_din_a[11:0]</obj_property>
+      <obj_property name="ObjectShortName">bram0_din_a[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ntt_axi_wrapper/dut/bram0_we_a">
+      <obj_property name="ElementShortName">bram0_we_a</obj_property>
+      <obj_property name="ObjectShortName">bram0_we_a</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider4444" type="divider">
+      <obj_property name="label">BRAM 1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/dut/ctrl_bram1_addr_a">
+      <obj_property name="ElementShortName">ctrl_bram1_addr_a[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ctrl_bram1_addr_a[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/dut/ctrl_bram1_addr_b">
+      <obj_property name="ElementShortName">ctrl_bram1_addr_b[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ctrl_bram1_addr_b[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ntt_axi_wrapper/dut/ctrl_bram1_we_a">
+      <obj_property name="ElementShortName">ctrl_bram1_we_a</obj_property>
+      <obj_property name="ObjectShortName">ctrl_bram1_we_a</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ntt_axi_wrapper/dut/ctrl_bram1_we_b">
+      <obj_property name="ElementShortName">ctrl_bram1_we_b</obj_property>
+      <obj_property name="ObjectShortName">ctrl_bram1_we_b</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/dut/ctrl_bram1_din_a">
+      <obj_property name="ElementShortName">ctrl_bram1_din_a[11:0]</obj_property>
+      <obj_property name="ObjectShortName">ctrl_bram1_din_a[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/dut/ctrl_bram1_din_b">
+      <obj_property name="ElementShortName">ctrl_bram1_din_b[11:0]</obj_property>
+      <obj_property name="ObjectShortName">ctrl_bram1_din_b[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/dut/ctrl_bram1_dout_a">
+      <obj_property name="ElementShortName">ctrl_bram1_dout_a[11:0]</obj_property>
+      <obj_property name="ObjectShortName">ctrl_bram1_dout_a[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/dut/ctrl_bram1_dout_b">
+      <obj_property name="ElementShortName">ctrl_bram1_dout_b[11:0]</obj_property>
+      <obj_property name="ObjectShortName">ctrl_bram1_dout_b[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider4577" type="divider">
+      <obj_property name="label">ROM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/dut/rom_addr">
+      <obj_property name="ElementShortName">rom_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/dut/rom_dout">
+      <obj_property name="ElementShortName">rom_dout[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_dout[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider4578" type="divider">
+      <obj_property name="label">BUTTERFLY</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/dut/butterfly_in1">
+      <obj_property name="ElementShortName">butterfly_in1[11:0]</obj_property>
+      <obj_property name="ObjectShortName">butterfly_in1[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/dut/butterfly_in2">
+      <obj_property name="ElementShortName">butterfly_in2[11:0]</obj_property>
+      <obj_property name="ObjectShortName">butterfly_in2[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/dut/butterfly_twiddle">
+      <obj_property name="ElementShortName">butterfly_twiddle[11:0]</obj_property>
+      <obj_property name="ObjectShortName">butterfly_twiddle[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ntt_axi_wrapper/dut/butterfly_inverse">
+      <obj_property name="ElementShortName">butterfly_inverse</obj_property>
+      <obj_property name="ObjectShortName">butterfly_inverse</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ntt_axi_wrapper/dut/valid_in">
+      <obj_property name="ElementShortName">valid_in</obj_property>
+      <obj_property name="ObjectShortName">valid_in</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ntt_axi_wrapper/dut/valid_out">
+      <obj_property name="ElementShortName">valid_out</obj_property>
+      <obj_property name="ObjectShortName">valid_out</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/dut/butterfly_u">
+      <obj_property name="ElementShortName">butterfly_u[11:0]</obj_property>
+      <obj_property name="ObjectShortName">butterfly_u[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ntt_axi_wrapper/dut/butterfly_v">
+      <obj_property name="ElementShortName">butterfly_v[11:0]</obj_property>
+      <obj_property name="ObjectShortName">butterfly_v[11:0]</obj_property>
+   </wvobject>
+</wave_config>
