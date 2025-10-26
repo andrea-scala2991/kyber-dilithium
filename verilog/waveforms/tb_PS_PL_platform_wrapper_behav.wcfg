@@ -5,10 +5,9 @@
    <db_ref_list>
       <db_ref path="tb_PS_PL_platform_wrapper_behav.wdb" id="1">
          <top_modules>
-            <top_module name="axi_dma_pkg" />
+            <top_module name="axi_cdma_pkg" />
             <top_module name="axi_vip_pkg" />
             <top_module name="glbl" />
-            <top_module name="ipif_pkg" />
             <top_module name="lib_pkg" />
             <top_module name="std" />
             <top_module name="tb_PS_PL_platform_wrapper" />
@@ -18,18 +17,18 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
-      <ZoomEndTime time="6.943751 us"></ZoomEndTime>
-      <Cursor1Time time="4.668750 us"></Cursor1Time>
+      <ZoomStartTime time="15,189.666 ns"></ZoomStartTime>
+      <ZoomEndTime time="15,437.267 ns"></ZoomEndTime>
+      <Cursor1Time time="15,396.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="293"></NameColumnWidth>
-      <ValueColumnWidth column_width="75"></ValueColumnWidth>
+      <ValueColumnWidth column_width="63"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="79" />
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/s00_axi_aclk">
-      <obj_property name="ElementShortName">s00_axi_aclk</obj_property>
-      <obj_property name="ObjectShortName">s00_axi_aclk</obj_property>
+   <WVObjectSize size="65" />
+   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_aclk">
+      <obj_property name="ElementShortName">m_axi_aclk</obj_property>
+      <obj_property name="ObjectShortName">m_axi_aclk</obj_property>
    </wvobject>
    <wvobject fp_name="divider293" type="divider">
       <obj_property name="label">DMA</obj_property>
@@ -39,327 +38,212 @@
       <obj_property name="label">S_AXI_LITE</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/s_axi_lite_awvalid">
-         <obj_property name="ElementShortName">s_axi_lite_awvalid</obj_property>
-         <obj_property name="ObjectShortName">s_axi_lite_awvalid</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/s_axi_lite_awready">
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/s_axi_lite_awready">
          <obj_property name="ElementShortName">s_axi_lite_awready</obj_property>
          <obj_property name="ObjectShortName">s_axi_lite_awready</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/s_axi_lite_awaddr">
-         <obj_property name="ElementShortName">s_axi_lite_awaddr[9:0]</obj_property>
-         <obj_property name="ObjectShortName">s_axi_lite_awaddr[9:0]</obj_property>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/s_axi_lite_awvalid">
+         <obj_property name="ElementShortName">s_axi_lite_awvalid</obj_property>
+         <obj_property name="ObjectShortName">s_axi_lite_awvalid</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/s_axi_lite_wvalid">
-         <obj_property name="ElementShortName">s_axi_lite_wvalid</obj_property>
-         <obj_property name="ObjectShortName">s_axi_lite_wvalid</obj_property>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/s_axi_lite_awaddr">
+         <obj_property name="ElementShortName">s_axi_lite_awaddr[5:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axi_lite_awaddr[5:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/s_axi_lite_wready">
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/s_axi_lite_wready">
          <obj_property name="ElementShortName">s_axi_lite_wready</obj_property>
          <obj_property name="ObjectShortName">s_axi_lite_wready</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/s_axi_lite_wdata">
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/s_axi_lite_wvalid">
+         <obj_property name="ElementShortName">s_axi_lite_wvalid</obj_property>
+         <obj_property name="ObjectShortName">s_axi_lite_wvalid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/s_axi_lite_wdata">
          <obj_property name="ElementShortName">s_axi_lite_wdata[31:0]</obj_property>
          <obj_property name="ObjectShortName">s_axi_lite_wdata[31:0]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/s_axi_lite_bresp">
-         <obj_property name="ElementShortName">s_axi_lite_bresp[1:0]</obj_property>
-         <obj_property name="ObjectShortName">s_axi_lite_bresp[1:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/s_axi_lite_bvalid">
-         <obj_property name="ElementShortName">s_axi_lite_bvalid</obj_property>
-         <obj_property name="ObjectShortName">s_axi_lite_bvalid</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/s_axi_lite_bready">
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/s_axi_lite_bready">
          <obj_property name="ElementShortName">s_axi_lite_bready</obj_property>
          <obj_property name="ObjectShortName">s_axi_lite_bready</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/s_axi_lite_arvalid">
-         <obj_property name="ElementShortName">s_axi_lite_arvalid</obj_property>
-         <obj_property name="ObjectShortName">s_axi_lite_arvalid</obj_property>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/s_axi_lite_bvalid">
+         <obj_property name="ElementShortName">s_axi_lite_bvalid</obj_property>
+         <obj_property name="ObjectShortName">s_axi_lite_bvalid</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/s_axi_lite_arready">
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/s_axi_lite_bresp">
+         <obj_property name="ElementShortName">s_axi_lite_bresp[1:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axi_lite_bresp[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/s_axi_lite_arready">
          <obj_property name="ElementShortName">s_axi_lite_arready</obj_property>
          <obj_property name="ObjectShortName">s_axi_lite_arready</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/s_axi_lite_araddr">
-         <obj_property name="ElementShortName">s_axi_lite_araddr[9:0]</obj_property>
-         <obj_property name="ObjectShortName">s_axi_lite_araddr[9:0]</obj_property>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/s_axi_lite_arvalid">
+         <obj_property name="ElementShortName">s_axi_lite_arvalid</obj_property>
+         <obj_property name="ObjectShortName">s_axi_lite_arvalid</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/s_axi_lite_rvalid">
-         <obj_property name="ElementShortName">s_axi_lite_rvalid</obj_property>
-         <obj_property name="ObjectShortName">s_axi_lite_rvalid</obj_property>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/s_axi_lite_araddr">
+         <obj_property name="ElementShortName">s_axi_lite_araddr[5:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axi_lite_araddr[5:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/s_axi_lite_rready">
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/s_axi_lite_rready">
          <obj_property name="ElementShortName">s_axi_lite_rready</obj_property>
          <obj_property name="ObjectShortName">s_axi_lite_rready</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/s_axi_lite_rdata">
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/s_axi_lite_rvalid">
+         <obj_property name="ElementShortName">s_axi_lite_rvalid</obj_property>
+         <obj_property name="ObjectShortName">s_axi_lite_rvalid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/s_axi_lite_rdata">
          <obj_property name="ElementShortName">s_axi_lite_rdata[31:0]</obj_property>
          <obj_property name="ObjectShortName">s_axi_lite_rdata[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/s_axi_lite_rresp">
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/s_axi_lite_rresp">
          <obj_property name="ElementShortName">s_axi_lite_rresp[1:0]</obj_property>
          <obj_property name="ObjectShortName">s_axi_lite_rresp[1:0]</obj_property>
       </wvobject>
-   </wvobject>
-   <wvobject type="group" fp_name="group3836">
-      <obj_property name="label">M_AXI_MM2S</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_mm2s_araddr">
-         <obj_property name="ElementShortName">m_axi_mm2s_araddr[31:0]</obj_property>
-         <obj_property name="ObjectShortName">m_axi_mm2s_araddr[31:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_mm2s_arlen">
-         <obj_property name="ElementShortName">m_axi_mm2s_arlen[7:0]</obj_property>
-         <obj_property name="ObjectShortName">m_axi_mm2s_arlen[7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_mm2s_arsize">
-         <obj_property name="ElementShortName">m_axi_mm2s_arsize[2:0]</obj_property>
-         <obj_property name="ObjectShortName">m_axi_mm2s_arsize[2:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_mm2s_arburst">
-         <obj_property name="ElementShortName">m_axi_mm2s_arburst[1:0]</obj_property>
-         <obj_property name="ObjectShortName">m_axi_mm2s_arburst[1:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_mm2s_arprot">
-         <obj_property name="ElementShortName">m_axi_mm2s_arprot[2:0]</obj_property>
-         <obj_property name="ObjectShortName">m_axi_mm2s_arprot[2:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_mm2s_arcache">
-         <obj_property name="ElementShortName">m_axi_mm2s_arcache[3:0]</obj_property>
-         <obj_property name="ObjectShortName">m_axi_mm2s_arcache[3:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_mm2s_arvalid">
-         <obj_property name="ElementShortName">m_axi_mm2s_arvalid</obj_property>
-         <obj_property name="ObjectShortName">m_axi_mm2s_arvalid</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_mm2s_arready">
-         <obj_property name="ElementShortName">m_axi_mm2s_arready</obj_property>
-         <obj_property name="ObjectShortName">m_axi_mm2s_arready</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_mm2s_rdata">
-         <obj_property name="ElementShortName">m_axi_mm2s_rdata[31:0]</obj_property>
-         <obj_property name="ObjectShortName">m_axi_mm2s_rdata[31:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_mm2s_rresp">
-         <obj_property name="ElementShortName">m_axi_mm2s_rresp[1:0]</obj_property>
-         <obj_property name="ObjectShortName">m_axi_mm2s_rresp[1:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_mm2s_rlast">
-         <obj_property name="ElementShortName">m_axi_mm2s_rlast</obj_property>
-         <obj_property name="ObjectShortName">m_axi_mm2s_rlast</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_mm2s_rvalid">
-         <obj_property name="ElementShortName">m_axi_mm2s_rvalid</obj_property>
-         <obj_property name="ObjectShortName">m_axi_mm2s_rvalid</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_mm2s_rready">
-         <obj_property name="ElementShortName">m_axi_mm2s_rready</obj_property>
-         <obj_property name="ObjectShortName">m_axi_mm2s_rready</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/mm2s_prmry_reset_out_n">
-         <obj_property name="ElementShortName">mm2s_prmry_reset_out_n</obj_property>
-         <obj_property name="ObjectShortName">mm2s_prmry_reset_out_n</obj_property>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/s_axi_lite_aresetn">
+         <obj_property name="ElementShortName">s_axi_lite_aresetn</obj_property>
+         <obj_property name="ObjectShortName">s_axi_lite_aresetn</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject type="group" fp_name="group3837">
-      <obj_property name="label">M_AXIS_MM2S</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axis_mm2s_tdata">
-         <obj_property name="ElementShortName">m_axis_mm2s_tdata[31:0]</obj_property>
-         <obj_property name="ObjectShortName">m_axis_mm2s_tdata[31:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axis_mm2s_tkeep">
-         <obj_property name="ElementShortName">m_axis_mm2s_tkeep[3:0]</obj_property>
-         <obj_property name="ObjectShortName">m_axis_mm2s_tkeep[3:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axis_mm2s_tvalid">
-         <obj_property name="ElementShortName">m_axis_mm2s_tvalid</obj_property>
-         <obj_property name="ObjectShortName">m_axis_mm2s_tvalid</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axis_mm2s_tready">
-         <obj_property name="ElementShortName">m_axis_mm2s_tready</obj_property>
-         <obj_property name="ObjectShortName">m_axis_mm2s_tready</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axis_mm2s_tlast">
-         <obj_property name="ElementShortName">m_axis_mm2s_tlast</obj_property>
-         <obj_property name="ObjectShortName">m_axis_mm2s_tlast</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject type="group" fp_name="group3838">
-      <obj_property name="label">M_AXI_S2MM</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_s2mm_awaddr">
-         <obj_property name="ElementShortName">m_axi_s2mm_awaddr[31:0]</obj_property>
-         <obj_property name="ObjectShortName">m_axi_s2mm_awaddr[31:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_s2mm_awlen">
-         <obj_property name="ElementShortName">m_axi_s2mm_awlen[7:0]</obj_property>
-         <obj_property name="ObjectShortName">m_axi_s2mm_awlen[7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_s2mm_awsize">
-         <obj_property name="ElementShortName">m_axi_s2mm_awsize[2:0]</obj_property>
-         <obj_property name="ObjectShortName">m_axi_s2mm_awsize[2:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_s2mm_awburst">
-         <obj_property name="ElementShortName">m_axi_s2mm_awburst[1:0]</obj_property>
-         <obj_property name="ObjectShortName">m_axi_s2mm_awburst[1:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_s2mm_awprot">
-         <obj_property name="ElementShortName">m_axi_s2mm_awprot[2:0]</obj_property>
-         <obj_property name="ObjectShortName">m_axi_s2mm_awprot[2:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_s2mm_awcache">
-         <obj_property name="ElementShortName">m_axi_s2mm_awcache[3:0]</obj_property>
-         <obj_property name="ObjectShortName">m_axi_s2mm_awcache[3:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_s2mm_awvalid">
-         <obj_property name="ElementShortName">m_axi_s2mm_awvalid</obj_property>
-         <obj_property name="ObjectShortName">m_axi_s2mm_awvalid</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_s2mm_awready">
-         <obj_property name="ElementShortName">m_axi_s2mm_awready</obj_property>
-         <obj_property name="ObjectShortName">m_axi_s2mm_awready</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_s2mm_wdata">
-         <obj_property name="ElementShortName">m_axi_s2mm_wdata[31:0]</obj_property>
-         <obj_property name="ObjectShortName">m_axi_s2mm_wdata[31:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_s2mm_wstrb">
-         <obj_property name="ElementShortName">m_axi_s2mm_wstrb[3:0]</obj_property>
-         <obj_property name="ObjectShortName">m_axi_s2mm_wstrb[3:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_s2mm_wlast">
-         <obj_property name="ElementShortName">m_axi_s2mm_wlast</obj_property>
-         <obj_property name="ObjectShortName">m_axi_s2mm_wlast</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_s2mm_wvalid">
-         <obj_property name="ElementShortName">m_axi_s2mm_wvalid</obj_property>
-         <obj_property name="ObjectShortName">m_axi_s2mm_wvalid</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_s2mm_wready">
-         <obj_property name="ElementShortName">m_axi_s2mm_wready</obj_property>
-         <obj_property name="ObjectShortName">m_axi_s2mm_wready</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_s2mm_bresp">
-         <obj_property name="ElementShortName">m_axi_s2mm_bresp[1:0]</obj_property>
-         <obj_property name="ObjectShortName">m_axi_s2mm_bresp[1:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_s2mm_bvalid">
-         <obj_property name="ElementShortName">m_axi_s2mm_bvalid</obj_property>
-         <obj_property name="ObjectShortName">m_axi_s2mm_bvalid</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/m_axi_s2mm_bready">
-         <obj_property name="ElementShortName">m_axi_s2mm_bready</obj_property>
-         <obj_property name="ObjectShortName">m_axi_s2mm_bready</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/s2mm_prmry_reset_out_n">
-         <obj_property name="ElementShortName">s2mm_prmry_reset_out_n</obj_property>
-         <obj_property name="ObjectShortName">s2mm_prmry_reset_out_n</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject type="group" fp_name="group3839">
-      <obj_property name="label">S_AXIS_S2MM</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/s_axis_s2mm_tdata">
-         <obj_property name="ElementShortName">s_axis_s2mm_tdata[31:0]</obj_property>
-         <obj_property name="ObjectShortName">s_axis_s2mm_tdata[31:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/s_axis_s2mm_tkeep">
-         <obj_property name="ElementShortName">s_axis_s2mm_tkeep[3:0]</obj_property>
-         <obj_property name="ObjectShortName">s_axis_s2mm_tkeep[3:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/s_axis_s2mm_tvalid">
-         <obj_property name="ElementShortName">s_axis_s2mm_tvalid</obj_property>
-         <obj_property name="ObjectShortName">s_axis_s2mm_tvalid</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/s_axis_s2mm_tready">
-         <obj_property name="ElementShortName">s_axis_s2mm_tready</obj_property>
-         <obj_property name="ObjectShortName">s_axis_s2mm_tready</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/s_axis_s2mm_tlast">
-         <obj_property name="ElementShortName">s_axis_s2mm_tlast</obj_property>
-         <obj_property name="ObjectShortName">s_axis_s2mm_tlast</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/mm2s_introut">
-      <obj_property name="ElementShortName">mm2s_introut</obj_property>
-      <obj_property name="ObjectShortName">mm2s_introut</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/s2mm_introut">
-      <obj_property name="ElementShortName">s2mm_introut</obj_property>
-      <obj_property name="ObjectShortName">s2mm_introut</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/axi_dma_tstvec">
-      <obj_property name="ElementShortName">axi_dma_tstvec[31:0]</obj_property>
-      <obj_property name="ObjectShortName">axi_dma_tstvec[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="protoinst" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/M_AXIS_MM2S">
-      <obj_property name="children_use_element_short_name">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
-      <obj_property name="EnumTransactionColorTable">fff,fff=blank</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="CustomSignalColor">#00E600</obj_property>
-      <obj_property name="Render_Data">/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/M_AXIS_MM2S.streamWaveData</obj_property>
-      <obj_property name="Number_Overlay">2</obj_property>
-      <obj_property name="Overlay_Object_0">/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/M_AXIS_MM2S.linkStarve</obj_property>
-      <obj_property name="Overlay_Color_0">#99E600</obj_property>
-      <obj_property name="Overlay_Object_1">/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/M_AXIS_MM2S.linkStall</obj_property>
-      <obj_property name="Overlay_Color_1">#E64C00</obj_property>
-      <obj_property name="Detail_Data">/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/M_AXIS_MM2S.streamTooltipData</obj_property>
-      <obj_property name="ElementShortName">M_AXIS_MM2S</obj_property>
-      <obj_property name="ObjectShortName">M_AXIS_MM2S</obj_property>
-   </wvobject>
-   <wvobject type="protoinst" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/S_AXIS_S2MM">
-      <obj_property name="children_use_element_short_name">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
-      <obj_property name="EnumTransactionColorTable">fff,fff=blank</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="CustomSignalColor">#00E600</obj_property>
-      <obj_property name="Render_Data">/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/S_AXIS_S2MM.streamWaveData</obj_property>
-      <obj_property name="Number_Overlay">2</obj_property>
-      <obj_property name="Overlay_Object_0">/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/S_AXIS_S2MM.linkStarve</obj_property>
-      <obj_property name="Overlay_Color_0">#99E600</obj_property>
-      <obj_property name="Overlay_Object_1">/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/S_AXIS_S2MM.linkStall</obj_property>
-      <obj_property name="Overlay_Color_1">#E64C00</obj_property>
-      <obj_property name="Detail_Data">/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/S_AXIS_S2MM.streamTooltipData</obj_property>
-      <obj_property name="ElementShortName">S_AXIS_S2MM</obj_property>
-      <obj_property name="ObjectShortName">S_AXIS_S2MM</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-   </wvobject>
-   <wvobject type="protoinst" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/M_AXI_MM2S">
-      <obj_property name="ElementShortName">M_AXI_MM2S</obj_property>
-      <obj_property name="ObjectShortName">M_AXI_MM2S</obj_property>
-   </wvobject>
-   <wvobject type="protoinst" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/M_AXI_S2MM">
-      <obj_property name="children_use_element_short_name">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
-      <obj_property name="EnumTransactionColorTable">0=blank 1=#D399FF 2=pink</obj_property>
-      <obj_property name="EnumTransactionValueTable">0=blank;1=Read;2=Write;3=Read/Write</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="CustomSignalColor">turquoise</obj_property>
-      <obj_property name="Render_Data">/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/M_AXI_S2MM.readWriteSummary</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="CellHeight">36</obj_property>
-      <obj_property name="ElementShortName">M_AXI_S2MM</obj_property>
-      <obj_property name="ObjectShortName">M_AXI_S2MM</obj_property>
-   </wvobject>
-   <wvobject type="protoinst" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/S_AXI_LITE">
-      <obj_property name="children_use_element_short_name">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
-      <obj_property name="EnumTransactionColorTable">0=blank 1=#D399FF 2=pink</obj_property>
-      <obj_property name="EnumTransactionValueTable">0=blank;1=Read;2=Write;3=Read/Write</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="CustomSignalColor">turquoise</obj_property>
-      <obj_property name="Render_Data">/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_dma_0/S_AXI_LITE.readWriteSummary</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="CellHeight">36</obj_property>
+   <wvobject type="protoinst" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/S_AXI_LITE">
       <obj_property name="ElementShortName">S_AXI_LITE</obj_property>
       <obj_property name="ObjectShortName">S_AXI_LITE</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group1091">
+      <obj_property name="label">M_AXI</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_arready">
+         <obj_property name="ElementShortName">m_axi_arready</obj_property>
+         <obj_property name="ObjectShortName">m_axi_arready</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_arvalid">
+         <obj_property name="ElementShortName">m_axi_arvalid</obj_property>
+         <obj_property name="ObjectShortName">m_axi_arvalid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_araddr">
+         <obj_property name="ElementShortName">m_axi_araddr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axi_araddr[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_arlen">
+         <obj_property name="ElementShortName">m_axi_arlen[7:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axi_arlen[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_arsize">
+         <obj_property name="ElementShortName">m_axi_arsize[2:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axi_arsize[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_arburst">
+         <obj_property name="ElementShortName">m_axi_arburst[1:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axi_arburst[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_arprot">
+         <obj_property name="ElementShortName">m_axi_arprot[2:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axi_arprot[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_arcache">
+         <obj_property name="ElementShortName">m_axi_arcache[3:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axi_arcache[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_rready">
+         <obj_property name="ElementShortName">m_axi_rready</obj_property>
+         <obj_property name="ObjectShortName">m_axi_rready</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_rvalid">
+         <obj_property name="ElementShortName">m_axi_rvalid</obj_property>
+         <obj_property name="ObjectShortName">m_axi_rvalid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_rdata">
+         <obj_property name="ElementShortName">m_axi_rdata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axi_rdata[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_rresp">
+         <obj_property name="ElementShortName">m_axi_rresp[1:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axi_rresp[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_rlast">
+         <obj_property name="ElementShortName">m_axi_rlast</obj_property>
+         <obj_property name="ObjectShortName">m_axi_rlast</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_awready">
+         <obj_property name="ElementShortName">m_axi_awready</obj_property>
+         <obj_property name="ObjectShortName">m_axi_awready</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_awvalid">
+         <obj_property name="ElementShortName">m_axi_awvalid</obj_property>
+         <obj_property name="ObjectShortName">m_axi_awvalid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_awaddr">
+         <obj_property name="ElementShortName">m_axi_awaddr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axi_awaddr[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_awlen">
+         <obj_property name="ElementShortName">m_axi_awlen[7:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axi_awlen[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_awsize">
+         <obj_property name="ElementShortName">m_axi_awsize[2:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axi_awsize[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_awburst">
+         <obj_property name="ElementShortName">m_axi_awburst[1:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axi_awburst[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_awprot">
+         <obj_property name="ElementShortName">m_axi_awprot[2:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axi_awprot[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_awcache">
+         <obj_property name="ElementShortName">m_axi_awcache[3:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axi_awcache[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_wready">
+         <obj_property name="ElementShortName">m_axi_wready</obj_property>
+         <obj_property name="ObjectShortName">m_axi_wready</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_wvalid">
+         <obj_property name="ElementShortName">m_axi_wvalid</obj_property>
+         <obj_property name="ObjectShortName">m_axi_wvalid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_wdata">
+         <obj_property name="ElementShortName">m_axi_wdata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axi_wdata[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_wstrb">
+         <obj_property name="ElementShortName">m_axi_wstrb[3:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axi_wstrb[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_wlast">
+         <obj_property name="ElementShortName">m_axi_wlast</obj_property>
+         <obj_property name="ObjectShortName">m_axi_wlast</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_bready">
+         <obj_property name="ElementShortName">m_axi_bready</obj_property>
+         <obj_property name="ObjectShortName">m_axi_bready</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_bvalid">
+         <obj_property name="ElementShortName">m_axi_bvalid</obj_property>
+         <obj_property name="ObjectShortName">m_axi_bvalid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_bresp">
+         <obj_property name="ElementShortName">m_axi_bresp[1:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axi_bresp[1:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="protoinst" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/M_AXI">
+      <obj_property name="ElementShortName">M_AXI</obj_property>
+      <obj_property name="ObjectShortName">M_AXI</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/cdma_introut">
+      <obj_property name="ElementShortName">cdma_introut</obj_property>
+      <obj_property name="ObjectShortName">cdma_introut</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/cdma_tvect_out">
+      <obj_property name="ElementShortName">cdma_tvect_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">cdma_tvect_out[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="divider805" type="divider">
       <obj_property name="label">ZYNQ PS</obj_property>
@@ -702,8 +586,8 @@
       </wvobject>
    </wvobject>
    <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/processing_system7_0/IRQ_F2P">
-      <obj_property name="ElementShortName">IRQ_F2P[2:0]</obj_property>
-      <obj_property name="ObjectShortName">IRQ_F2P[2:0]</obj_property>
+      <obj_property name="ElementShortName">IRQ_F2P[1:0]</obj_property>
+      <obj_property name="ObjectShortName">IRQ_F2P[1:0]</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/processing_system7_0/FCLK_RESET0_N">
       <obj_property name="ElementShortName">FCLK_RESET0_N</obj_property>
@@ -729,344 +613,452 @@
       <obj_property name="label">NTT_UNIT</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject type="group" fp_name="group3842">
-      <obj_property name="label">AXI_LITE_SLAVE</obj_property>
+   <wvobject type="group" fp_name="group1261">
+      <obj_property name="label">S_AXI PS</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/s00_axi_aresetn">
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s00_axi_aclk">
+         <obj_property name="ElementShortName">s00_axi_aclk</obj_property>
+         <obj_property name="ObjectShortName">s00_axi_aclk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s00_axi_aresetn">
          <obj_property name="ElementShortName">s00_axi_aresetn</obj_property>
          <obj_property name="ObjectShortName">s00_axi_aresetn</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/s00_axi_awaddr">
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s00_axi_awaddr">
          <obj_property name="ElementShortName">s00_axi_awaddr[3:0]</obj_property>
          <obj_property name="ObjectShortName">s00_axi_awaddr[3:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/s00_axi_awprot">
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s00_axi_awprot">
          <obj_property name="ElementShortName">s00_axi_awprot[2:0]</obj_property>
          <obj_property name="ObjectShortName">s00_axi_awprot[2:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/s00_axi_awvalid">
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s00_axi_awvalid">
          <obj_property name="ElementShortName">s00_axi_awvalid</obj_property>
          <obj_property name="ObjectShortName">s00_axi_awvalid</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/s00_axi_awready">
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s00_axi_awready">
          <obj_property name="ElementShortName">s00_axi_awready</obj_property>
          <obj_property name="ObjectShortName">s00_axi_awready</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/s00_axi_wdata">
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s00_axi_wdata">
          <obj_property name="ElementShortName">s00_axi_wdata[31:0]</obj_property>
          <obj_property name="ObjectShortName">s00_axi_wdata[31:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/s00_axi_wstrb">
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s00_axi_wstrb">
          <obj_property name="ElementShortName">s00_axi_wstrb[3:0]</obj_property>
          <obj_property name="ObjectShortName">s00_axi_wstrb[3:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/s00_axi_wvalid">
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s00_axi_wvalid">
          <obj_property name="ElementShortName">s00_axi_wvalid</obj_property>
          <obj_property name="ObjectShortName">s00_axi_wvalid</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/s00_axi_wready">
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s00_axi_wready">
          <obj_property name="ElementShortName">s00_axi_wready</obj_property>
          <obj_property name="ObjectShortName">s00_axi_wready</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/s00_axi_bresp">
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s00_axi_bresp">
          <obj_property name="ElementShortName">s00_axi_bresp[1:0]</obj_property>
          <obj_property name="ObjectShortName">s00_axi_bresp[1:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/s00_axi_bvalid">
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s00_axi_bvalid">
          <obj_property name="ElementShortName">s00_axi_bvalid</obj_property>
          <obj_property name="ObjectShortName">s00_axi_bvalid</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/s00_axi_bready">
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s00_axi_bready">
          <obj_property name="ElementShortName">s00_axi_bready</obj_property>
          <obj_property name="ObjectShortName">s00_axi_bready</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/s00_axi_araddr">
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s00_axi_araddr">
          <obj_property name="ElementShortName">s00_axi_araddr[3:0]</obj_property>
          <obj_property name="ObjectShortName">s00_axi_araddr[3:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/s00_axi_arprot">
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s00_axi_arprot">
          <obj_property name="ElementShortName">s00_axi_arprot[2:0]</obj_property>
          <obj_property name="ObjectShortName">s00_axi_arprot[2:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/s00_axi_arvalid">
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s00_axi_arvalid">
          <obj_property name="ElementShortName">s00_axi_arvalid</obj_property>
          <obj_property name="ObjectShortName">s00_axi_arvalid</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/s00_axi_arready">
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s00_axi_arready">
          <obj_property name="ElementShortName">s00_axi_arready</obj_property>
          <obj_property name="ObjectShortName">s00_axi_arready</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/s00_axi_rdata">
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s00_axi_rdata">
          <obj_property name="ElementShortName">s00_axi_rdata[31:0]</obj_property>
          <obj_property name="ObjectShortName">s00_axi_rdata[31:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/s00_axi_rresp">
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s00_axi_rresp">
          <obj_property name="ElementShortName">s00_axi_rresp[1:0]</obj_property>
          <obj_property name="ObjectShortName">s00_axi_rresp[1:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/s00_axi_rvalid">
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s00_axi_rvalid">
          <obj_property name="ElementShortName">s00_axi_rvalid</obj_property>
          <obj_property name="ObjectShortName">s00_axi_rvalid</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/s00_axi_rready">
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s00_axi_rready">
          <obj_property name="ElementShortName">s00_axi_rready</obj_property>
          <obj_property name="ObjectShortName">s00_axi_rready</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject type="group" fp_name="group3843">
-      <obj_property name="label">AXI_STREAM_SLAVE</obj_property>
+   <wvobject type="group" fp_name="group1471">
+      <obj_property name="label">S_AXI DMA</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/s00_axis_tready">
-         <obj_property name="ElementShortName">s00_axis_tready</obj_property>
-         <obj_property name="ObjectShortName">s00_axis_tready</obj_property>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_awid">
+         <obj_property name="ElementShortName">s01_axi_awid[-1:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_awid[-1:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/s00_axis_tdata">
-         <obj_property name="ElementShortName">s00_axis_tdata[31:0]</obj_property>
-         <obj_property name="ObjectShortName">s00_axis_tdata[31:0]</obj_property>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_awaddr">
+         <obj_property name="ElementShortName">s01_axi_awaddr[8:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_awaddr[8:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/s00_axis_tstrb">
-         <obj_property name="ElementShortName">s00_axis_tstrb[3:0]</obj_property>
-         <obj_property name="ObjectShortName">s00_axis_tstrb[3:0]</obj_property>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_awlen">
+         <obj_property name="ElementShortName">s01_axi_awlen[7:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_awlen[7:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/s00_axis_tlast">
-         <obj_property name="ElementShortName">s00_axis_tlast</obj_property>
-         <obj_property name="ObjectShortName">s00_axis_tlast</obj_property>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_awsize">
+         <obj_property name="ElementShortName">s01_axi_awsize[2:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_awsize[2:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/s00_axis_tvalid">
-         <obj_property name="ElementShortName">s00_axis_tvalid</obj_property>
-         <obj_property name="ObjectShortName">s00_axis_tvalid</obj_property>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_awburst">
+         <obj_property name="ElementShortName">s01_axi_awburst[1:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_awburst[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_awlock">
+         <obj_property name="ElementShortName">s01_axi_awlock</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_awlock</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_awcache">
+         <obj_property name="ElementShortName">s01_axi_awcache[3:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_awcache[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_awprot">
+         <obj_property name="ElementShortName">s01_axi_awprot[2:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_awprot[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_awqos">
+         <obj_property name="ElementShortName">s01_axi_awqos[3:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_awqos[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_awregion">
+         <obj_property name="ElementShortName">s01_axi_awregion[3:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_awregion[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_awuser">
+         <obj_property name="ElementShortName">s01_axi_awuser[-1:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_awuser[-1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_awvalid">
+         <obj_property name="ElementShortName">s01_axi_awvalid</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_awvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_awready">
+         <obj_property name="ElementShortName">s01_axi_awready</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_awready</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_wdata">
+         <obj_property name="ElementShortName">s01_axi_wdata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_wdata[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_wstrb">
+         <obj_property name="ElementShortName">s01_axi_wstrb[3:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_wstrb[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_wlast">
+         <obj_property name="ElementShortName">s01_axi_wlast</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_wlast</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_wuser">
+         <obj_property name="ElementShortName">s01_axi_wuser[-1:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_wuser[-1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_wvalid">
+         <obj_property name="ElementShortName">s01_axi_wvalid</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_wvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_wready">
+         <obj_property name="ElementShortName">s01_axi_wready</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_wready</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_bid">
+         <obj_property name="ElementShortName">s01_axi_bid[-1:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_bid[-1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_bresp">
+         <obj_property name="ElementShortName">s01_axi_bresp[1:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_bresp[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_buser">
+         <obj_property name="ElementShortName">s01_axi_buser[-1:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_buser[-1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_bvalid">
+         <obj_property name="ElementShortName">s01_axi_bvalid</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_bvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_bready">
+         <obj_property name="ElementShortName">s01_axi_bready</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_bready</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_arid">
+         <obj_property name="ElementShortName">s01_axi_arid[-1:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_arid[-1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_araddr">
+         <obj_property name="ElementShortName">s01_axi_araddr[8:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_araddr[8:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_arlen">
+         <obj_property name="ElementShortName">s01_axi_arlen[7:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_arlen[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_arsize">
+         <obj_property name="ElementShortName">s01_axi_arsize[2:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_arsize[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_arburst">
+         <obj_property name="ElementShortName">s01_axi_arburst[1:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_arburst[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_arlock">
+         <obj_property name="ElementShortName">s01_axi_arlock</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_arlock</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_arcache">
+         <obj_property name="ElementShortName">s01_axi_arcache[3:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_arcache[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_arprot">
+         <obj_property name="ElementShortName">s01_axi_arprot[2:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_arprot[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_arqos">
+         <obj_property name="ElementShortName">s01_axi_arqos[3:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_arqos[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_arregion">
+         <obj_property name="ElementShortName">s01_axi_arregion[3:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_arregion[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_aruser">
+         <obj_property name="ElementShortName">s01_axi_aruser[-1:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_aruser[-1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_arvalid">
+         <obj_property name="ElementShortName">s01_axi_arvalid</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_arvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_arready">
+         <obj_property name="ElementShortName">s01_axi_arready</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_arready</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_rid">
+         <obj_property name="ElementShortName">s01_axi_rid[-1:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_rid[-1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_rdata">
+         <obj_property name="ElementShortName">s01_axi_rdata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_rdata[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_rresp">
+         <obj_property name="ElementShortName">s01_axi_rresp[1:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_rresp[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_rlast">
+         <obj_property name="ElementShortName">s01_axi_rlast</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_rlast</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_ruser">
+         <obj_property name="ElementShortName">s01_axi_ruser[-1:0]</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_ruser[-1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_rvalid">
+         <obj_property name="ElementShortName">s01_axi_rvalid</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_rvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/s01_axi_rready">
+         <obj_property name="ElementShortName">s01_axi_rready</obj_property>
+         <obj_property name="ObjectShortName">s01_axi_rready</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject type="group" fp_name="group3844">
-      <obj_property name="label">AXI_STREAM_MASTER</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/m00_axis_aresetn">
-         <obj_property name="ElementShortName">m00_axis_aresetn</obj_property>
-         <obj_property name="ObjectShortName">m00_axis_aresetn</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/m00_axis_tvalid">
-         <obj_property name="ElementShortName">m00_axis_tvalid</obj_property>
-         <obj_property name="ObjectShortName">m00_axis_tvalid</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/m00_axis_tdata">
-         <obj_property name="ElementShortName">m00_axis_tdata[31:0]</obj_property>
-         <obj_property name="ObjectShortName">m00_axis_tdata[31:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/m00_axis_tstrb">
-         <obj_property name="ElementShortName">m00_axis_tstrb[3:0]</obj_property>
-         <obj_property name="ObjectShortName">m00_axis_tstrb[3:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/m00_axis_tlast">
-         <obj_property name="ElementShortName">m00_axis_tlast</obj_property>
-         <obj_property name="ObjectShortName">m00_axis_tlast</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/m00_axis_tready">
-         <obj_property name="ElementShortName">m00_axis_tready</obj_property>
-         <obj_property name="ObjectShortName">m00_axis_tready</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/done">
-      <obj_property name="ElementShortName">done</obj_property>
-      <obj_property name="ObjectShortName">done</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/start_reg">
-      <obj_property name="ElementShortName">start_reg</obj_property>
-      <obj_property name="ObjectShortName">start_reg</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/mode_reg">
-      <obj_property name="ElementShortName">mode_reg</obj_property>
-      <obj_property name="ObjectShortName">mode_reg</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/done_wire">
-      <obj_property name="ElementShortName">done_wire</obj_property>
-      <obj_property name="ObjectShortName">done_wire</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/dma_addr">
-      <obj_property name="ElementShortName">dma_addr[7:0]</obj_property>
-      <obj_property name="ObjectShortName">dma_addr[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/dma_data_in">
-      <obj_property name="ElementShortName">dma_data_in[11:0]</obj_property>
-      <obj_property name="ObjectShortName">dma_data_in[11:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/dma_we">
-      <obj_property name="ElementShortName">dma_we</obj_property>
-      <obj_property name="ObjectShortName">dma_we</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/dma_en">
-      <obj_property name="ElementShortName">dma_en</obj_property>
-      <obj_property name="ObjectShortName">dma_en</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/bram_data_out">
-      <obj_property name="ElementShortName">bram_data_out[11:0]</obj_property>
-      <obj_property name="ObjectShortName">bram_data_out[11:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/read_addr">
-      <obj_property name="ElementShortName">read_addr[7:0]</obj_property>
-      <obj_property name="ObjectShortName">read_addr[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/sending">
-      <obj_property name="ElementShortName">sending</obj_property>
-      <obj_property name="ObjectShortName">sending</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/clk">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/rst">
-      <obj_property name="ElementShortName">rst</obj_property>
-      <obj_property name="ObjectShortName">rst</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/start">
-      <obj_property name="ElementShortName">start</obj_property>
-      <obj_property name="ObjectShortName">start</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/mode">
-      <obj_property name="ElementShortName">mode</obj_property>
-      <obj_property name="ObjectShortName">mode</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/done">
-      <obj_property name="ElementShortName">done</obj_property>
-      <obj_property name="ObjectShortName">done</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/axi_bram_addr">
-      <obj_property name="ElementShortName">axi_bram_addr[7:0]</obj_property>
-      <obj_property name="ObjectShortName">axi_bram_addr[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/axi_bram_din">
-      <obj_property name="ElementShortName">axi_bram_din[11:0]</obj_property>
-      <obj_property name="ObjectShortName">axi_bram_din[11:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/axi_bram_dout">
-      <obj_property name="ElementShortName">axi_bram_dout[11:0]</obj_property>
-      <obj_property name="ObjectShortName">axi_bram_dout[11:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/axi_bram_we">
-      <obj_property name="ElementShortName">axi_bram_we</obj_property>
-      <obj_property name="ObjectShortName">axi_bram_we</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/axi_bram_en">
-      <obj_property name="ElementShortName">axi_bram_en</obj_property>
-      <obj_property name="ObjectShortName">axi_bram_en</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/irq">
+   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/irq">
       <obj_property name="ElementShortName">irq</obj_property>
       <obj_property name="ObjectShortName">irq</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/ctrl_bram0_addr_a">
+   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/core_start_i">
+      <obj_property name="ElementShortName">core_start_i</obj_property>
+      <obj_property name="ObjectShortName">core_start_i</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/core_mode_i">
+      <obj_property name="ElementShortName">core_mode_i</obj_property>
+      <obj_property name="ObjectShortName">core_mode_i</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/core_done_o">
+      <obj_property name="ElementShortName">core_done_o</obj_property>
+      <obj_property name="ObjectShortName">core_done_o</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/core_irq_o">
+      <obj_property name="ElementShortName">core_irq_o</obj_property>
+      <obj_property name="ObjectShortName">core_irq_o</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/ntt_start_o">
+      <obj_property name="ElementShortName">ntt_start_o</obj_property>
+      <obj_property name="ObjectShortName">ntt_start_o</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/ntt_mode_o">
+      <obj_property name="ElementShortName">ntt_mode_o</obj_property>
+      <obj_property name="ObjectShortName">ntt_mode_o</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/ntt_busy_i">
+      <obj_property name="ElementShortName">ntt_busy_i</obj_property>
+      <obj_property name="ObjectShortName">ntt_busy_i</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/ntt_error_i">
+      <obj_property name="ElementShortName">ntt_error_i</obj_property>
+      <obj_property name="ObjectShortName">ntt_error_i</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/data_bram_addr_o">
+      <obj_property name="ElementShortName">data_bram_addr_o[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_bram_addr_o[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/data_bram_din_o">
+      <obj_property name="ElementShortName">data_bram_din_o[11:0]</obj_property>
+      <obj_property name="ObjectShortName">data_bram_din_o[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/data_bram_we_o">
+      <obj_property name="ElementShortName">data_bram_we_o</obj_property>
+      <obj_property name="ObjectShortName">data_bram_we_o</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/data_bram_en_o">
+      <obj_property name="ElementShortName">data_bram_en_o</obj_property>
+      <obj_property name="ObjectShortName">data_bram_en_o</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/data_bram_dout_i">
+      <obj_property name="ElementShortName">data_bram_dout_i[11:0]</obj_property>
+      <obj_property name="ObjectShortName">data_bram_dout_i[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider3041" type="divider">
+      <obj_property name="label">NTT CORE INTERNAL</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/controller/state">
+      <obj_property name="ElementShortName">state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/ctrl_bram0_addr_a">
       <obj_property name="ElementShortName">ctrl_bram0_addr_a[7:0]</obj_property>
       <obj_property name="ObjectShortName">ctrl_bram0_addr_a[7:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/ctrl_bram0_addr_b">
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/ctrl_bram0_addr_b">
       <obj_property name="ElementShortName">ctrl_bram0_addr_b[7:0]</obj_property>
       <obj_property name="ObjectShortName">ctrl_bram0_addr_b[7:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/ctrl_bram0_we_a">
+   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/ctrl_bram0_we_a">
       <obj_property name="ElementShortName">ctrl_bram0_we_a</obj_property>
       <obj_property name="ObjectShortName">ctrl_bram0_we_a</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/ctrl_bram0_we_b">
+   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/ctrl_bram0_we_b">
       <obj_property name="ElementShortName">ctrl_bram0_we_b</obj_property>
       <obj_property name="ObjectShortName">ctrl_bram0_we_b</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/ctrl_bram0_din_a">
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/ctrl_bram0_din_a">
       <obj_property name="ElementShortName">ctrl_bram0_din_a[11:0]</obj_property>
       <obj_property name="ObjectShortName">ctrl_bram0_din_a[11:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/ctrl_bram0_din_b">
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/ctrl_bram0_din_b">
       <obj_property name="ElementShortName">ctrl_bram0_din_b[11:0]</obj_property>
       <obj_property name="ObjectShortName">ctrl_bram0_din_b[11:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/ctrl_bram0_dout_a">
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/ctrl_bram0_dout_a">
       <obj_property name="ElementShortName">ctrl_bram0_dout_a[11:0]</obj_property>
       <obj_property name="ObjectShortName">ctrl_bram0_dout_a[11:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/ctrl_bram0_dout_b">
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/ctrl_bram0_dout_b">
       <obj_property name="ElementShortName">ctrl_bram0_dout_b[11:0]</obj_property>
       <obj_property name="ObjectShortName">ctrl_bram0_dout_b[11:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/ctrl_bram1_addr_a">
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/ctrl_bram1_addr_a">
       <obj_property name="ElementShortName">ctrl_bram1_addr_a[7:0]</obj_property>
       <obj_property name="ObjectShortName">ctrl_bram1_addr_a[7:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/ctrl_bram1_addr_b">
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/ctrl_bram1_addr_b">
       <obj_property name="ElementShortName">ctrl_bram1_addr_b[7:0]</obj_property>
       <obj_property name="ObjectShortName">ctrl_bram1_addr_b[7:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/ctrl_bram1_we_a">
+   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/ctrl_bram1_we_a">
       <obj_property name="ElementShortName">ctrl_bram1_we_a</obj_property>
       <obj_property name="ObjectShortName">ctrl_bram1_we_a</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/ctrl_bram1_we_b">
+   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/ctrl_bram1_we_b">
       <obj_property name="ElementShortName">ctrl_bram1_we_b</obj_property>
       <obj_property name="ObjectShortName">ctrl_bram1_we_b</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/ctrl_bram1_din_a">
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/ctrl_bram1_din_a">
       <obj_property name="ElementShortName">ctrl_bram1_din_a[11:0]</obj_property>
       <obj_property name="ObjectShortName">ctrl_bram1_din_a[11:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/ctrl_bram1_din_b">
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/ctrl_bram1_din_b">
       <obj_property name="ElementShortName">ctrl_bram1_din_b[11:0]</obj_property>
       <obj_property name="ObjectShortName">ctrl_bram1_din_b[11:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/ctrl_bram1_dout_a">
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/ctrl_bram1_dout_a">
       <obj_property name="ElementShortName">ctrl_bram1_dout_a[11:0]</obj_property>
       <obj_property name="ObjectShortName">ctrl_bram1_dout_a[11:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/ctrl_bram1_dout_b">
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/ctrl_bram1_dout_b">
       <obj_property name="ElementShortName">ctrl_bram1_dout_b[11:0]</obj_property>
       <obj_property name="ObjectShortName">ctrl_bram1_dout_b[11:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/bram0_addr_a">
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/bram0_addr_a">
       <obj_property name="ElementShortName">bram0_addr_a[7:0]</obj_property>
       <obj_property name="ObjectShortName">bram0_addr_a[7:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/bram0_din_a">
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/bram0_din_a">
       <obj_property name="ElementShortName">bram0_din_a[11:0]</obj_property>
       <obj_property name="ObjectShortName">bram0_din_a[11:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/bram0_we_a">
+   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/bram0_we_a">
       <obj_property name="ElementShortName">bram0_we_a</obj_property>
       <obj_property name="ObjectShortName">bram0_we_a</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/rom_addr">
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/rom_addr">
       <obj_property name="ElementShortName">rom_addr[7:0]</obj_property>
       <obj_property name="ObjectShortName">rom_addr[7:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/rom_dout">
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/rom_dout">
       <obj_property name="ElementShortName">rom_dout[11:0]</obj_property>
       <obj_property name="ObjectShortName">rom_dout[11:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/butterfly_in1">
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/butterfly_in1">
       <obj_property name="ElementShortName">butterfly_in1[11:0]</obj_property>
       <obj_property name="ObjectShortName">butterfly_in1[11:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/butterfly_in2">
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/butterfly_in2">
       <obj_property name="ElementShortName">butterfly_in2[11:0]</obj_property>
       <obj_property name="ObjectShortName">butterfly_in2[11:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/butterfly_twiddle">
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/butterfly_twiddle">
       <obj_property name="ElementShortName">butterfly_twiddle[11:0]</obj_property>
       <obj_property name="ObjectShortName">butterfly_twiddle[11:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/butterfly_inverse">
+   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/butterfly_inverse">
       <obj_property name="ElementShortName">butterfly_inverse</obj_property>
       <obj_property name="ObjectShortName">butterfly_inverse</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/valid_in">
+   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/valid_in">
       <obj_property name="ElementShortName">valid_in</obj_property>
       <obj_property name="ObjectShortName">valid_in</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/valid_out">
+   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/valid_out">
       <obj_property name="ElementShortName">valid_out</obj_property>
       <obj_property name="ObjectShortName">valid_out</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/butterfly_u">
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/butterfly_u">
       <obj_property name="ElementShortName">butterfly_u[11:0]</obj_property>
       <obj_property name="ObjectShortName">butterfly_u[11:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/NTT_unit_AXI_0/inst/ntt_core/butterfly_v">
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/butterfly_v">
       <obj_property name="ElementShortName">butterfly_v[11:0]</obj_property>
       <obj_property name="ObjectShortName">butterfly_v[11:0]</obj_property>
    </wvobject>
