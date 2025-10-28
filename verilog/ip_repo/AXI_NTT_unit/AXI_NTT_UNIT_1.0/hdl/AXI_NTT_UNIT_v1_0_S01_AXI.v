@@ -471,27 +471,39 @@
         end 
     end         
     // Implement axi_rvalid generation
+    reg axi_rvalid1; 
+
+    always @( posedge S_AXI_ACLK ) begin
+        if ( S_AXI_ARESETN == 1'b0 )
+        begin
+            axi_rvalid <= 0;
+        end else begin
+            axi_rvalid <= axi_rvalid1;
+        end
+        
+    end
 
     always @( posedge S_AXI_ACLK )
     begin
         if ( S_AXI_ARESETN == 1'b0 )
         begin
-            axi_rvalid <= 0;
+            axi_rvalid1 <= 0;
             axi_rresp  <= 0;
         end 
         else
         begin 
             // If address is latched and RVALID is low, assert RVALID (assuming single-cycle data latency)
-            if (axi_arv_arr_flag && ~axi_rvalid)
+            if (axi_arv_arr_flag && ~axi_rvalid1)
             begin
-                axi_rvalid <= 1'b1;
+                axi_rvalid1 <= 1'b1;
                 axi_rresp  <= 2'b0; 
                 // 'OKAY' response
             end   
             // Deassert RVALID when the master accepts the data
-            else if (axi_rvalid && S_AXI_RREADY)
+            else if (axi_rvalid1 && S_AXI_RREADY)
             begin
-                axi_rvalid <= 1'b0;
+                //axi_rvalid <= 1'b0;
+                axi_rvalid1 <= 1'b0;
             end          
         end
     end   
