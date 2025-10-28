@@ -732,7 +732,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>b84a9579</spirit:value>
+            <spirit:value>7976f4c9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -748,7 +748,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>b84a9579</spirit:value>
+            <spirit:value>7976f4c9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1163,7 +1163,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S01_AXI_ADDR_WIDTH&apos;)) - 1)">8</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S01_AXI_ADDR_WIDTH&apos;)) - 1)">9</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1592,7 +1592,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S01_AXI_ADDR_WIDTH&apos;)) - 1)">8</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S01_AXI_ADDR_WIDTH&apos;)) - 1)">9</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1962,7 +1962,7 @@
         <spirit:name>C_S01_AXI_ADDR_WIDTH</spirit:name>
         <spirit:displayName>C S01 AXI ADDR WIDTH</spirit:displayName>
         <spirit:description>Width of S_AXI address bus</spirit:description>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S01_AXI_ADDR_WIDTH" spirit:order="9" spirit:rangeType="long">9</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S01_AXI_ADDR_WIDTH" spirit:order="9" spirit:rangeType="long">10</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_S01_AXI_AWUSER_WIDTH</spirit:name>
@@ -2075,7 +2075,7 @@
       <spirit:file>
         <spirit:name>hdl/AXI_NTT_UNIT_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_5fd6a646</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_0c093183</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -2249,7 +2249,7 @@
       <spirit:name>C_S01_AXI_ADDR_WIDTH</spirit:name>
       <spirit:displayName>C S01 AXI ADDR WIDTH</spirit:displayName>
       <spirit:description>Width of S_AXI address bus</spirit:description>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S01_AXI_ADDR_WIDTH" spirit:order="9" spirit:rangeType="long">9</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S01_AXI_ADDR_WIDTH" spirit:order="9" spirit:rangeType="long">10</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -2326,8 +2326,8 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>AXI_NTT_UNIT_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>3</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-10-25T18:54:34Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>20</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-10-28T12:16:29Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.df@5e783eef_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@385c4936_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
@@ -2376,16 +2376,250 @@
         <xilinx:tag xilinx:name="ui.data.coregen.df@7616366a_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@28212557_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@694965a7_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3a763d7f_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3a4fad09_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4de4fd1d_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1c220f9f_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4a8855a4_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@22ded27_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@63a1a9d5_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@47f8e27_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@469741cf_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@459a716_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@37132a44_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@43ac61c2_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1cecfa37_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@18bf088d_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5d1a1893_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4a897786_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@343ef06e_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@b03cc5_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4ae92154_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@23f638df_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@414de2bd_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5df33f1f_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3b2b0ddd_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4b6a8626_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4b0e8561_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6accb5c9_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@765e74d0_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1503446_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@369ce4b7_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@761258e8_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1a4f43d2_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@571dcb5b_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@41eadd3d_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@bef2beb_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@75c69ed_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@35f5c37_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2af3525f_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6c5465fc_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5c2e09fb_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@66064b30_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7abe57dd_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1c34fb91_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@112a217a_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@46a5e0d1_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@441269b2_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@14b0b4b6_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3930d96e_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@536ce859_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@430d3b0_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@103b0b87_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4263c049_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@33775a9b_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7c477a21_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3f70f75a_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@67e35bc_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@747207d2_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@301851a2_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@394a782e_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@651933a_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@505fc2a0_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1eeed960_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2039c03d_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1734939a_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7117e295_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4b9225bf_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@17f6c1a5_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4cf4c270_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@34f9f8cd_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3e93e460_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@58f94be0_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@18dc4f6e_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6b328541_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@71aff84d_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@57617194_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4489a632_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2faecc09_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@77eed5d6_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4648b2d1_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4effcd53_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@a0d202e_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4acc70b1_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@77ba9ab3_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3905b7b9_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2bb72d55_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@41f94b6c_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@56771e83_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6c520b0f_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6d4b41fe_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2f0a9391_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5f05bec7_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@386b248a_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@781aaeae_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@310d8830_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@78e543fe_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4d1614_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6a6b4e1_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@70a2244_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2f2250eb_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1b1511ef_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@15a91dc4_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@28b148be_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4c48871f_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@66eeb7c6_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@785cf4ce_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@261f5d5_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3d6e75e8_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@72e65a95_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7ba3b9ba_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@cd3c5a0_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@52cb468c_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@25ad2fa_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4557fca9_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@169e82fb_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@613fb562_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@29b4551c_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5a64ffb_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6b1965c_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5c90b9d_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@283742d8_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@15b1b045_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4ae32a8c_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2e165a1c_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@79358191_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@93a1c37_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@443466d9_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1ed5d14c_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3546488f_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@71ce817a_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@632a2bc4_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7f0c3469_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3d4612a7_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@214540be_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7e57c53e_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@659e4ecd_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@63c2026_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6fb3aadb_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2ada378f_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6ce19344_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@65cffd5d_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1a21ab25_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6f70cc7_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@99adfe_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@71e1efc5_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7db57e99_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4158ecc1_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3867340a_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1da649f9_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@643a50f7_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1b8e8032_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@14758824_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@719bdbd0_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@113725c9_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6ab984c2_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1436170_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@243b21ea_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@f84a43a_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@249c56aa_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@49b32da3_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@23edb98f_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@68a646b9_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@50d93e3b_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@62ba78a9_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@73cc925c_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6d1f846a_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@467ed41c_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2b491e61_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6ae14aa9_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7718a755_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@56df648e_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@414dfe43_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4fb8ca9f_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@68970bcc_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5ea3a29f_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@abff574_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1943b1e1_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@37afcd4b_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@75174118_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3706d94e_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@16be8451_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@164b133_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@44e8d6ef_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2f23b41d_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@436d31b1_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3c638c97_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@535811bf_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@55780bfc_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5d3dcb20_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@44e78e68_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3fd2fc4c_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5f4ec9d3_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2dfd77fc_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@58b5c8ed_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1bfdd8d0_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@92773e5_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2bc8181_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3bb7661f_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6de94ee0_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5a800ad0_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@127677bc_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7d3c0805_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5124359_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@74d4deca_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@24f37115_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@dcb54b6_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4e1cb105_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@157c9381_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3d285eba_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@32d4d97b_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3099c9b_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6dc996c6_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@a86dd3b_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@28aa1ff8_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@40ff7115_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5c804a05_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@27c6fae4_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@41440a09_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@11a86a0f_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3a9cc3f0_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6c17bf60_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@70c2a2c5_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@62ffdead_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@52372f0c_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@8a2893a_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3c0cf2c2_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@24baac5a_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@dcd08b_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4edc0e6b_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@15b2234b_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@590aceb_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5b2f66f_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@684f9b80_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7bde195c_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7a395542_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@447ffb2e_ARCHIVE_LOCATION">/home/andrea/Scrivania/projects/ip_repo/AXI_NTT_unit/AXI_NTT_UNIT_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2021.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="590cf800"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="1546779e"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="5d5a0547"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="44f567a8"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="79c855f4"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="b26ea8bf"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="73479bb2"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="795a798a"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="d4d728b1"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="ae79ab4a"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

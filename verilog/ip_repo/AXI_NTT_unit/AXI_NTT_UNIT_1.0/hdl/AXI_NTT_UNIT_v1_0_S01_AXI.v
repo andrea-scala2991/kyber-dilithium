@@ -12,7 +12,7 @@
         // Width of S_AXI data bus
         parameter integer C_S_AXI_DATA_WIDTH    = 32,
         // Width of S_AXI address bus
-        parameter integer C_S_AXI_ADDR_WIDTH    = 9,
+        parameter integer C_S_AXI_ADDR_WIDTH    = 10,
         // Width of optional user defined signal in write address channel
         parameter integer C_S_AXI_AWUSER_WIDTH    = 0,
         // Width of optional user defined signal in read address channel
@@ -27,7 +27,7 @@
     (
         // Users to add ports here
         // BRAM Interface Ports for Top-Level Connection
-        output reg [7:0] data_bram_addr_o,
+        output reg [C_S_AXI_ADDR_WIDTH-1:0] data_bram_addr_o,
         output reg [11:0] data_bram_din_o,
         input wire [11:0] data_bram_dout_i, // Read data from BRAM to AXI Slave handler
         output reg data_bram_we_o,
@@ -212,12 +212,6 @@
     //ADDR_LSB = 3 for 42 bits (n downto 3)
 
     localparam integer ADDR_LSB = (C_S_AXI_DATA_WIDTH/32)+ 1;
-    // The following parameters related to internal BRAM are no longer needed
-    // localparam integer OPT_MEM_ADDR_BITS = 6;
-    // localparam integer USER_NUM_MEM = 1;
-    // wire [OPT_MEM_ADDR_BITS:0] mem_address;
-    // wire [USER_NUM_MEM-1:0] mem_select;
-    // reg [C_S_AXI_DATA_WIDTH-1:0] mem_data_out[0 : USER_NUM_MEM-1];
     
     // I/O Connections assignments
 
@@ -227,7 +221,7 @@
     assign S_AXI_BUSER       = axi_buser;
     assign S_AXI_BVALID      = axi_bvalid;
     assign S_AXI_ARREADY     = axi_arready;
-    // S_AXI_RDATA is driven in the user logic section now
+    assign S_AXI_RDATA       = axi_rdata; // RDATA is now driven by axi_rdata
     assign S_AXI_RRESP       = axi_rresp;
     assign S_AXI_RLAST       = axi_rlast;
     assign S_AXI_RUSER       = axi_ruser;
@@ -273,10 +267,7 @@
             end
         end 
     end         
-    // Implement axi_awaddr latching
-
-    // This process is used to latch the address when both 
-    // S_AXI_AWVALID and S_AXI_WVALID are valid. 
+    // Implement axi_awaddr latching (Write address and counter)
 
     always @( posedge S_AXI_ACLK )
     begin
@@ -300,7 +291,6 @@
             end   
             else if((axi_awlen_cntr <= axi_awlen) && axi_wready && S_AXI_WVALID)        
             begin
-
                 axi_awlen_cntr <= axi_awlen_cntr + 1;
 
                 case (axi_awburst)
@@ -308,7 +298,6 @@
                     // The write address for all the beats in the transaction are fixed
                     begin
                         axi_awaddr <= axi_awaddr;          
-                        //for awsize = 4 bytes (010)
                     end   
                     2'b01: //incremental burst
                     // The write address for all the beats in the transaction are increments by awsize
@@ -316,7 +305,6 @@
                         axi_awaddr[C_S_AXI_ADDR_WIDTH - 1:ADDR_LSB] <= axi_awaddr[C_S_AXI_ADDR_WIDTH - 1:ADDR_LSB] + 1;
                         //awaddr aligned to 4 byte boundary
                         axi_awaddr[ADDR_LSB-1:0]   <= {ADDR_LSB{1'b0}};    
-                        //for awsize = 4 bytes (010)
                     end   
                     2'b10: //Wrapping burst
                     // The write address wraps when the address reaches wrap boundary 
@@ -332,17 +320,12 @@
                     default: //reserved (incremental burst for example)
                     begin
                         axi_awaddr <= axi_awaddr[C_S_AXI_ADDR_WIDTH - 1:ADDR_LSB] + 1;
-                        //for awsize = 4 bytes (010)
                     end
                 endcase            
             end
         end 
     end         
     // Implement axi_wready generation
-
-    // axi_wready is asserted for one S_AXI_ACLK clock cycle when both
-    // S_AXI_AWVALID and S_AXI_WVALID are asserted. axi_wready is 
-    // de-asserted when reset is low. 
 
     always @( posedge S_AXI_ACLK )
     begin
@@ -357,7 +340,6 @@
                 // slave can accept the write data
                 axi_wready <= 1'b1;
             end
-            //else if (~axi_awv_awr_flag)
             else if (S_AXI_WLAST && axi_wready)
             begin
                 axi_wready <= 1'b0;
@@ -365,11 +347,6 @@
         end 
     end         
     // Implement write response logic generation
-
-    // The write response and response valid signals are asserted by the slave 
-    // when axi_wready, S_AXI_WVALID, axi_wready and S_AXI_WVALID are asserted.  
-    // This marks the acceptance of address and indicates the status of 
-    // write transaction.
 
     always @( posedge S_AXI_ACLK )
     begin
@@ -390,8 +367,6 @@
             else
             begin
                 if (S_AXI_BREADY && axi_bvalid) 
-                //check if bready is asserted while bvalid is high) 
-                //(there is a possibility that bready is always asserted high)    
                 begin
                     axi_bvalid <= 1'b0; 
                 end 
@@ -399,12 +374,6 @@
         end
     end   
     // Implement axi_arready generation
-
-    // axi_arready is asserted for one S_AXI_ACLK clock cycle when
-    // S_AXI_ARVALID is asserted. axi_awready is 
-    // de-asserted when reset (active low) is asserted. 
-    // The read address is also latched when S_AXI_ARVALID is 
-    // asserted. axi_araddr is reset to zero on reset assertion.
 
     always @( posedge S_AXI_ACLK )
     begin
@@ -420,8 +389,8 @@
                 axi_arready <= 1'b1;
                 axi_arv_arr_flag <= 1'b1;
             end
-            else if (axi_rvalid && S_AXI_RREADY && axi_arlen_cntr == axi_arlen)
-            // preparing to accept next address after current read completion
+            // A burst ends when RLAST is asserted AND the data is accepted.
+            else if (axi_rlast && axi_rvalid && S_AXI_RREADY)
             begin
                 axi_arv_arr_flag  <= 1'b0;
             end
@@ -431,10 +400,9 @@
             end
         end 
     end         
-    // Implement axi_araddr latching
+    // Implement axi_araddr latching (Read address, counter, and RLAST)
+    // RLAST generation is explicitly controlled here based on axi_arlen_cntr.
 
-    //This process is used to latch the address when both 
-    //S_AXI_ARVALID and S_AXI_RVALID are valid. 
     always @( posedge S_AXI_ACLK )
     begin
         if ( S_AXI_ARESETN == 1'b0 )
@@ -450,73 +418,59 @@
         begin 
             if (~axi_arready && S_AXI_ARVALID && ~axi_arv_arr_flag)
             begin
-                // address latching 
+                // Address latching (Start of burst)
                 axi_araddr <= S_AXI_ARADDR[C_S_AXI_ADDR_WIDTH - 1:0]; 
                 axi_arburst <= S_AXI_ARBURST; 
                 axi_arlen <= S_AXI_ARLEN;      
-                // start address of transfer
+                // Counter tracks the beat index (0 to ARlen)
                 axi_arlen_cntr <= 0;
-                axi_rlast <= 1'b0;
+                axi_rlast <= 1'b0; // Start with RLAST low
             end   
-            else if((axi_arlen_cntr <= axi_arlen) && axi_rvalid && S_AXI_RREADY)        
+            // A read beat is accepted by the master (valid handshake)
+            else if(axi_rvalid && S_AXI_RREADY)        
             begin
-                
-                axi_arlen_cntr <= axi_arlen_cntr + 1;
-                axi_rlast <= 1'b0;
-                
-                case (axi_arburst)
-                    2'b00: // fixed burst
-                     // The read address for all the beats in the transaction are fixed
-                    begin
-                        axi_araddr       <= axi_araddr;          
-                        //for arsize = 4 bytes (010)
-                    end   
-                    2'b01: //incremental burst
-                    // The read address for all the beats in the transaction are increments by awsize
-                    begin
-                        axi_araddr[C_S_AXI_ADDR_WIDTH - 1:ADDR_LSB] <= axi_araddr[C_S_AXI_ADDR_WIDTH - 1:ADDR_LSB] + 1; 
-                        //araddr aligned to 4 byte boundary
-                        axi_araddr[ADDR_LSB-1:0]   <= {ADDR_LSB{1'b0}};    
-                        //for awsize = 4 bytes (010)
-                    end   
-                    2'b10: //Wrapping burst
-                    // The read address wraps when the address reaches wrap boundary 
-                    if (ar_wrap_en) 
-                    begin
-                        axi_araddr <= (axi_araddr - ar_wrap_size); 
-                    end
-                    else 
-                    begin
-                        axi_araddr[C_S_AXI_ADDR_WIDTH - 1:ADDR_LSB] <= axi_araddr[C_S_AXI_ADDR_WIDTH - 1:ADDR_LSB] + 1; 
-                        //araddr aligned to 4 byte boundary
-                        axi_araddr[ADDR_LSB-1:0]   <= {ADDR_LSB{1'b0}};    
-                    end             
-                    default: //reserved (incremental burst for example)
-                    begin
-                        axi_araddr <= axi_araddr[C_S_AXI_ADDR_WIDTH - 1:ADDR_LSB]+1;
-                        //for arsize = 4 bytes (010)
-                    end
-                endcase            
+                // Check if the transfer just completed was the last one (0-indexed count)
+                if (axi_arlen_cntr == axi_arlen && ~axi_rlast)
+                begin
+                    // This is the last beat, RLAST must be high
+                    axi_rlast <= 1'b1;
+                end
+                else
+                begin
+                    // Not the last beat, continue the burst
+                    axi_rlast <= 1'b0;
+                    axi_arlen_cntr <= axi_arlen_cntr + 1; // Increment counter
+
+                    // Address update logic
+                    case (axi_arburst)
+                        2'b00: begin axi_araddr <= axi_araddr; end // fixed burst
+                        2'b01: //incremental burst
+                        begin
+                            axi_araddr[C_S_AXI_ADDR_WIDTH - 1:ADDR_LSB] <= axi_araddr[C_S_AXI_ADDR_WIDTH - 1:ADDR_LSB] + 1;
+                            axi_araddr[ADDR_LSB-1:0]   <= {ADDR_LSB{1'b0}};    
+                        end   
+                        2'b10: //Wrapping burst
+                        if (ar_wrap_en) 
+                        begin
+                            axi_araddr <= (axi_araddr - ar_wrap_size); 
+                        end
+                        else 
+                        begin
+                            axi_araddr[C_S_AXI_ADDR_WIDTH - 1:ADDR_LSB] <= axi_araddr[C_S_AXI_ADDR_WIDTH - 1:ADDR_LSB] + 1; 
+                            axi_araddr[ADDR_LSB-1:0]   <= {ADDR_LSB{1'b0}};    
+                        end             
+                        default: begin axi_araddr <= axi_araddr[C_S_AXI_ADDR_WIDTH - 1:ADDR_LSB]+1; end
+                    endcase            
+                end
             end
-            else if((axi_arlen_cntr == axi_arlen) && ~axi_rlast && axi_arv_arr_flag )    
-            begin
-                axi_rlast <= 1'b1;
-            end          
-            else if (S_AXI_RREADY)    
+            // If RLAST was asserted and accepted, clear it for the next transaction
+            else if (axi_rlast && axi_rvalid && S_AXI_RREADY)    
             begin
                 axi_rlast <= 1'b0;
             end          
         end 
     end         
-    // Implement axi_arvalid generation
-
-    // axi_rvalid is asserted for one S_AXI_ACLK clock cycle when both 
-    // S_AXI_ARVALID and axi_arready are asserted. The slave registers 
-    // data are available on the axi_rdata bus at this instance. The 
-    // assertion of axi_rvalid marks the validity of read data on the 
-    // bus and axi_rresp indicates the status of read transaction.axi_rvalid 
-    // is deasserted on reset (active low). axi_rresp and axi_rdata are 
-    // cleared to zero on reset (active low).  
+    // Implement axi_rvalid generation
 
     always @( posedge S_AXI_ACLK )
     begin
@@ -527,12 +481,14 @@
         end 
         else
         begin 
+            // If address is latched and RVALID is low, assert RVALID (assuming single-cycle data latency)
             if (axi_arv_arr_flag && ~axi_rvalid)
             begin
                 axi_rvalid <= 1'b1;
                 axi_rresp  <= 2'b0; 
                 // 'OKAY' response
             end   
+            // Deassert RVALID when the master accepts the data
             else if (axi_rvalid && S_AXI_RREADY)
             begin
                 axi_rvalid <= 1'b0;
@@ -540,26 +496,18 @@
         end
     end   
     
-    // The previous section for Block RAM(s) implementation has been removed
-    // to connect to the external BRAM ports instead.
-
     // ------------------------------------------
     // -- User Logic: BRAM Interface Mapping
     // ------------------------------------------
 
     // Combinational block to drive axi_rdata
-    // Note: The BRAM output (data_bram_dout_i) is assumed to be valid on the cycle 
-    // axi_rvalid is high (or the cycle before if single-cycle BRAM).
-    // We zero-extend the 12-bit BRAM data to 32 bits for the AXI bus.
+    // This takes the data from the BRAM and zero-pads it to the AXI data width.
     always @(*)
     begin
-        // Default to zero if not valid
-        axi_rdata = 32'h00000000;
-        if (axi_rvalid)
-        begin
-            // C_S_AXI_DATA_WIDTH must be >= 12 bits. We pad the MSBs with zeros.
-            axi_rdata = {{(C_S_AXI_DATA_WIDTH - 12){1'b0}}, data_bram_dout_i};
-        end
+        // Default to the BRAM output for all cycles where RDATA could be relevant
+        // Since the BRAM output is read combinatorially, we use it directly.
+        // The BRAM is assumed to be single-cycle access.
+        axi_rdata = {{(C_S_AXI_DATA_WIDTH - 12){1'b0}}, data_bram_dout_i};
     end
 
     // Sequential block to control BRAM access (Address, Enable, Write Enable, Data In)
@@ -567,43 +515,34 @@
     begin
         if (S_AXI_ARESETN == 1'b0)
         begin
-            data_bram_addr_o <= 8'b0;
+            data_bram_addr_o <= 0;
             data_bram_din_o <= 12'b0;
             data_bram_we_o <= 1'b0;
             data_bram_en_o <= 1'b0;
         end
         else
         begin
-            // BRAM Enable: Active whenever a write or read transaction is ongoing
+            // BRAM Enable: Active whenever a burst is ongoing
             data_bram_en_o <= axi_awv_awr_flag | axi_arv_arr_flag;
 
-            // BRAM Write Enable: Active only during a valid write data beat
-            data_bram_we_o <= axi_wready && S_AXI_WVALID;
-
-            // BRAM Data In: Drive the lower 12 bits of AXI write data when writing
-            if (axi_wready && S_AXI_WVALID)
+            // BRAM Write Logic (Higher Priority)
+            if (axi_awv_awr_flag && axi_wready && S_AXI_WVALID)
             begin
-                // Only take the lower 12 bits for storage
-                data_bram_din_o <= S_AXI_WDATA[11:0];
+                // Writing data (WVALID & WREADY handshake)
+                data_bram_we_o <= 1'b1;
+                data_bram_din_o <= S_AXI_WDATA[11:0]; // Store lower 12 bits
+                data_bram_addr_o <= axi_awaddr;        // Use the current write address
             end
-
-            // BRAM Address: Multiplexed based on the active channel
-            if (axi_awv_awr_flag && ~axi_wready) begin
-                // Write address is active/latched, but a write data beat has not started yet
-                data_bram_addr_o <= axi_awaddr[7:0];
+            // BRAM Read Logic
+            else if (axi_arv_arr_flag)
+            begin
+                // Reading data (Read burst is active)
+                data_bram_we_o <= 1'b0;
+                data_bram_addr_o <= (axi_araddr);        // Use the current read address
             end
-            else if (axi_awv_awr_flag && axi_wready && S_AXI_WVALID) begin
-                // Write address is active and a data beat is accepted (use current address for write)
-                data_bram_addr_o <= axi_awaddr[7:0];
-            end
-            else if (axi_arv_arr_flag && ~axi_rvalid) begin
-                // Read address is active/latched, wait for data output (use current address for read)
-                data_bram_addr_o <= axi_araddr[7:0];
-            end
-            else if (axi_arv_arr_flag && axi_rvalid && S_AXI_RREADY) begin
-                // A read data beat just finished, the address register (axi_araddr) is already incremented
-                // to the next address in its internal logic, so we use the new value for the next BRAM access.
-                data_bram_addr_o <= axi_araddr[7:0];
+            else
+            begin
+                data_bram_we_o <= 1'b0;
             end
         end
     end

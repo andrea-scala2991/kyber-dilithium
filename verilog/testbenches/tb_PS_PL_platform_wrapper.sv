@@ -16,6 +16,7 @@ module tb_PS_PL_platform_wrapper();
     wire temp_rstn;
 
     localparam period = 8; // 125MHz (8ns period)
+    localparam C_SYNC_DELAY_CYCLES = 20; // 160 ns synchronization delay
 
     always begin
         tb_ACLK = 1'b0; #(period/2.0);
@@ -56,22 +57,21 @@ module tb_PS_PL_platform_wrapper();
     localparam CDMA_SR_IOC_IRQ_MASK = 32'h00001000; // IOC Interrupt (Completion)
     localparam CDMA_SR_DMASLAVE_ERR_MASK = 32'h00002000; // Error Mask
     localparam CDMA_SR_ALL_IRQ_MASK = 32'h0000F000; // All IRQ flags (for clearing)
+    localparam CDMA_CR_RESET_MASK   = 32'h00000004; // Reset bit (Bit 2)
 
     //PS IRQ lines
     localparam NTT_IRQ_MASK      = 4'b0000;
     localparam CDMA_IRQ_MASK  = 4'b0001;
+
     reg[15:0] IRQ_status = '0;
     
     // Data Transfer Parameters
     localparam C_NTT_SIZE = 256;
-    localparam C_WORD_SIZE_BYTES = 2; // u16 in C code (2 bytes)
-    localparam C_TRANSFER_LEN_BYTES = C_NTT_SIZE * C_WORD_SIZE_BYTES; // 512 Bytes
+    localparam C_WORD_SIZE_BYTES = 4; // 32 bit words by AXI standard
+    localparam C_TRANSFER_LEN_BYTES = C_NTT_SIZE * C_WORD_SIZE_BYTES; // 1024 Bytes
     localparam C_DDR_BUFFER_ADDR = 32'h0a00_0000; // PS memory address
 
-    // Simulation timing constants (Simulates time the CPU waits for an IRQ)
-    localparam C_TRANSFER_CLOCKS = 512 * 5; // Simulates time for data transfer (5 cycles per 2-byte word)
-    localparam C_NTT_COMPUTE_CLOCKS = 1100; // Estimate for NTT computation time
-
+    
     // UUT Instantiation (Black Box)
     PS_PL_platform_wrapper UUT (
         // ... DDR and FIXED_IO ports from user template ...
@@ -98,16 +98,38 @@ module tb_PS_PL_platform_wrapper();
         .FIXED_IO_ps_srstb(temp_rstn)
     );
 
+    task CDMA_reset();
+        bit [31:0] status;
+        $display("[%0t] PS: Executing CDMA Software Reset.", $time);
+
+        // 1. Assert Reset bit (Bit 2) in CR
+        UUT.PS_PL_platform_i.processing_system7_0.inst.write_data(C_CDMA_CR, 4, CDMA_CR_RESET_MASK, resp);
+
+        // Wait for 10 clocks for reset to complete
+        repeat (10) @(posedge tb_ACLK);
+
+        // 2. De-assert Reset and re-enable IRQs (Set CR back to its desired operational state)
+        UUT.PS_PL_platform_i.processing_system7_0.inst.write_data(C_CDMA_CR, 4, CDMA_SR_IOC_IRQ_MASK, resp);
+
+        // 3. Clear Status Register (clear any remaining flags)
+        UUT.PS_PL_platform_i.processing_system7_0.inst.write_data(C_CDMA_SR, 4, CDMA_SR_ALL_IRQ_MASK, resp);
+
+        // 4. Read SR to confirm reset state (Idle/Halted)
+        UUT.PS_PL_platform_i.processing_system7_0.inst.read_data(C_CDMA_SR, 4, status, resp);
+        $display("[%0t] PS: CDMA Reset complete. New Status Register=0x%h. Ready for transfer.", $time, status);
+    endtask
+
     
     // --- 3. High-Level Task to Model the C Function 'run_NTT' ---
     task NTT_run(input int mode);
         bit [31:0] ctrl_val;
         bit [31:0] status;
         string mode_str = (mode == 1) ? "iNTT" : "NTT";
-
+        
+        CDMA_reset();
+        
         $display("\n-------------------------------------------------------");
         $display("[%0t] PS: Starting full INTERRUPT-DRIVEN %s sequence (Mode=%0d).", $time, mode_str, mode);
-
         // =====================================================================
         // PHASE 1: START DMA WRITE (DDR -> IP) & WAIT FOR CDMA IRQ
         // =====================================================================
@@ -119,7 +141,7 @@ module tb_PS_PL_platform_wrapper();
 
         // 2c. Write Bytes to Transfer (BTT) - This register write STARTS the transfer
         UUT.PS_PL_platform_i.processing_system7_0.inst.write_data(C_CDMA_BTT, 4, C_TRANSFER_LEN_BYTES, resp);
-        $display("[%0t] PS: CDMA (DDR->IP) Triggered (SA=0x%h, DA=0x%h).", $time, C_DDR_BUFFER_ADDR, C_NTT_DATA_BASE);
+        $display("[%0t] PS: CDMA (DDR->IP) Triggered (SA=0x%h, DA=0x%h) for %0d Bytes.", $time, C_DDR_BUFFER_ADDR, C_NTT_DATA_BASE, C_TRANSFER_LEN_BYTES);
 
         // 2d. Wait for CDMA IOC Interrupt
         $display("[%0t] PS: CPU enters wait loop for CDMA (DDR->IP) IRQ...", $time);
@@ -128,7 +150,7 @@ module tb_PS_PL_platform_wrapper();
         // 2e. Service IRQ: Read Status, Check for error, Clear flags
         UUT.PS_PL_platform_i.processing_system7_0.inst.read_data(C_CDMA_SR, 4, status, resp);
         if ((status & CDMA_SR_DMASLAVE_ERR_MASK) != 0) begin
-            $display("!!! [%0t] PS: CDMA (DDR->IP) Transfer FAILED with error (Status=0x%h). Halting test.", $time, status);
+            $display("[%0t] PS: CDMA (DDR->IP) Transfer FAILED with error (Status=0x%h). Halting test.", $time, status);
             $stop;
         end
         UUT.PS_PL_platform_i.processing_system7_0.inst.write_data(C_CDMA_SR, 4, CDMA_SR_ALL_IRQ_MASK, resp);
@@ -153,6 +175,10 @@ module tb_PS_PL_platform_wrapper();
         // Clear NTT IP Control Register (Acts as acknowledge)
         UUT.PS_PL_platform_i.processing_system7_0.inst.write_data(C_NTT_CTRL_BASE + C_NTT_CTRL_OFFSET, 4, 32'h0, resp);
         $display("[%0t] PS: NTT Done IRQ received and acknowledged. Result is ready in BRAM.", $time);
+        
+        // --- Synchronization Delay to let IP AXI Slave Readout stabilize ---
+        #(C_SYNC_DELAY_CYCLES * period);
+        $display("[%0t] PS: Synchronized for IP->DDR DMA read.", $time);
 
 
         // =====================================================================
@@ -166,7 +192,7 @@ module tb_PS_PL_platform_wrapper();
 
         // 4c. Write Bytes to Transfer (BTT) - This register write STARTS the final transfer
         UUT.PS_PL_platform_i.processing_system7_0.inst.write_data(C_CDMA_BTT, 4, C_TRANSFER_LEN_BYTES, resp);
-        $display("[%0t] PS: CDMA (IP->DDR) Triggered (SA=0x%h, DA=0x%h).", $time, C_NTT_DATA_BASE, C_DDR_BUFFER_ADDR);
+        $display("[%0t] PS: CDMA (IP->DDR) Triggered (SA=0x%h, DA=0x%h) for %0d Bytes.", $time, C_NTT_DATA_BASE, C_DDR_BUFFER_ADDR, C_TRANSFER_LEN_BYTES);
 
         // 4d. Wait for CDMA IOC Interrupt (Simulated)
         $display("[%0t] PS: CPU enters wait loop for final CDMA (IP->DDR) IRQ...", $time);
@@ -208,10 +234,6 @@ module tb_PS_PL_platform_wrapper();
         #(100*period);
         $display("[%0t] PS: PL Soft Reset sequence complete.", $time);
 
-        // Initialize CDMA Control Register (Set up the CDMA CR once: Enable IRQs)
-        // Set up the CDMA control register once (Reset=0, Keyhole=0, IOC_IRQ_En=1)
-        UUT.PS_PL_platform_i.processing_system7_0.inst.write_data(C_CDMA_CR, 4, CDMA_SR_IOC_IRQ_MASK, resp); 
-        $display("[%0t] PS: CDMA initialization (CR writes) complete. IOC IRQ enabled.", $time);
 
         // ---------------------------------------------------------------------
         // C Code Step 1: Initialize Data in DDR & Cache Flush (MODELED)
@@ -225,6 +247,7 @@ module tb_PS_PL_platform_wrapper();
         // =====================================================================
         NTT_run(0); // 0 for NTT
 
+       // UUT.PS_PL_platform_i.processing_system7_0.inst.read_to_file("NTT_RESULT.mem",C_DDR_BUFFER_ADDR, C_TRANSFER_LEN_BYTES,resp);
         // =====================================================================
         // TEST 2: Inverse NTT Control Flow
         // =====================================================================

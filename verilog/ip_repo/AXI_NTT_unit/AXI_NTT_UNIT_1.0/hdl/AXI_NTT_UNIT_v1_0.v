@@ -14,7 +14,7 @@ module AXI_NTT_UNIT_v1_0 #
 
     parameter integer C_S01_AXI_ID_WIDTH = 1,
     parameter integer C_S01_AXI_DATA_WIDTH = 32,
-    parameter integer C_S01_AXI_ADDR_WIDTH = 9, // 512 bytes = 2^9
+    parameter integer C_S01_AXI_ADDR_WIDTH = 10, // 1024 bytes = 2^10
     parameter integer C_S01_AXI_AWUSER_WIDTH = 0,
     parameter integer C_S01_AXI_ARUSER_WIDTH = 0,
     parameter integer C_S01_AXI_WUSER_WIDTH = 0,
@@ -127,7 +127,7 @@ module AXI_NTT_UNIT_v1_0 #
     // --- Intermediate Signals for AXI-Full (S01_AXI) BRAM Access ---
     // CORRECTED: These are now declared as 'wire' as they are simply connecting two modules.
     // Signals driven by S01_AXI (outputs)
-    wire [7:0] data_bram_addr_o; // Address from AXI handler to Core/BRAM
+    wire [C_S01_AXI_ADDR_WIDTH-1:0] data_bram_addr_o; // Address from AXI handler to Core/BRAM
     wire [11:0] data_bram_din_o; // Data to write from AXI handler to Core/BRAM
     wire data_bram_we_o;         // Write Enable from AXI handler to Core/BRAM
     wire data_bram_en_o;         // Enable from AXI handler to Core/BRAM
@@ -240,8 +240,11 @@ AXI_NTT_UNIT_v1_0_S01_AXI # (
 // =====================================================================
 // USER LOGIC: Instantiation of the NTT Core
 // The Core must provide the BRAM functionality, receiving commands from
-// the S01_AXI handler and signaling done/IRQ to the S00_AXI handler.
+// the S01_AXI handler and signaling done/IRQ.
 // =====================================================================
+wire  [7:0] ntt_core_axi_bram_addr;
+assign ntt_core_axi_bram_addr = (data_bram_addr_o >> 2);
+
 
 // Note: Renamed to NTT_CORE for clarity in the top-level AXI wrapper.
 NTT_AXI_wrapper NTT_CORE (
@@ -257,7 +260,7 @@ NTT_AXI_wrapper NTT_CORE (
     
     // Data Signals (from S01_AXI Full, connected to BRAM access)
     // The core must now drive the read data (dout) and use the others as inputs.
-    .axi_bram_addr(data_bram_addr_o), // Input to Core
+    .axi_bram_addr(ntt_core_axi_bram_addr), // Input to Core
     .axi_bram_din(data_bram_din_o),   // Input to Core
     .axi_bram_dout(data_bram_dout_i), // Output from Core (BRAM read data)
     .axi_bram_we(data_bram_we_o),     // Input to Core
