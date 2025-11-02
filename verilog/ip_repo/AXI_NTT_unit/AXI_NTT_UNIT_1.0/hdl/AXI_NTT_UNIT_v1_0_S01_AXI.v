@@ -1,6 +1,5 @@
 `timescale 1 ns / 1 ps
-
-    module AXI_NTT_UNIT_v1_0_S01_AXI #
+module AXI_NTT_UNIT_v1_0_S01_AXI #
     (
         // Users to add parameters here
 
@@ -201,7 +200,8 @@
     // The axi_awlen_cntr internal write address counter to keep track of beats in a burst transaction
     reg [7:0] axi_awlen_cntr;
     //The axi_arlen_cntr internal read address counter to keep track of beats in a burst transaction
-    reg [7:0] axi_arlen_cntr;
+    //reg [7:0] axi_arlen_cntr;
+    wire [7:0] axi_arlen_cntr;
     reg [1:0] axi_arburst;
     reg [1:0] axi_awburst;
     reg [7:0] axi_arlen;
@@ -373,8 +373,11 @@
             end
         end
     end   
+   
+  //READ CHANNELS  
+    
     // Implement axi_arready generation
-
+        
     always @( posedge S_AXI_ACLK )
     begin
         if ( S_AXI_ARESETN == 1'b0 )
@@ -402,28 +405,28 @@
     end         
     // Implement axi_araddr latching (Read address, counter, and RLAST)
     // RLAST generation is explicitly controlled here based on axi_arlen_cntr.
-
+    assign axi_arlen_cntr = axi_araddr >> 2;
+    
     always @( posedge S_AXI_ACLK )
     begin
         if ( S_AXI_ARESETN == 1'b0 )
         begin
             axi_araddr <= 0;
-            axi_arlen_cntr <= 0;
+            //axi_arlen_cntr <= 0;
             axi_arburst <= 0;
             axi_arlen <= 0;
             axi_rlast <= 1'b0;
-            axi_ruser <= 0;
         end 
         else
         begin 
             if (~axi_arready && S_AXI_ARVALID && ~axi_arv_arr_flag)
             begin
                 // Address latching (Start of burst)
-                axi_araddr <= S_AXI_ARADDR[C_S_AXI_ADDR_WIDTH - 1:0]; 
+                axi_araddr <= (S_AXI_ARADDR[C_S_AXI_ADDR_WIDTH - 1:0]); 
                 axi_arburst <= S_AXI_ARBURST; 
                 axi_arlen <= S_AXI_ARLEN;      
                 // Counter tracks the beat index (0 to ARlen)
-                axi_arlen_cntr <= 0;
+               // axi_arlen_cntr <= 0;
                 axi_rlast <= 1'b0; // Start with RLAST low
             end   
             // A read beat is accepted by the master (valid handshake)
@@ -439,7 +442,7 @@
                 begin
                     // Not the last beat, continue the burst
                     axi_rlast <= 1'b0;
-                    axi_arlen_cntr <= axi_arlen_cntr + 1; // Increment counter
+                 //   axi_arlen_cntr <= axi_araddr >> 2; // Increment counter
 
                     // Address update logic
                     case (axi_arburst)
@@ -470,40 +473,28 @@
             end          
         end 
     end         
-    // Implement axi_rvalid generation
-    reg axi_rvalid1; 
 
-    always @( posedge S_AXI_ACLK ) begin
-        if ( S_AXI_ARESETN == 1'b0 )
-        begin
-            axi_rvalid <= 0;
-        end else begin
-            axi_rvalid <= axi_rvalid1;
-        end
-        
-    end
 
     always @( posedge S_AXI_ACLK )
     begin
         if ( S_AXI_ARESETN == 1'b0 )
         begin
-            axi_rvalid1 <= 0;
+            axi_rvalid <= 0;
             axi_rresp  <= 0;
         end 
         else
         begin 
-            // If address is latched and RVALID is low, assert RVALID (assuming single-cycle data latency)
-            if (axi_arv_arr_flag && ~axi_rvalid1)
+            // If address is latched and RVALID is low, assert RVALID
+            if (axi_arv_arr_flag && ~axi_rvalid)
             begin
-                axi_rvalid1 <= 1'b1;
+                axi_rvalid <= 1'b1;
                 axi_rresp  <= 2'b0; 
                 // 'OKAY' response
             end   
             // Deassert RVALID when the master accepts the data
-            else if (axi_rvalid1 && S_AXI_RREADY)
+            else if (axi_rvalid && S_AXI_RREADY)
             begin
-                //axi_rvalid <= 1'b0;
-                axi_rvalid1 <= 1'b0;
+                axi_rvalid <= 1'b0;
             end          
         end
     end   
@@ -517,8 +508,6 @@
     always @(*)
     begin
         // Default to the BRAM output for all cycles where RDATA could be relevant
-        // Since the BRAM output is read combinatorially, we use it directly.
-        // The BRAM is assumed to be single-cycle access.
         axi_rdata = {{(C_S_AXI_DATA_WIDTH - 12){1'b0}}, data_bram_dout_i};
     end
 
@@ -550,7 +539,7 @@
             begin
                 // Reading data (Read burst is active)
                 data_bram_we_o <= 1'b0;
-                data_bram_addr_o <= (axi_araddr);        // Use the current read address
+                data_bram_addr_o <= (axi_araddr);        // read address offset by 1
             end
             else
             begin

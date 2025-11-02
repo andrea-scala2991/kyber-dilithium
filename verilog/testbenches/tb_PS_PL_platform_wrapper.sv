@@ -15,8 +15,8 @@ module tb_PS_PL_platform_wrapper();
     wire temp_clk;
     wire temp_rstn;
 
-    localparam period = 8; // 125MHz (8ns period)
-    localparam C_SYNC_DELAY_CYCLES = 20; // 160 ns synchronization delay
+    localparam period = 10; // 100MHz (10ns period)
+    //localparam C_SYNC_DELAY_CYCLES = 20; // 160 ns synchronization delay
 
     always begin
         tb_ACLK = 1'b0; #(period/2.0);
@@ -168,18 +168,13 @@ module tb_PS_PL_platform_wrapper();
         //clear values
         UUT.PS_PL_platform_i.processing_system7_0.inst.write_data(C_NTT_CTRL_BASE + C_NTT_CTRL_OFFSET, 4, '0, resp);
 
-        // 3b. Wait for NTT IP Done Interrupt (Simulated)
+        // 3b. Wait for NTT IP Done Interrupt 
         $display("[%0t] PS: CPU enters wait loop for NTT Done IRQ...", $time);
         UUT.PS_PL_platform_i.processing_system7_0.inst.wait_interrupt(NTT_IRQ_MASK, IRQ_status);
        
         // Clear NTT IP Control Register (Acts as acknowledge)
         UUT.PS_PL_platform_i.processing_system7_0.inst.write_data(C_NTT_CTRL_BASE + C_NTT_CTRL_OFFSET, 4, 32'h0, resp);
         $display("[%0t] PS: NTT Done IRQ received and acknowledged. Result is ready in BRAM.", $time);
-        
-        // --- Synchronization Delay to let IP AXI Slave Readout stabilize ---
-        #(C_SYNC_DELAY_CYCLES * period);
-        $display("[%0t] PS: Synchronized for IP->DDR DMA read.", $time);
-
 
         // =====================================================================
         // PHASE 3: START DMA READ (IP -> DDR) & WAIT FOR FINAL IRQ

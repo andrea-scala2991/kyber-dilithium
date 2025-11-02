@@ -243,7 +243,7 @@ AXI_NTT_UNIT_v1_0_S01_AXI # (
 // the S01_AXI handler and signaling done/IRQ.
 // =====================================================================
 wire  [7:0] ntt_core_axi_bram_addr;
-assign ntt_core_axi_bram_addr = (data_bram_addr_o >> 2);
+assign ntt_core_axi_bram_addr = (data_bram_en_o & ~data_bram_we_o) ? (data_bram_addr_o >> 2) +1'b1 : (data_bram_addr_o >> 2) ;
 
 
 // Note: Renamed to NTT_CORE for clarity in the top-level AXI wrapper.

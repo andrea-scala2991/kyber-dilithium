@@ -17,15 +17,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="37,402.230 ns"></ZoomStartTime>
-      <ZoomEndTime time="37,660.231 ns"></ZoomEndTime>
-      <Cursor1Time time="37,617.230 ns"></Cursor1Time>
+      <ZoomStartTime time="64,929.748 ns"></ZoomStartTime>
+      <ZoomEndTime time="65,584.749 ns"></ZoomEndTime>
+      <Cursor1Time time="65,239.248 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="244"></NameColumnWidth>
+      <NameColumnWidth column_width="224"></NameColumnWidth>
       <ValueColumnWidth column_width="60"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="61" />
+   <WVObjectSize size="60" />
    <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_aclk">
       <obj_property name="ElementShortName">m_axi_aclk</obj_property>
       <obj_property name="ObjectShortName">m_axi_aclk</obj_property>
@@ -46,6 +46,7 @@
       <obj_property name="CellHeight">36</obj_property>
       <obj_property name="ElementShortName">M01_AXI</obj_property>
       <obj_property name="ObjectShortName">M01_AXI</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="group" fp_name="group3834">
       <obj_property name="label">S_AXI_LITE</obj_property>
@@ -132,7 +133,6 @@
       <obj_property name="Render_Data">/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/S_AXI_LITE.readWriteSummary</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       <obj_property name="CellHeight">36</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="group" fp_name="group1091">
       <obj_property name="label">M_AXI</obj_property>
@@ -653,7 +653,6 @@
       <obj_property name="Render_Data">/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/processing_system7_0/S_AXI_HP0.readWriteSummary</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       <obj_property name="CellHeight">36</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="divider1688" type="divider">
       <obj_property name="label">NTT_UNIT</obj_property>
@@ -915,10 +914,6 @@
          <obj_property name="ElementShortName">axi_bvalid</obj_property>
          <obj_property name="ObjectShortName">axi_bvalid</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/AXI_NTT_UNIT_v1_0_S01_AXI_inst/axi_araddr">
-         <obj_property name="ElementShortName">axi_araddr[9:0]</obj_property>
-         <obj_property name="ObjectShortName">axi_araddr[9:0]</obj_property>
-      </wvobject>
       <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/AXI_NTT_UNIT_v1_0_S01_AXI_inst/axi_arready">
          <obj_property name="ElementShortName">axi_arready</obj_property>
          <obj_property name="ObjectShortName">axi_arready</obj_property>
@@ -958,6 +953,10 @@
       <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/AXI_NTT_UNIT_v1_0_S01_AXI_inst/axi_awlen_cntr">
          <obj_property name="ElementShortName">axi_awlen_cntr[7:0]</obj_property>
          <obj_property name="ObjectShortName">axi_awlen_cntr[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/AXI_NTT_UNIT_v1_0_S01_AXI_inst/axi_araddr">
+         <obj_property name="ElementShortName">axi_araddr[9:0]</obj_property>
+         <obj_property name="ObjectShortName">axi_araddr[9:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/AXI_NTT_UNIT_v1_0_S01_AXI_inst/axi_arlen_cntr">
          <obj_property name="ElementShortName">axi_arlen_cntr[7:0]</obj_property>
@@ -1009,10 +1008,6 @@
    <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/core_mode_i">
       <obj_property name="ElementShortName">core_mode_i</obj_property>
       <obj_property name="ObjectShortName">core_mode_i</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/ntt_mode_o">
-      <obj_property name="ElementShortName">ntt_mode_o</obj_property>
-      <obj_property name="ObjectShortName">ntt_mode_o</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/data_bram_addr_o">
       <obj_property name="ElementShortName">data_bram_addr_o[9:0]</obj_property>
@@ -1089,6 +1084,7 @@
    <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/bram0/mem">
       <obj_property name="ElementShortName">mem[0:255][11:0]</obj_property>
       <obj_property name="ObjectShortName">mem[0:255][11:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/NTT_CORE/ctrl_bram1_din_a">
       <obj_property name="ElementShortName">ctrl_bram1_din_a[11:0]</obj_property>
