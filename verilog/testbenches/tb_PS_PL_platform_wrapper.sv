@@ -173,9 +173,11 @@ module tb_PS_PL_platform_wrapper();
         UUT.PS_PL_platform_i.processing_system7_0.inst.wait_interrupt(NTT_IRQ_MASK, IRQ_status);
        
         // Clear NTT IP Control Register (Acts as acknowledge)
-        UUT.PS_PL_platform_i.processing_system7_0.inst.write_data(C_NTT_CTRL_BASE + C_NTT_CTRL_OFFSET, 4, 32'h0, resp);
+        UUT.PS_PL_platform_i.processing_system7_0.inst.write_data(C_NTT_CTRL_BASE + C_NTT_STATUS_OFFSET, 4, 32'h1, resp);
         $display("[%0t] PS: NTT Done IRQ received and acknowledged. Result is ready in BRAM.", $time);
-
+        
+        UUT.PS_PL_platform_i.processing_system7_0.inst.write_data(C_NTT_CTRL_BASE + C_NTT_STATUS_OFFSET, 4, 32'h0, resp);
+        
         // =====================================================================
         // PHASE 3: START DMA READ (IP -> DDR) & WAIT FOR FINAL IRQ
         // =====================================================================
@@ -249,7 +251,7 @@ module tb_PS_PL_platform_wrapper();
         NTT_run(1); // 1 for iNTT
 
         $display("-------------------------------------------------------");
-        $display("[%0t] INTERRUPT-DRIVEN TEST BENCH SEQUENCE FINISHED.", $time);
+        $display("[%0t] TEST BENCH SEQUENCE FINISHED.", $time);
         $display("-------------------------------------------------------");
 
         $stop;

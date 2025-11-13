@@ -17,15 +17,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="64,929.748 ns"></ZoomStartTime>
-      <ZoomEndTime time="65,584.749 ns"></ZoomEndTime>
-      <Cursor1Time time="65,239.248 ns"></Cursor1Time>
+      <ZoomStartTime time="30,445.200 ns"></ZoomStartTime>
+      <ZoomEndTime time="30,511.501 ns"></ZoomEndTime>
+      <Cursor1Time time="30,456.250 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="224"></NameColumnWidth>
+      <NameColumnWidth column_width="208"></NameColumnWidth>
       <ValueColumnWidth column_width="60"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="60" />
+   <WVObjectSize size="63" />
    <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/axi_cdma_0/m_axi_aclk">
       <obj_property name="ElementShortName">m_axi_aclk</obj_property>
       <obj_property name="ObjectShortName">m_axi_aclk</obj_property>
@@ -993,13 +993,29 @@
       <obj_property name="ObjectShortName">S01_AXI</obj_property>
       <obj_property name="isExpanded"></obj_property>
    </wvobject>
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/data_bram_addr_o">
+      <obj_property name="ElementShortName">data_bram_addr_o[9:0]</obj_property>
+      <obj_property name="ObjectShortName">data_bram_addr_o[9:0]</obj_property>
+   </wvobject>
    <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/data_bram_dout_i">
       <obj_property name="ElementShortName">data_bram_dout_i[11:0]</obj_property>
       <obj_property name="ObjectShortName">data_bram_dout_i[11:0]</obj_property>
    </wvobject>
+   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/AXI_NTT_UNIT_v1_0_S00_AXI_inst/ntt_int_clear">
+      <obj_property name="ElementShortName">ntt_int_clear</obj_property>
+      <obj_property name="ObjectShortName">ntt_int_clear</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/AXI_NTT_UNIT_v1_0_S00_AXI_inst/slv_reg1">
+      <obj_property name="ElementShortName">slv_reg1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg1[31:0]</obj_property>
+   </wvobject>
    <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/irq">
       <obj_property name="ElementShortName">irq</obj_property>
       <obj_property name="ObjectShortName">irq</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/core_done_o">
+      <obj_property name="ElementShortName">core_done_o</obj_property>
+      <obj_property name="ObjectShortName">core_done_o</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/core_start_i">
       <obj_property name="ElementShortName">core_start_i</obj_property>
@@ -1008,10 +1024,6 @@
    <wvobject type="logic" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/core_mode_i">
       <obj_property name="ElementShortName">core_mode_i</obj_property>
       <obj_property name="ObjectShortName">core_mode_i</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/data_bram_addr_o">
-      <obj_property name="ElementShortName">data_bram_addr_o[9:0]</obj_property>
-      <obj_property name="ObjectShortName">data_bram_addr_o[9:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_PS_PL_platform_wrapper/UUT/PS_PL_platform_i/AXI_NTT_UNIT_0/inst/data_bram_din_o">
       <obj_property name="ElementShortName">data_bram_din_o[11:0]</obj_property>

@@ -26,7 +26,7 @@
         output wire ntt_mode_o,     // Bit 1 of slv_reg0: 0=NTT, 1=iNTT
 
         // Inputs from the NTT Core (Status Signals)
-        input wire ntt_busy_i,      // NTT operation is running (for slv_reg1[1])
+        output wire ntt_int_clear,      // NTT done interrupt latch  (for slv_reg1[1])
         input wire ntt_error_i,     // Error status (for slv_reg1[2])
 
         // User ports ends
@@ -249,10 +249,12 @@
                     // Slave register 0
                     slv_reg0[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
                   end  
-              2'h1: begin
-                    // slv_reg1 (Status Register - READ-ONLY - Do not write)
-                    // We only write to slv_reg0, slv_reg2, and slv_reg3 here.
-                    // This block does nothing to slv_reg1.
+              2'h1:
+                for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
+                  if ( S_AXI_WSTRB[byte_index] == 1 ) begin
+                    // Respective byte enables are asserted as per write strobes 
+                    // Slave register 0
+                    slv_reg1[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
                 end
               2'h2: // slv_reg2 (Writable)
                 for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
@@ -419,27 +421,7 @@
     assign ntt_start_o = slv_reg0[0];
     assign ntt_mode_o  = slv_reg0[1];
 
-    // -------------------------------------------------------------------------
-    // User Logic: Status Register Update
-    // slv_reg1 (0x04) -> Status Register
-    // [0] = ntt_busy_i (Busy)
-    // [1] = ntt_error_i (Error)
-    // This register is constantly updated from the NTT core inputs.
-    // -------------------------------------------------------------------------
-    always @(posedge S_AXI_ACLK) begin
-        if (S_AXI_ARESETN == 1'b0) begin
-            slv_reg1 <= 0;
-        end else begin
-            // We use concatenation to update the lower bits based on the core inputs
-            // and keep the upper bits (31 down to 3) at 0 (or previous value, but 0 is safer).
-            slv_reg1 <= {
-                {C_S_AXI_DATA_WIDTH-2{1'b0}}, // Reserved upper bits
-                ntt_error_i,                  // Bit 1: Error
-                ntt_busy_i                    // Bit 0: Busy
-            };
-        end
-    end
-
+    assign ntt_int_clear = slv_reg1[0];
     // User logic ends
 
     endmodule

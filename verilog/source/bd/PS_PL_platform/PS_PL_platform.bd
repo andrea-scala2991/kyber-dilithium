@@ -938,7 +938,7 @@
             "value": "10.000000"
           },
           "PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ": {
-            "value": "84.210526"
+            "value": "80.000000"
           },
           "PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ": {
             "value": "10.000000"
@@ -1028,7 +1028,7 @@
             "value": "0"
           },
           "PCW_CLK0_FREQ": {
-            "value": "84210526"
+            "value": "80000000"
           },
           "PCW_CLK1_FREQ": {
             "value": "10000000"
@@ -1310,7 +1310,7 @@
             "value": "TRUE"
           },
           "PCW_FPGA0_PERIPHERAL_FREQMHZ": {
-            "value": "85"
+            "value": "80"
           },
           "PCW_FPGA1_PERIPHERAL_FREQMHZ": {
             "value": "50"

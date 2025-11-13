@@ -168,7 +168,7 @@ module NTT_Controller #(
         end
     end
 
-    // -------------------- issued / completed counters (no change) --------------------
+    // -------------------- issued / completed counters --------------------
     logic [11:0] issued_count;
     logic [11:0] completed_count;
 
@@ -188,7 +188,7 @@ module NTT_Controller #(
     wire butterflies_in_flight = (completed_count < issued_count);
 
 
-    //DELAY COUNTER FOR INTT INITIALISATION (no change)
+    //DELAY COUNTER FOR INTT INITIALISATION
     logic [1:0] intt_delay_cnt;
     
     always_ff @(posedge clk, posedge rst) begin
@@ -202,7 +202,7 @@ module NTT_Controller #(
         end
     end
     
-    // -------------------- FSM seq / next (no change) --------------------
+    // -------------------- FSM seq / next --------------------
     always_ff @(posedge clk, posedge rst) begin
         if (rst) state <= IDLE;
         else     state <= next_state;
@@ -214,7 +214,7 @@ module NTT_Controller #(
             IDLE: begin
                 if (enable) begin
                     if (mode == 1'b1)
-                        next_state = INTT_WAIT;   // new state for pipeline warm-up
+                        next_state = INTT_WAIT;   // state for pipeline warm-up
                     else
                         next_state = PIPELINE;
                 end
@@ -228,7 +228,6 @@ module NTT_Controller #(
             end
     
             PIPELINE: begin
-                // Logic updated to use current values of stage/start/j
                 if ((stage == MAX_STAGE) && (start == (N - 2*len)) && (j == len - 1'b1))
                     next_state = FLUSH;
             end
@@ -244,9 +243,6 @@ module NTT_Controller #(
         
 
     // -------------------- COUNTER NEXT-STATE CALCULATION (COMBINATIONAL) --------------------
-    // The inner-defaults from the last attempt have been removed, as they caused
-    // a conflict with the top-level defaults. We now rely on explicit coverage
-    // within the loop logic to avoid falling back to the top-level default implicitly.
     always_comb begin
         // Default: Hold current value (active in all FSM states except when a branch below overrides it)
         stage_next = stage;
@@ -303,7 +299,7 @@ module NTT_Controller #(
         end
     end
 
-    // -------------------- bank-swap delay counter (Refactored) --------------------
+    // -------------------- bank-swap delay counter --------------------
    
 
     always_ff @(posedge clk, posedge rst) begin
@@ -316,7 +312,7 @@ module NTT_Controller #(
                 src_bank <= src_bank; // explicitly hold
             end else if (bank_swap_cnt != '0) begin
                 if (bank_swap_cnt == 1) begin
-                    // The register resets for j/start/stage are handled by the main counter block now
+                    // The register resets for j/start/stage are handled by the main counter block
                     src_bank <= ~src_bank; // Only bank swap remains here
                     bank_swap_cnt <= '0;
                 end else begin
@@ -326,7 +322,7 @@ module NTT_Controller #(
         end
     end
 
-    // -------------------- butterfly I/O routing (no change) --------------------
+    // -------------------- butterfly I/O routing--------------------
     assign butterfly_inverse = mode_reg;
     assign butterfly_twiddle = rom_dout;
 
@@ -340,7 +336,7 @@ module NTT_Controller #(
         end
     end
 
-    // -------------------- BRAM port address & write logic (no change) --------------------
+    // -------------------- BRAM port address & write logic--------------------
     always_comb begin
         // defaults
         bram0_addr_a = '0; bram0_addr_b = '0;
@@ -375,7 +371,7 @@ module NTT_Controller #(
         end
     end
 
-    // valid_in sequential logic (no change)
+    // valid_in sequential logic
     logic valid_in_next;
     
     always_comb begin

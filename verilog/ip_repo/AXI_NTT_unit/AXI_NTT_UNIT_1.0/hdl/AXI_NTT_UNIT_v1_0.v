@@ -112,16 +112,39 @@ module AXI_NTT_UNIT_v1_0 #
     wire ntt_mode_o;    // Bit 1 of slv_reg0: 0=NTT, 1=iNTT
 
     // Inputs from the NTT Core (Status Signals)
-    wire ntt_busy_i;      // NTT operation is running (for slv_reg1[1])
+    wire ntt_int_i;      // NTT done interrupt latch (for slv_reg1[1])
     wire ntt_error_i;     // Error status (for slv_reg1[2])
 
     // Map control signals from the AXI-Lite registers (slv_reg0_o driven by AXI module)
     // Assumption: slv_reg0[0] is START, slv_reg0[1] is MODE
     assign core_start_i = ntt_start_o;
     assign core_mode_i  = ntt_mode_o;
-    
     // Map status signals back to the AXI-Lite registers (slv_reg1_i is input to AXI module)
-    assign irq = core_done_o;
+
+    // =====================================================================
+    // ** INTERRUPT LATCHING LOGIC **
+    // This logic converts the single-cycle core_done_o pulse into a level-
+    // sensitive signal (irq_latched) that is held until software clears it.
+    // =====================================================================
+    reg irq_latched;
+
+    assign irq = irq_latched;
+
+    always @(posedge s00_axi_aclk) begin
+        if (~s00_axi_aresetn) begin
+            // Asynchronous Reset
+            irq_latched <= 1'b0;
+        end else if (ntt_int_i) begin
+            // Software Clear: Interrupt is acknowledged/cleared by a write 
+            // to the specific Interrupt Clear Register address.
+            irq_latched <= 1'b0;
+        end else if (core_done_o) begin
+            // Core Pulse: Latch the interrupt status on the rising edge of the done pulse
+            irq_latched <= 1'b1;
+        end
+    end
+
+    
 
 
     // --- Intermediate Signals for AXI-Full (S01_AXI) BRAM Access ---
@@ -166,7 +189,7 @@ AXI_NTT_UNIT_v1_0_S00_AXI # (
     // User logic connections (Control/Status)
     .ntt_start_o(ntt_start_o),
     .ntt_mode_o(ntt_mode_o),
-    .ntt_busy_i(ntt_busy_i),
+    .ntt_int_clear(ntt_int_i),
     .ntt_error_i(ntt_error_i)
 );
 

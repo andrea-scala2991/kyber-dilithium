@@ -492,7 +492,7 @@ module AXI_NTT_UNIT_v1_0_S01_AXI #
                 // 'OKAY' response
             end   
             // Deassert RVALID when the master accepts the data
-            else if (axi_rvalid && S_AXI_RREADY)
+            else if (axi_rvalid &&  S_AXI_RREADY)
             begin
                 axi_rvalid <= 1'b0;
             end          
